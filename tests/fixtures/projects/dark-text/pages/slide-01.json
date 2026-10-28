@@ -1,0 +1,28 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "elements": [
+  {
+   "id": "t",
+   "type": "text",
+   "bounds": [
+    66,
+    60,
+    900,
+    70
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Тёмная тема",
+       "sz": 28,
+       "b": true,
+       "color": "#FFFFFF"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

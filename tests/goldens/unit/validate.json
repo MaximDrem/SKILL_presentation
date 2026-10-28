@@ -1,0 +1,5313 @@
+{
+ "a": {
+  "theme": "dark",
+  "mode": "create"
+ },
+ "cases": [
+  {
+   "name": "sz_zero",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 0,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "runs[0].sz — число pt в диапазоне 1–4000 (0 вне его)"
+    }
+   ]
+  },
+  {
+   "name": "sz_5000",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 5000,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "runs[0].sz — число pt в диапазоне 1–4000 (5000 вне его)"
+    }
+   ]
+  },
+  {
+   "name": "sz_fractional_ok",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 13.5,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": []
+  },
+  {
+   "name": "cell_color_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "tb",
+        "type": "table",
+        "bounds": [
+         66,
+         100,
+         600,
+         200
+        ],
+        "table": {
+         "colW": [
+          300,
+          300
+         ],
+         "rows": [
+          [
+           {
+            "text": "A",
+            "color": "red"
+           },
+           {
+            "text": "B"
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "row[0][0]: color \"red\" не #RRGGBB(AA)"
+    }
+   ]
+  },
+  {
+   "name": "gradient_color_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 14,
+            "color": {
+             "stops": [
+              [
+               "поз",
+               "#FFF"
+              ]
+             ]
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "gradient: stops — 2..4 пары [pos,цвет]"
+    }
+   ]
+  },
+  {
+   "name": "bounds_missing",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "x",
+        "type": "text",
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "y",
+            "sz": 14
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "bounds — [x,y,w,h] из 4 чисел (px) — поле обязательно"
+    }
+   ]
+  },
+  {
+   "name": "bounds_fractional",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66.5,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "msg": "bounds [x,y,w,h] только из целых px — дробные у 1 эл. (t): округлите до целых"
+    }
+   ]
+  },
+  {
+   "name": "canvas_card",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "shape",
+        "shape": "roundRect",
+        "bounds": [
+         906,
+         230,
+         380,
+         340
+        ],
+        "fill": {
+         "solid": "#1D254D"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "action": "bounds→[900, 230, 380, 340]",
+     "msg": "выход за канвас 1280×720 (906,230,380,340) — default: впишите bounds→[900, 230, 380, 340] (контентная карточка не должна уходить за край; bleed:true — только для фонового декора)"
+    }
+   ]
+  },
+  {
+   "name": "canvas_blob",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "d",
+        "type": "shape",
+        "shape": "ellipse",
+        "bounds": [
+         1200,
+         600,
+         200,
+         200
+        ],
+        "fill": {
+         "solid": "#2FE7C4"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "action": "bleed:true",
+     "msg": "выход за канвас 1280×720 без bleed:true (1200,600,200,200) — default: bleed:true (декор/фон уходит за край осознанно); если это контентный элемент — впишите bounds→[1080, 520, 200, 200]"
+    }
+   ]
+  },
+  {
+   "name": "canvas_text",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         1200,
+         600,
+         300,
+         80
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "action": "bounds→[980, 600, 300, 80]",
+     "msg": "выход за канвас 1280×720 (1200,600,300,80) — текст обязан жить в канвасе"
+    }
+   ]
+  },
+  {
+   "name": "canvas_bleed_ok",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "d",
+        "type": "shape",
+        "shape": "ellipse",
+        "bounds": [
+         1200,
+         600,
+         200,
+         200
+        ],
+        "fill": {
+         "solid": "#2FE7C4"
+        },
+        "bleed": true
+       }
+      ]
+     }
+    }
+   ],
+   "expected": []
+  },
+  {
+   "name": "shadow_soft_ok",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ],
+        "shadow": "soft"
+       }
+      ]
+     }
+    }
+   ],
+   "expected": []
+  },
+  {
+   "name": "shadow_hard_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ],
+        "shadow": "hard"
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "shadow ∈ none|soft|lift (токены; свободные параметры запрещены)"
+    }
+   ]
+  },
+  {
+   "name": "svg_shadow_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/picto.svg",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ],
+        "shadow": "soft"
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "shadow для svg не поддерживается (нативные фигуры; тень — только у растровых image)"
+    }
+   ]
+  },
+  {
+   "name": "svg_missing",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/nothere.svg",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "src не найден: media/nothere.svg (скопируйте медиа в media/ проекта как есть)"
+    }
+   ]
+  },
+  {
+   "name": "src_missing",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/nothere.png",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "src не найден: media/nothere.png (скопируйте медиа в media/ проекта как есть)"
+    }
+   ]
+  },
+  {
+   "name": "src_escape",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "../secret.png",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "src \"../secret.png\" — относительный путь внутри media/ проекта"
+    }
+   ]
+  },
+  {
+   "name": "src_absolute",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "/etc/passwd",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "src \"/etc/passwd\" — относительный путь внутри media/ проекта"
+    }
+   ]
+  },
+  {
+   "name": "ext_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/f.tiff",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "формат .tiff не рендерится движком (svg/wmf/emf/wdp) — используйте png/jpg"
+    }
+   ]
+  },
+  {
+   "name": "ext_unknown",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/f.xyz",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "расширение .xyz не поддерживается (png|jpg|jpeg|gif|webp|bmp)"
+    }
+   ]
+  },
+  {
+   "name": "ext_gif_ok",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/anim.gif",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": []
+  },
+  {
+   "name": "srcrect_svg_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/picto.svg",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ],
+        "srcRect": {
+         "l": 0.1
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "srcRect для svg не поддерживается (нативные фигуры; обрежь иконку в исходнике)"
+    }
+   ]
+  },
+  {
+   "name": "srcrect_sum_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ],
+        "srcRect": {
+         "l": 0.6,
+         "r": 0.6
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "srcRect: l+r ≤ 1 и t+b ≤ 1"
+    }
+   ]
+  },
+  {
+   "name": "srcrect_frac_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         100,
+         100,
+         200,
+         150
+        ],
+        "srcRect": {
+         "l": 1.5
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "srcRect — доли 0..1 {l,t,r,b}"
+    }
+   ]
+  },
+  {
+   "name": "id_dup",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ]
+       },
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         260,
+         60,
+         100,
+         100
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "2",
+     "msg": "id «s» не уникален на странице"
+    }
+   ]
+  },
+  {
+   "name": "pagetype_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "title",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "msg": "pageType обязателен: cover|content|divider|closing (сейчас: \"title\")"
+    }
+   ]
+  },
+  {
+   "name": "bg_bad_type",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "texture"
+      }
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "background",
+     "msg": "type \"texture\" ∉ solid|image|gradient"
+    }
+   ]
+  },
+  {
+   "name": "bg_solid_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "red"
+      }
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "background",
+     "msg": "solid: color \"red\" не #RRGGBB(AA)"
+    }
+   ]
+  },
+  {
+   "name": "bg_image_escape",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "image",
+       "src": "../x.png"
+      }
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "background",
+     "msg": "image: src \"../x.png\" обязан быть относительным путём внутри media/"
+    }
+   ]
+  },
+  {
+   "name": "bg_image_unrenderable_ok",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "image",
+       "src": "media/f.wmf"
+      }
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "background",
+     "msg": "формат .wmf не рендерится движком (svg/wmf/emf/wdp) — используйте png/jpg (правило касается только спеки; фоны шаблона переносятся кодом как есть)"
+    }
+   ]
+  },
+  {
+   "name": "unknown_shape",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "cloud",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "fill": {
+         "solid": "#111111"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "shape \"cloud\" ∉ пресетам (chevron,diamond,donut,downArrow,ellipse,heptagon,hexagon,homePlate,leftArrow,octagon,parallelogram,pentagon,pie,rect,rightArrow,roundRect,rtTriangle,star5,star6,trapezoid,triangle,upArrow)"
+    }
+   ]
+  },
+  {
+   "name": "connector_hint",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "straightConnector1",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "shape \"straightConnector1\" ∉ пресетам (chevron,diamond,donut,downArrow,ellipse,heptagon,hexagon,homePlate,leftArrow,octagon,parallelogram,pentagon,pie,rect,rightArrow,roundRect,rtTriangle,star5,star6,trapezoid,triangle,upArrow); линий в пресетах нет — сделайте линию как shape rect с h=1..3px и fill.solid (без line)"
+    }
+   ]
+  },
+  {
+   "name": "adjustments_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "adjustments": [
+         100001
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "adjustments — целые 0..100000"
+    }
+   ]
+  },
+  {
+   "name": "adjustments_frac_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "adjustments": [
+         1.5
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "adjustments — целые 0..100000"
+    }
+   ]
+  },
+  {
+   "name": "fill_none_extra",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "fill": {
+         "none": true,
+         "solid": "#111111"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "fill {none:true} — без других полей"
+    }
+   ]
+  },
+  {
+   "name": "fill_empty",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "fill": {}
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "fill — {solid}|{gradient}|{none:true}"
+    }
+   ]
+  },
+  {
+   "name": "gradient_stops_1",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "fill": {
+         "gradient": {
+          "stops": [
+           [
+            0,
+            "#111111"
+           ]
+          ]
+         }
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "gradient: stops — 2..4 пары [pos,цвет]"
+    }
+   ]
+  },
+  {
+   "name": "gradient_stops_5",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "fill": {
+         "gradient": {
+          "stops": [
+           [
+            0,
+            "#111111"
+           ],
+           [
+            0,
+            "#111111"
+           ],
+           [
+            0,
+            "#111111"
+           ],
+           [
+            0,
+            "#111111"
+           ],
+           [
+            0,
+            "#111111"
+           ]
+          ]
+         }
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "gradient: stops — 2..4 пары [pos,цвет]"
+    }
+   ]
+  },
+  {
+   "name": "gradient_angle_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "fill": {
+         "gradient": {
+          "angle": 360,
+          "stops": [
+           [
+            0,
+            "#111111"
+           ],
+           [
+            1,
+            "#222222"
+           ]
+          ]
+         }
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "gradient.angle 0..359.9"
+    }
+   ]
+  },
+  {
+   "name": "gradient_pos_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "fill": {
+         "gradient": {
+          "stops": [
+           [
+            1.5,
+            "#111111"
+           ],
+           [
+            1,
+            "#222222"
+           ]
+          ]
+         }
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "gradient.stops[0] — [0..1, #RRGGBB(AA)]"
+    }
+   ]
+  },
+  {
+   "name": "line_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "line": {
+         "w": "2"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "line — {w?:px float, color?:#RRGGBB(AA)}"
+    }
+   ]
+  },
+  {
+   "name": "line_color_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "line": {
+         "color": "red"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "line — {w?:px float, color?:#RRGGBB(AA)}"
+    }
+   ]
+  },
+  {
+   "name": "rotation_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "rotation": "15"
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "rotation — число (°)"
+    }
+   ]
+  },
+  {
+   "name": "opacity_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "opacity": 1.5
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "opacity 0..1"
+    }
+   ]
+  },
+  {
+   "name": "flip_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "flip": {
+         "h": 1
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "flip — {h?:bool,v?:bool}"
+    }
+   ]
+  },
+  {
+   "name": "bleed_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ],
+        "bleed": 1
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "bleed — boolean"
+    }
+   ]
+  },
+  {
+   "name": "id_dup",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         60,
+         100,
+         100
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": []
+  },
+  {
+   "name": "chart_kind_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "chart",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "chart": {
+         "kind": "radar",
+         "series": [
+          {
+           "values": [
+            1
+           ]
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "chart.kind \"radar\" ∉ bar|line|pie|doughnut (combo/radar/3D — фаза 2)"
+    }
+   ]
+  },
+  {
+   "name": "chart_series_empty",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "chart",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "chart": {
+         "kind": "bar",
+         "series": []
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "chart.series — непустой массив"
+    }
+   ]
+  },
+  {
+   "name": "chart_values_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "chart",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "chart": {
+         "kind": "bar",
+         "series": [
+          {
+           "values": [
+            "a"
+           ]
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "series[0].values — числа"
+    }
+   ]
+  },
+  {
+   "name": "chart_cat_len_mismatch",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "chart",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "chart": {
+         "kind": "bar",
+         "series": [
+          {
+           "values": [
+            1,
+            2
+           ],
+           "categories": [
+            "A"
+           ]
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "series[0]: categories (1) ≠ values (2)"
+    }
+   ]
+  },
+  {
+   "name": "chart_colors_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "chart",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "chart": {
+         "kind": "bar",
+         "series": [
+          {
+           "values": [
+            1
+           ]
+          }
+         ],
+         "colors": [
+          "red"
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "chart.colors — массив #RRGGBB"
+    }
+   ]
+  },
+  {
+   "name": "chart_legend_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "chart",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "chart": {
+         "kind": "bar",
+         "series": [
+          {
+           "values": [
+            1
+           ]
+          }
+         ],
+         "legend": "yes"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "chart.legend — boolean"
+    }
+   ]
+  },
+  {
+   "name": "chart_unknown_field",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "chart",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "chart": {
+         "kind": "bar",
+         "series": [
+          {
+           "values": [
+            1
+           ]
+          }
+         ]
+        },
+        "bogus": 1
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "unknown field chart: bogus"
+    }
+   ]
+  },
+  {
+   "name": "table_colW_missing",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "rows": [
+          [
+           {
+            "text": "a"
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "table.colW обязателен (px, сумма = bounds.w)"
+    }
+   ]
+  },
+  {
+   "name": "table_colW_sum",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          100,
+          100
+         ],
+         "rows": [
+          [
+           {
+            "text": "a"
+           },
+           {
+            "text": "b"
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "сумма colW (200) ≠ bounds.w (400)"
+    }
+   ]
+  },
+  {
+   "name": "table_row_len",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          200,
+          200
+         ],
+         "rows": [
+          [
+           {
+            "text": "a"
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "row[0]: ячеек 1, по colW ждём 2"
+    }
+   ]
+  },
+  {
+   "name": "table_colspan_over",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          200,
+          200
+         ],
+         "rows": [
+          [
+           {
+            "text": "a",
+            "colSpan": 3
+           },
+           {
+            "text": "b"
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "row[0][0]: colSpan выходит за сетку"
+    }
+   ]
+  },
+  {
+   "name": "table_rowspan_over",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          200,
+          200
+         ],
+         "rows": [
+          [
+           {
+            "text": "a",
+            "rowSpan": 2
+           },
+           {
+            "text": "b"
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "row[0][0]: rowSpan выходит за сетку"
+    }
+   ]
+  },
+  {
+   "name": "table_cell_fill_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          400
+         ],
+         "rows": [
+          [
+           {
+            "text": "a",
+            "fill": "red"
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "row[0][0]: fill \"red\" не #RRGGBB(AA)"
+    }
+   ]
+  },
+  {
+   "name": "table_cell_unknown",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          400
+         ],
+         "rows": [
+          [
+           {
+            "text": "a",
+            "bogus": 1
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "row[0][0]: unknown field ячейки: bogus"
+    }
+   ]
+  },
+  {
+   "name": "table_border_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          400
+         ],
+         "rows": [
+          [
+           {
+            "text": "a"
+           }
+          ]
+         ],
+         "border": {
+          "w": "1"
+         }
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "table.border — {w?:px,color?:#hex}"
+    }
+   ]
+  },
+  {
+   "name": "table_inset_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          400
+         ],
+         "rows": [
+          [
+           {
+            "text": "a"
+           }
+          ]
+         ],
+         "inset": "5"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "table.inset — число px"
+    }
+   ]
+  },
+  {
+   "name": "table_font_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          400
+         ],
+         "rows": [
+          [
+           {
+            "text": "a"
+           }
+          ]
+         ],
+         "font": 12
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "table.font — строка"
+    }
+   ]
+  },
+  {
+   "name": "text_paragraphs_empty",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         60,
+         60,
+         400,
+         100
+        ],
+        "paragraphs": []
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "text.paragraphs — непустой массив"
+    }
+   ]
+  },
+  {
+   "name": "text_runs_empty",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         60,
+         60,
+         400,
+         100
+        ],
+        "paragraphs": [
+         {
+          "runs": []
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "paragraphs[0].runs — непустой массив"
+    }
+   ]
+  },
+  {
+   "name": "text_run_no_text",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         60,
+         60,
+         400,
+         100
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "sz": 14
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "paragraphs[0].runs[0] — {text:string,…}"
+    }
+   ]
+  },
+  {
+   "name": "text_align_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         60,
+         60,
+         400,
+         100
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "a",
+            "sz": 14
+           }
+          ],
+          "align": "center"
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "paragraphs[0].align ∉ l|ctr|r|just"
+    }
+   ]
+  },
+  {
+   "name": "text_bullet_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         60,
+         60,
+         400,
+         100
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "a",
+            "sz": 14
+           }
+          ],
+          "bullet": "num"
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "paragraphs[0].bullet ∈ none|char"
+    }
+   ]
+  },
+  {
+   "name": "text_lineheight_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         60,
+         60,
+         400,
+         100
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "a",
+            "sz": 14
+           }
+          ],
+          "lineHeight": 0
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "paragraphs[0].lineHeight — число > 0"
+    }
+   ]
+  },
+  {
+   "name": "text_spcbef_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         60,
+         60,
+         400,
+         100
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "a",
+            "sz": 14
+           }
+          ],
+          "spcBef": -1
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "paragraphs[0].spcBef — pt ≥ 0"
+    }
+   ]
+  },
+  {
+   "name": "text_unknown_para_field",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         60,
+         60,
+         400,
+         100
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "a",
+            "sz": 14
+           }
+          ],
+          "bogus": 1
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "unknown field абзаца: bogus"
+    }
+   ]
+  },
+  {
+   "name": "text_placeholder",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Lorem ipsum dolor",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "плейсхолдер в тексте: «Lorem ipsum dolor»"
+    }
+   ]
+  },
+  {
+   "name": "text_placeholder_xx",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Рост на XX%",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "плейсхолдер в тексте: «Рост на XX%»"
+    }
+   ]
+  },
+  {
+   "name": "text_placeholder_tbd",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "TBD later",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "плейсхолдер в тексте: «TBD later»"
+    }
+   ]
+  },
+  {
+   "name": "text_emoji",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Смотри 🚀 ракета",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "emoji/пиктограмма в тексте: «Смотри 🚀 ракета» — рендерится как «¶»/тофу; поставьте shape-пресет или image вместо символа"
+    }
+   ]
+  },
+  {
+   "name": "text_anchor_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ],
+        "anchor": "middle"
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "anchor ∉ t|ctr|b"
+    }
+   ]
+  },
+  {
+   "name": "text_autofit_spautofit",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ],
+        "autofit": "spAutoFit"
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "autofit=spAutoFit запрещён: PowerPoint/LO раздувают бокс на соседние элементы (наложения). Задайте h с запасом или уменьшите sz"
+    }
+   ]
+  },
+  {
+   "name": "text_autofit_bad",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ],
+        "autofit": "max"
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "autofit ∉ none|norm"
+    }
+   ]
+  },
+  {
+   "name": "table_placeholder",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "table",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "table": {
+         "colW": [
+          400
+         ],
+         "rows": [
+          [
+           {
+            "text": "XX%"
+           }
+          ]
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "msg": "плейсхолдер в таблице: «XX%»"
+    }
+   ]
+  },
+  {
+   "name": "chart_title_placeholder",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "c",
+        "type": "chart",
+        "bounds": [
+         60,
+         60,
+         400,
+         300
+        ],
+        "chart": {
+         "kind": "bar",
+         "series": [
+          {
+           "values": [
+            1
+           ]
+          }
+         ],
+         "title": "TBD"
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "msg": "плейсхолдер в заголовке чарта: «TBD»"
+    }
+   ]
+  },
+  {
+   "name": "image_count_over",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im0",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im1",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im2",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im3",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im4",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im5",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im6",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im7",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "im8",
+        "type": "image",
+        "src": "media/pic.png",
+        "bounds": [
+         10,
+         10,
+         50,
+         50
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": []
+  },
+  {
+   "name": "ok_clean",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Чистый заголовок",
+            "sz": 28,
+            "b": true,
+            "color": "#FFFFFF"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": []
+  },
+  {
+   "name": "element_not_object",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       "строка вместо объекта"
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "элемент — не объект"
+    }
+   ]
+  },
+  {
+   "name": "type_unknown",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "v",
+        "type": "video",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": "slide-01.json",
+     "el": "1",
+     "msg": "type \"video\" ∉ shape|text|image|chart|table"
+    }
+   ]
+  },
+  {
+   "name": "too_many_pages",
+   "pages": [
+    {
+     "file": "slide-00.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-02.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-03.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-04.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-05.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-06.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-07.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-08.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-09.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-10.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-11.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-12.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-13.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-14.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-15.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-16.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-17.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-18.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-19.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-20.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-21.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-22.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-23.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-24.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-25.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-26.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-27.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-28.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-29.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-30.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-31.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-32.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-33.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-34.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-35.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-36.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-37.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-38.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-39.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-40.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-41.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-42.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-43.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-44.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-45.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-46.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-47.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-48.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-49.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-50.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-51.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-52.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-53.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-54.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-55.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-56.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-57.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-58.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-59.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "file": "slide-60.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         66,
+         60,
+         900,
+         70
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "x",
+            "sz": 18,
+            "b": false
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "expected": [
+    {
+     "page": null,
+     "msg": "страниц 61 > 60"
+    }
+   ]
+  }
+ ]
+}

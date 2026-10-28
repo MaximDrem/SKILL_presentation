@@ -1,0 +1,360 @@
+{
+ "oracle": "SKILL_WORK v3.2.1 (oracle; production — CJS/PptxGenJS 4.0.1)",
+ "python": "3.12.13",
+ "deps": {
+  "pptx": "1.0.2",
+  "PIL": "12.1.1",
+  "lxml": "6.1.1",
+  "numpy": "2.4.6"
+ },
+ "bundle_version": "4.0.0",
+ "modules": [
+  {
+   "file": "tools/deck.py",
+   "sha1": "00ed6532a3ca3fab34d5c2610a36a6729af1d2cd",
+   "lines": 54
+  },
+  {
+   "file": "tools/helpers/__init__.py",
+   "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+   "lines": 0
+  },
+  {
+   "file": "tools/helpers/consts.py",
+   "sha1": "eed6e16a45bf5d5cb4ce4a6676dd113ea6a92ac2",
+   "lines": 35
+  },
+  {
+   "file": "tools/helpers/errors.py",
+   "sha1": "62c4c470fc9378b5d6291cef6d3e2a936bcb6749",
+   "lines": 19
+  },
+  {
+   "file": "tools/helpers/render.py",
+   "sha1": "388a7a71373e97c2d7d18ecc173aac625d529a21",
+   "lines": 330
+  },
+  {
+   "file": "tools/helpers/typical.py",
+   "sha1": "7c1f3db0223523bff203a2a956534b8ba684597b",
+   "lines": 148
+  },
+  {
+   "file": "tools/helpers/xmlutil.py",
+   "sha1": "f54b8b792e100c2c449018b162754a2b3cbf62de",
+   "lines": 132
+  },
+  {
+   "file": "tools/helpers/build_templates/__init__.py",
+   "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+   "lines": 0
+  },
+  {
+   "file": "tools/helpers/build_templates/calibrate_widths.py",
+   "sha1": "c1aa659e7a9accc06f9a9c341fe2a48e8f071400",
+   "lines": 164
+  },
+  {
+   "file": "tools/helpers/build_templates/get_all_photos.py",
+   "sha1": "6b48a55eac89b9edc673b7204c542b9f77556781",
+   "lines": 145
+  },
+  {
+   "file": "tools/helpers/build_templates/labels.py",
+   "sha1": "d40c4773bffe908cd66ccb2be75a6f7a54601736",
+   "lines": 378
+  },
+  {
+   "file": "tools/helpers/build_templates/picto_svg.py",
+   "sha1": "e27e428386438af8782a19b1cbff0de92791bebd",
+   "lines": 229
+  },
+  {
+   "file": "tools/helpers/build_templates/prepare_templates.py",
+   "sha1": "80d043e4a9bede17acd8aeffcf794b692ddb4638",
+   "lines": 584
+  },
+  {
+   "file": "tools/helpers/builder/__init__.py",
+   "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+   "lines": 0
+  },
+  {
+   "file": "tools/helpers/builder/charwidths.py",
+   "sha1": "46fc78246ef53f4bab2afd37302dbcfd4656adc5",
+   "lines": 17
+  },
+  {
+   "file": "tools/helpers/builder/cli.py",
+   "sha1": "aad3856efe33ed096a091291beb022646af0c97b",
+   "lines": 480
+  },
+  {
+   "file": "tools/helpers/builder/decor.py",
+   "sha1": "9ec42f4463bb733356a3d65a9b4d5ec79d784f52",
+   "lines": 88
+  },
+  {
+   "file": "tools/helpers/builder/elements.py",
+   "sha1": "feed272bc228e4564a3def40c55616d73fc6bb18",
+   "lines": 310
+  },
+  {
+   "file": "tools/helpers/builder/overlap.py",
+   "sha1": "0b39b295921296bbd9e915c9cd405f5c79fff240",
+   "lines": 289
+  },
+  {
+   "file": "tools/helpers/builder/proto.py",
+   "sha1": "d7b3bf3fe588155934987d497152788df29ae5d6",
+   "lines": 87
+  },
+  {
+   "file": "tools/helpers/builder/qa.py",
+   "sha1": "103657bb898980eb93eec8246d97250742d430f6",
+   "lines": 212
+  },
+  {
+   "file": "tools/helpers/builder/svgshape.py",
+   "sha1": "585dbf0996f638b59bb9d9d38057fc1cfbd2a3d8",
+   "lines": 147
+  },
+  {
+   "file": "tools/helpers/builder/textfit.py",
+   "sha1": "f9ced6ba9379a1c21fa88995d3c15268f08a3cb6",
+   "lines": 325
+  },
+  {
+   "file": "tools/helpers/builder/validate.py",
+   "sha1": "b9892a3c7c83024dd3312ea447c4587525ed42cd",
+   "lines": 353
+  },
+  {
+   "file": "tools/helpers/unpack/__init__.py",
+   "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+   "lines": 0
+  },
+  {
+   "file": "tools/helpers/unpack/cli.py",
+   "sha1": "9061539cf098d9e0725f51f4678e320d5ce39155",
+   "lines": 762
+  },
+  {
+   "file": "tools/helpers/unpack/colors.py",
+   "sha1": "dbc626c235bb397fd7a117edc63ab1abd3219900",
+   "lines": 226
+  },
+  {
+   "file": "tools/helpers/unpack/elements.py",
+   "sha1": "9cce1451fadaa89f4b5d15f8251ad1b90571af66",
+   "lines": 461
+  },
+  {
+   "file": "tools/helpers/unpack/grammar.py",
+   "sha1": "f94e33da2dfd2cf6785c69df780f23c01d01f16b",
+   "lines": 152
+  },
+  {
+   "file": "tools/helpers/unpack/image.py",
+   "sha1": "40e7b298b8bf61bd8df8376756b1c239d3333c1a",
+   "lines": 83
+  },
+  {
+   "file": "tools/helpers/unpack/md.py",
+   "sha1": "b818a200d8e4f5f94b0d1b02f7967602da155fab",
+   "lines": 102
+  },
+  {
+   "file": "tools/helpers/unpack/ooxml.py",
+   "sha1": "2aa0d37f2e76578ab288d1249707c9073d1f4f07",
+   "lines": 135
+  },
+  {
+   "file": "tools/helpers/unpack/styles.py",
+   "sha1": "bc93b7734a31ecb914d4cf9d6d460c98818274eb",
+   "lines": 72
+  },
+  {
+   "file": "tools/helpers/unpack/text.py",
+   "sha1": "641dd77d59562e80e9bd370d2b5178665b1a6f2d",
+   "lines": 168
+  }
+ ],
+ "tests": {
+  "names": [
+   "t_autofit_norm_skips",
+   "t_build_merge_and_shadow",
+   "t_build_no_theme_blank",
+   "t_build_no_theme_explicit_bg",
+   "t_build_theme_copies_and_no_warn",
+   "t_chart_axes_scaling_and_vary_colors",
+   "t_check_collects_all_bad_json",
+   "t_check_integration",
+   "t_check_missing_pages",
+   "t_check_no_theme_warns",
+   "t_font_k_wider",
+   "t_height_plain",
+   "t_height_wrap_w_option",
+   "t_junk_no_crash",
+   "t_overlap_anchor_b",
+   "t_overlap_empty_paras",
+   "t_overlap_hard_classes",
+   "t_overlap_text_shape",
+   "t_proto_defaults",
+   "t_qa_aspect_and_upscale",
+   "t_shorten_clamp",
+   "t_textfit_never_grows_into_neighbor",
+   "t_unpack_atlas_shape",
+   "t_unpack_corrupt",
+   "t_validate_bounds_missing",
+   "t_validate_canvas_defaults",
+   "t_validate_cell_color",
+   "t_validate_gradient_color",
+   "t_validate_image_shadow",
+   "t_validate_sz_range",
+   "t_width_sz_sane",
+   "t_width_token"
+  ],
+  "count": 32,
+  "exit": 0,
+  "stdout_tail": "ВСЕ ТЕСТЫ ЗЕЛЁНЫЕ"
+ },
+ "cli": {
+  "build": "build <projectDir> --out <deck.pptx> [--theme dark|light] [--template <ref.pptx> --ref <name>-ref/] [--app <path>]",
+  "check": "check <projectDir> [--theme dark|light] [--template <ref.pptx> --ref <name>-ref/]",
+  "unpack": "unpack <ref.pptx> --out <dir> [--render | --shots <dir>] [--with-pages]",
+  "extra_flags": [
+   "--no-decor-thumbs",
+   "--render-bin",
+   "--render-app"
+  ],
+  "env": [
+   "DECK_SKIP_RENDER",
+   "DECK_DEBUG",
+   "GIGATOOL_NODE",
+   "GIGATOOL_APP_PATH",
+   "GIGATOOL_RENDERER_URL"
+  ]
+ },
+ "goldens": {
+  "build-pptx/blank-text.pptx": 28417,
+  "build-pptx/charts.pptx": 53872,
+  "build-pptx/climate-multi-chart.pptx": 50049,
+  "build-pptx/clone-tiny.pptx": 30270,
+  "build-pptx/dark-text.pptx": 2981447,
+  "build-pptx/elements-all.pptx": 32895,
+  "build-pptx/explicit-bg.pptx": 29472,
+  "build-pptx/light-text.pptx": 6078103,
+  "build-pptx/merge-shadow.pptx": 28989,
+  "unit/colors.json": 4820,
+  "unit/grammar.json": 7177,
+  "unit/image_info.json": 2687,
+  "unit/numbers.json": 3446,
+  "unit/overlap.json": 29132,
+  "unit/proto.json": 9653,
+  "unit/qa.json": 17643,
+  "unit/styles.json": 827,
+  "unit/svgshape.json": 3111,
+  "unit/text_parse.json": 4091,
+  "unit/textfit.json": 29106,
+  "unit/typical.json": 6591,
+  "unit/validate.json": 86136,
+  "build/blank-text.canon.txt": 242463,
+  "build/charts.canon.txt": 414385,
+  "build/climate-multi-chart.canon.txt": 409686,
+  "build/clone-tiny.canon.txt": 251307,
+  "build/dark-text.canon.txt": 446305,
+  "build/elements-all.canon.txt": 364747,
+  "build/explicit-bg.canon.txt": 247274,
+  "build/light-text.canon.txt": 685203,
+  "build/merge-shadow.canon.txt": 247967,
+  "unpack/roundtrip-clone-tiny/STYLE.md": 1699,
+  "unpack/roundtrip-clone-tiny/_source.json": 76,
+  "unpack/roundtrip-clone-tiny/fonts.json": 146,
+  "unpack/roundtrip-clone-tiny/media-map.json": 401,
+  "unpack/roundtrip-clone-tiny/proto.json": 198,
+  "unpack/roundtrip-clone-tiny/style.json": 1199,
+  "unpack/roundtrip-clone-tiny/pages/slide-01.json": 724,
+  "unpack/roundtrip-clone-tiny/pages/slide-02.json": 588,
+  "unpack/roundtrip-charts/STYLE.md": 1584,
+  "unpack/roundtrip-charts/_source.json": 76,
+  "unpack/roundtrip-charts/fonts.json": 126,
+  "unpack/roundtrip-charts/media-map.json": 44,
+  "unpack/roundtrip-charts/proto.json": 208,
+  "unpack/roundtrip-charts/style.json": 1093,
+  "unpack/roundtrip-charts/pages/slide-01.json": 679,
+  "unpack/roundtrip-charts/pages/slide-02.json": 881,
+  "unpack/roundtrip-elements-all/STYLE.md": 4471,
+  "unpack/roundtrip-elements-all/_source.json": 76,
+  "unpack/roundtrip-elements-all/fonts.json": 169,
+  "unpack/roundtrip-elements-all/media-map.json": 400,
+  "unpack/roundtrip-elements-all/proto.json": 209,
+  "unpack/roundtrip-elements-all/style.json": 1309,
+  "unpack/roundtrip-elements-all/pages/slide-01.json": 2050,
+  "unpack/roundtrip-elements-all/pages/slide-02.json": 4735,
+  "unpack/default_light/STYLE.md": 18051,
+  "unpack/default_light/_source.json": 80,
+  "unpack/default_light/fonts.json": 369,
+  "unpack/default_light/media-map.json": 92966,
+  "unpack/default_light/proto.json": 5516,
+  "unpack/default_light/style.json": 3732,
+  "unpack/tiny-clone/STYLE.md": 2601,
+  "unpack/tiny-clone/_source.json": 76,
+  "unpack/tiny-clone/fonts.json": 173,
+  "unpack/tiny-clone/media-map.json": 749,
+  "unpack/tiny-clone/proto.json": 488,
+  "unpack/tiny-clone/style.json": 1320,
+  "unpack/tiny-clone/pages/slide-01.json": 756,
+  "unpack/tiny-clone/pages/slide-02.json": 1270,
+  "unpack/tiny-clone/pages/slide-03.json": 731,
+  "unpack/tiny-clone/pages/slide-04.json": 816,
+  "unpack/tiny-clone/pages/slide-05.json": 1030,
+  "unpack/default_dark/STYLE.md": 18435,
+  "unpack/default_dark/_source.json": 80,
+  "unpack/default_dark/fonts.json": 724,
+  "unpack/default_dark/media-map.json": 90894,
+  "unpack/default_dark/proto.json": 5643,
+  "unpack/default_dark/style.json": 4127,
+  "unpack/roundtrip-blank-text/STYLE.md": 1534,
+  "unpack/roundtrip-blank-text/_source.json": 76,
+  "unpack/roundtrip-blank-text/fonts.json": 146,
+  "unpack/roundtrip-blank-text/media-map.json": 48,
+  "unpack/roundtrip-blank-text/proto.json": 106,
+  "unpack/roundtrip-blank-text/style.json": 1164,
+  "unpack/roundtrip-blank-text/pages/slide-01.json": 574,
+  "cli/build-blank-text.json": 996,
+  "cli/build-charts.json": 316,
+  "cli/build-climate-multi-chart.json": 711,
+  "cli/build-clone-tiny.json": 473,
+  "cli/build-dark-text.json": 348,
+  "cli/build-elements-all.json": 334,
+  "cli/build-explicit-bg.json": 331,
+  "cli/build-light-text.json": 660,
+  "cli/build-merge-shadow.json": 675,
+  "cli/build-render-fail.json": 1245,
+  "cli/check-bad-json.json": 1030,
+  "cli/check-clone-ok.json": 464,
+  "cli/check-empty-pages.json": 342,
+  "cli/check-missing-atlas.json": 577,
+  "cli/check-missing-pages.json": 1325,
+  "cli/check-missing-project.json": 344,
+  "cli/check-no-theme-warn.json": 941,
+  "cli/check-pageorder.json": 792,
+  "cli/check-proto-miss-clone.json": 1325,
+  "cli/check-stale-atlas.json": 584,
+  "cli/check-template-without-ref.json": 467,
+  "cli/check-theme-bad.json": 349,
+  "cli/check-theme-dark.json": 295,
+  "cli/check-theme-with-template.json": 500,
+  "cli/unpack-corrupt.json": 357,
+  "cli/unpack-missing-file.json": 266,
+  "cli/unpack-render-shots-conflict.json": 470,
+  "cli/unpack-usage.json": 434,
+  "cli/usage-badcmd.json": 411,
+  "cli/usage-noargs.json": 400,
+  "build-pptx/chart-edges.pptx": 54859,
+  "build-pptx/clone-43.pptx": 29268,
+  "build/chart-edges.canon.txt": 501119,
+  "build/clone-43.canon.txt": 245422
+ }
+}

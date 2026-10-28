@@ -1,0 +1,238 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "elements": [
+  {
+   "id": "title2",
+   "type": "chart",
+   "bounds": [
+    60,
+    90,
+    560,
+    280
+   ],
+   "chart": {
+    "kind": "pie",
+    "title": "Доля\nрынка",
+    "series": [
+     {
+      "name": "S",
+      "categories": [
+       "А",
+       "Б"
+      ],
+      "values": [
+       30.5,
+       69.5
+      ]
+     }
+    ],
+    "legend": true
+   }
+  },
+  {
+   "id": "wide",
+   "type": "chart",
+   "bounds": [
+    660,
+    90,
+    560,
+    280
+   ],
+   "chart": {
+    "kind": "line",
+    "series": [
+     {
+      "name": "R1",
+      "values": [
+       1,
+       2
+      ]
+     },
+     {
+      "name": "R2",
+      "values": [
+       2,
+       3
+      ]
+     },
+     {
+      "name": "R3",
+      "values": [
+       3,
+       4
+      ]
+     },
+     {
+      "name": "R4",
+      "values": [
+       4,
+       5
+      ]
+     },
+     {
+      "name": "R5",
+      "values": [
+       5,
+       6
+      ]
+     },
+     {
+      "name": "R6",
+      "values": [
+       6,
+       7
+      ]
+     },
+     {
+      "name": "R7",
+      "values": [
+       7,
+       8
+      ]
+     },
+     {
+      "name": "R8",
+      "values": [
+       8,
+       9
+      ]
+     },
+     {
+      "name": "R9",
+      "values": [
+       9,
+       10
+      ]
+     },
+     {
+      "name": "R10",
+      "values": [
+       10,
+       11
+      ]
+     },
+     {
+      "name": "R11",
+      "values": [
+       11,
+       12
+      ]
+     },
+     {
+      "name": "R12",
+      "values": [
+       12,
+       13
+      ]
+     },
+     {
+      "name": "R13",
+      "values": [
+       13,
+       14
+      ]
+     },
+     {
+      "name": "R14",
+      "values": [
+       14,
+       15
+      ]
+     },
+     {
+      "name": "R15",
+      "values": [
+       15,
+       16
+      ]
+     },
+     {
+      "name": "R16",
+      "values": [
+       16,
+       17
+      ]
+     },
+     {
+      "name": "R17",
+      "values": [
+       17,
+       18
+      ]
+     },
+     {
+      "name": "R18",
+      "values": [
+       18,
+       19
+      ]
+     },
+     {
+      "name": "R19",
+      "values": [
+       19,
+       20
+      ]
+     },
+     {
+      "name": "R20",
+      "values": [
+       20,
+       21
+      ]
+     },
+     {
+      "name": "R21",
+      "values": [
+       21,
+       22
+      ]
+     },
+     {
+      "name": "R22",
+      "values": [
+       22,
+       23
+      ]
+     },
+     {
+      "name": "R23",
+      "values": [
+       23,
+       24
+      ]
+     },
+     {
+      "name": "R24",
+      "values": [
+       24,
+       25
+      ]
+     },
+     {
+      "name": "R25",
+      "values": [
+       25,
+       26
+      ]
+     },
+     {
+      "name": "R26",
+      "values": [
+       26,
+       27
+      ]
+     },
+     {
+      "name": "R27",
+      "values": [
+       27,
+       28
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/bad-json",
+  "--template",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/tiny-clone.pptx",
+  "--ref",
+  "/tmp/oracle-cli-jp5_xj6n/tiny-ref"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"невалидный JSON в 2 файл(ах)\",\n  \"failures\": [\n    {\n      \"page\": \"slide-01.json\",\n      \"msg\": \"[HARD] невалидный JSON (Expecting property name enclosed in double quotes: line 1 column 2 (char 1)) — перепишите файл целиком\"\n    },\n    {\n      \"page\": \"slide-02.json\",\n      \"msg\": \"[HARD] невалидный JSON (Expecting property name enclosed in double quotes: line 1 column 2 (char 1)) — перепишите файл целиком\"\n    }\n  ],\n  \"suggestion\": \"перепишите все перечисленные pages/*.json целиком (whole-file write) одним шагом и повторите check\"\n}\n"
+}

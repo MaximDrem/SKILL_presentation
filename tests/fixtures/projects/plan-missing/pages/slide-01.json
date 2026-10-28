@@ -1,0 +1,27 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "elements": [
+  {
+   "id": "t",
+   "type": "text",
+   "bounds": [
+    66,
+    60,
+    900,
+    70
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Одна страница",
+       "sz": 28,
+       "color": "#FFFFFF"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

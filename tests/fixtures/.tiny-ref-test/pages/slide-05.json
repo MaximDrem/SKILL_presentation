@@ -1,0 +1,34 @@
+{
+  "slide": 5,
+  "part": "ppt/slides/slide5.xml",
+  "background": {
+    "type": "gradient",
+    "gradient": {
+      "angle": 90,
+      "stops": [
+        {
+          "pos": 0,
+          "color": {
+            "hex": "#0A0F1F"
+          }
+        },
+        {
+          "pos": 1,
+          "color": {
+            "hex": "#1D254D"
+          }
+        }
+      ]
+    },
+    "source": "slide"
+  },
+  "coverageReport": {
+    "recognized": 4,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"78","name":"rect in group","type":"shape","shape":"roundRect","bounds":[60,240,120,60],"coverage":0.008,"fill":{"solid":"#2FE7C466"}},
+    {"id":"79","name":"text in group","type":"text","shape":"rect","bounds":[180,300,120,60],"coverage":0.008,"paragraphs":[{"runs":[{"text":"в группе","sz":14,"font":"Calibri","color":"#000000"}]}]},
+    {"id":"80","name":"Picture 79","type":"image","src":"image2.png","bounds":[900,300,300,200],"coverage":0.065,"opacity":0.6,"srcRect":{"l":0.1,"r":0.1},"mediaClass":"content","reuse":1}
+  ]
+}

@@ -1,0 +1,573 @@
+{
+ "input": [
+  {
+   "id": "5",
+   "name": "Table",
+   "type": "table",
+   "bounds": [
+    60.4,
+    100.6,
+    700.0,
+    240.5
+   ],
+   "table": {
+    "cols": [
+     300,
+     400
+    ],
+    "rows": [
+     {
+      "h": 40,
+      "cells": [
+       {
+        "text": [
+         {
+          "runs": [
+           {
+            "text": "A",
+            "sz": 14.0
+           }
+          ]
+         }
+        ],
+        "fill": "#112233",
+        "anchor": "ctr",
+        "colSpan": 2
+       },
+       {
+        "text": [],
+        "merged": true
+       }
+      ]
+     },
+     {
+      "h": 40,
+      "cells": [
+       {
+        "text": [
+         {
+          "runs": [
+           {
+            "text": "B"
+           }
+          ]
+         }
+        ],
+        "borders": {
+         "l": {
+          "w": 1.0,
+          "color": "#FF0000"
+         }
+        }
+       },
+       {
+        "text": [
+         {
+          "runs": [
+           {
+            "text": "C"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "flags": {
+     "firstRow": false,
+     "lastRow": false,
+     "firstCol": false,
+     "lastCol": false,
+     "bandRow": false,
+     "bandCol": false
+    }
+   },
+   "coverage": 0.182
+  },
+  {
+   "id": "6",
+   "type": "image",
+   "src": "image3.png",
+   "bounds": [
+    10.4,
+    20.6,
+    100.5,
+    50.49
+   ],
+   "flip": [
+    "h",
+    "v"
+   ],
+   "rotation": 15.0,
+   "opacity": 0.6,
+   "coverage": 0.005
+  },
+  {
+   "id": "7",
+   "type": "shape",
+   "shape": "straightConnector1",
+   "bounds": [
+    60.4,
+    100.5,
+    300.0,
+    1.0
+   ],
+   "line": {
+    "w": 1.0
+   },
+   "coverage": 0.0
+  },
+  {
+   "id": "8",
+   "type": "shape",
+   "shape": "roundRect",
+   "bounds": [
+    60,
+    200,
+    500,
+    300
+   ],
+   "fill": {
+    "solid": "#FFFFFF"
+   },
+   "anchor": "ctr",
+   "autofit": "spAutoFit",
+   "coverage": 0.163,
+   "text": [
+    {
+     "runs": [
+      {
+       "text": "внутри карточки",
+       "sz": 16.0,
+       "b": true,
+       "color": "#1A1A1A"
+      }
+     ],
+     "align": "ctr",
+     "lineHeight": 1.2,
+     "spcBef": 6.0
+    }
+   ]
+  },
+  {
+   "id": "9",
+   "type": "text",
+   "bounds": [
+    60,
+    520,
+    500,
+    40
+   ],
+   "autofit": "norm",
+   "coverage": 0.022,
+   "text": [
+    {
+     "runs": [
+      {
+       "text": "обычный текст",
+       "sz": 18.0,
+       "color": {
+        "stops": [
+         {
+          "pos": 0.0,
+          "color": {
+           "hex": "#FF0000"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "text": " два",
+       "i": true,
+       "font": "F"
+      }
+     ],
+     "bullet": "•"
+    },
+    {
+     "runs": [
+      {
+       "text": "второй",
+       "sz": 14.0
+      }
+     ],
+     "bullet": "auto"
+    },
+    {
+     "runs": [
+      {
+       "text": "третий",
+       "sz": 14.0
+      }
+     ],
+     "bullet": "none"
+    },
+    {
+     "runs": [
+      {
+       "text": "четвёртый",
+       "sz": 14.0
+      }
+     ],
+     "lineHeight": "22.5pt"
+    }
+   ]
+  },
+  {
+   "id": "10",
+   "type": "shape",
+   "shape": "rect",
+   "bounds": [
+    900,
+    600,
+    200,
+    100
+   ],
+   "fill": {
+    "none": true
+   },
+   "coverage": 0.022
+  },
+  {
+   "id": "11",
+   "type": "chart",
+   "bounds": [
+    60,
+    60,
+    500,
+    300
+   ],
+   "part": "ppt/charts/chart1.xml",
+   "chart": {
+    "kind": "bar",
+    "series": [
+     {
+      "name": "S",
+      "values": [
+       1.0,
+       2.5
+      ]
+     }
+    ],
+    "colors": [
+     "#2FE7C4"
+    ],
+    "legend": true
+   },
+   "coverage": 0.163
+  }
+ ],
+ "expected": [
+  {
+   "id": "5",
+   "name": "Table",
+   "type": "table",
+   "bounds": [
+    60,
+    101,
+    700,
+    240
+   ],
+   "table": {
+    "rows": [
+     [
+      {
+       "text": "A",
+       "fill": "#112233",
+       "colSpan": 2
+      },
+      {}
+     ],
+     [
+      {
+       "text": "B",
+       "borders": {
+        "l": {
+         "w": 1.0,
+         "color": "#FF0000"
+        }
+       }
+      },
+      {
+       "text": "C"
+      }
+     ]
+    ],
+    "flags": {
+     "firstRow": false,
+     "lastRow": false,
+     "firstCol": false,
+     "lastCol": false,
+     "bandRow": false,
+     "bandCol": false
+    },
+    "colW": [
+     300,
+     400
+    ]
+   },
+   "coverage": 0.182
+  },
+  {
+   "id": "6",
+   "type": "image",
+   "src": "image3.png",
+   "bounds": [
+    10,
+    21,
+    100,
+    50
+   ],
+   "flip": {
+    "h": true,
+    "v": true
+   },
+   "rotation": 15.0,
+   "opacity": 0.6,
+   "coverage": 0.005
+  },
+  {
+   "id": "7",
+   "type": "shape",
+   "shape": "rect",
+   "bounds": [
+    60,
+    100,
+    300,
+    2
+   ],
+   "line": {
+    "w": 1.0
+   },
+   "coverage": 0.0
+  },
+  {
+   "id": "8",
+   "type": "shape",
+   "shape": "roundRect",
+   "bounds": [
+    60,
+    200,
+    500,
+    300
+   ],
+   "fill": {
+    "solid": "#FFFFFF"
+   },
+   "coverage": 0.163
+  },
+  {
+   "type": "text",
+   "id": "8-t",
+   "bounds": [
+    60,
+    200,
+    500,
+    300
+   ],
+   "anchor": "ctr",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "внутри карточки",
+       "sz": 16.0,
+       "b": true,
+       "color": "#1A1A1A"
+      }
+     ],
+     "align": "ctr",
+     "lineHeight": 1.2,
+     "spcBef": 6.0
+    }
+   ],
+   "coverage": 0.163
+  },
+  {
+   "id": "9",
+   "type": "text",
+   "bounds": [
+    60,
+    520,
+    500,
+    40
+   ],
+   "coverage": 0.022,
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "обычный текст",
+       "sz": 18.0,
+       "color": {
+        "stops": [
+         {
+          "pos": 0.0,
+          "color": {
+           "hex": "#FF0000"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "text": " два",
+       "i": true,
+       "font": "F"
+      }
+     ],
+     "bullet": "char",
+     "bulletChar": "•"
+    },
+    {
+     "runs": [
+      {
+       "text": "второй",
+       "sz": 14.0
+      }
+     ]
+    },
+    {
+     "runs": [
+      {
+       "text": "третий",
+       "sz": 14.0
+      }
+     ],
+     "bullet": "none"
+    },
+    {
+     "runs": [
+      {
+       "text": "четвёртый",
+       "sz": 14.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "10",
+   "type": "shape",
+   "shape": "rect",
+   "bounds": [
+    900,
+    600,
+    200,
+    100
+   ],
+   "fill": {
+    "none": true
+   },
+   "coverage": 0.022
+  },
+  {
+   "id": "11",
+   "type": "chart",
+   "bounds": [
+    60,
+    60,
+    500,
+    300
+   ],
+   "part": "ppt/charts/chart1.xml",
+   "chart": {
+    "kind": "bar",
+    "series": [
+     {
+      "name": "S",
+      "values": [
+       1.0,
+       2.5
+      ]
+     }
+    ],
+    "colors": [
+     "#2FE7C4"
+    ],
+    "legend": true
+   },
+   "coverage": 0.163
+  }
+ ],
+ "funcs": {
+  "page_run": {
+   "{\"text\": \"x\", \"sz\": 14.0, \"b\": true, \"color\": \"#aabbcc\"}": {
+    "text": "x",
+    "sz": 14.0,
+    "b": true,
+    "color": "#aabbcc"
+   },
+   "{\"text\": \"y\", \"color\": \"red\"}": {
+    "text": "y"
+   },
+   "{\"text\": \"z\", \"color\": {\"stops\": []}}": {
+    "text": "z",
+    "color": {
+     "stops": []
+    }
+   },
+   "{\"sz\": 14}": null,
+   "null": null,
+   "{\"text\": 5}": null
+  },
+  "page_para": {
+   "{\"runs\": [{\"text\": \"a\"}], \"align\": \"center\"}": {
+    "runs": [
+     {
+      "text": "a"
+     }
+    ]
+   },
+   "{\"runs\": [{\"text\": \"a\"}], \"align\": \"ctr\"}": {
+    "runs": [
+     {
+      "text": "a"
+     }
+    ],
+    "align": "ctr"
+   },
+   "{\"runs\": [{\"text\": \"a\"}], \"bullet\": \"•\"}": {
+    "runs": [
+     {
+      "text": "a"
+     }
+    ],
+    "bullet": "char",
+    "bulletChar": "•"
+   },
+   "{\"runs\": [{\"text\": \"a\"}], \"bullet\": \"auto\"}": {
+    "runs": [
+     {
+      "text": "a"
+     }
+    ]
+   },
+   "{\"runs\": [{\"text\": \"a\"}], \"bullet\": \"none\"}": {
+    "runs": [
+     {
+      "text": "a"
+     }
+    ],
+    "bullet": "none"
+   },
+   "{\"runs\": [{\"text\": \"a\"}], \"lineHeight\": \"22.5pt\"}": {
+    "runs": [
+     {
+      "text": "a"
+     }
+    ]
+   },
+   "{\"runs\": [{\"text\": \"a\"}], \"lineHeight\": \"abc\"}": {
+    "runs": [
+     {
+      "text": "a"
+     }
+    ]
+   },
+   "{\"runs\": []}": null
+  }
+ }
+}

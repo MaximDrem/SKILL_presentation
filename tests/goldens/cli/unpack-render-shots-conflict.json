@@ -1,0 +1,14 @@
+{
+ "argv": [
+  "unpack",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/tiny-clone.pptx",
+  "--out",
+  "/tmp/oracle-cli-jp5_xj6n/x2",
+  "--render",
+  "--shots",
+  "/tmp/oracle-cli-jp5_xj6n/s"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"--render и --shots взаимоисключающи\",\n  \"suggestion\": \"--render: unpack сам вызывает --pptx-verify приложения; --shots: шоты уже готовы\"\n}\n"
+}

@@ -1,0 +1,343 @@
+{
+ "cases": [
+  {
+   "input": {
+    "slide": 3,
+    "part": "ppt/slides/slide3.xml",
+    "background": {
+     "type": "solid",
+     "color": "#0A0F1F",
+     "source": "slide"
+    },
+    "coverageReport": {
+     "recognized": 4,
+     "unrecognized": []
+    },
+    "elements": [
+     {
+      "id": "2",
+      "type": "text",
+      "bounds": [
+       60,
+       40,
+       900,
+       80
+      ],
+      "paragraphs": [
+       {
+        "runs": [
+         {
+          "text": "Настоящий заголовок референса",
+          "sz": 40.0,
+          "b": true,
+          "font": "SB Sans Display",
+          "color": "#FFFFFF"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "3",
+      "type": "text",
+      "bounds": [
+       60,
+       140,
+       700,
+       200
+      ],
+      "paragraphs": [
+       {
+        "runs": [
+         {
+          "text": "Тело с описанием",
+          "sz": 16.0,
+          "color": "#CCCCCC"
+         }
+        ],
+        "bullet": "char",
+        "bulletChar": "—",
+        "lineHeight": 1.2,
+        "spcBef": 6
+       }
+      ]
+     },
+     {
+      "id": "4",
+      "type": "shape",
+      "shape": "roundRect",
+      "bounds": [
+       60,
+       380,
+       360,
+       240
+      ],
+      "fill": {
+       "solid": "#F1F3FF33"
+      },
+      "line": {
+       "w": 1,
+       "color": "#2FE7C4"
+      },
+      "shadow": {
+       "blur": 20,
+       "dist": 4,
+       "dir": 90,
+       "color": "#0B0F14",
+       "token": "soft"
+      }
+     },
+     {
+      "id": "5",
+      "type": "image",
+      "src": "media/image42.png",
+      "bounds": [
+       460,
+       380,
+       200,
+       200
+      ],
+      "mediaClass": "decor"
+     },
+     {
+      "id": "6",
+      "type": "image",
+      "src": "media/photo9.jpg",
+      "bounds": [
+       700,
+       380,
+       400,
+       240
+      ],
+      "mediaClass": "content"
+     },
+     {
+      "id": "7",
+      "type": "text",
+      "bounds": [
+       60,
+       640,
+       300,
+       30
+      ],
+      "bleed": true,
+      "paragraphs": [
+       {
+        "runs": [
+         {
+          "text": "42",
+          "sz": 24.0,
+          "b": true
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "media_class": {
+    "image42.png": "decor",
+    "photo9.jpg": "content"
+   },
+   "expected": {
+    "pageType": "content",
+    "proto": 3,
+    "elements": [
+     {
+      "type": "text",
+      "id": "2",
+      "bounds": [
+       60,
+       40,
+       900,
+       80
+      ],
+      "paragraphs": [
+       {
+        "runs": [
+         {
+          "text": "Заголовок",
+          "sz": 40.0,
+          "b": true,
+          "font": "SB Sans Display",
+          "color": "#FFFFFF"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "text",
+      "id": "3",
+      "bounds": [
+       60,
+       140,
+       700,
+       200
+      ],
+      "paragraphs": [
+       {
+        "runs": [
+         {
+          "text": "Текст",
+          "sz": 16.0,
+          "color": "#CCCCCC"
+         }
+        ],
+        "bullet": "char",
+        "bulletChar": "—",
+        "lineHeight": 1.2,
+        "spcBef": 6
+       }
+      ]
+     },
+     {
+      "type": "shape",
+      "id": "4",
+      "shape": "roundRect",
+      "bounds": [
+       60,
+       380,
+       360,
+       240
+      ],
+      "fill": {
+       "solid": "#F1F3FF33"
+      },
+      "line": {
+       "w": 1,
+       "color": "#2FE7C4"
+      },
+      "shadow": {
+       "blur": 20,
+       "dist": 4,
+       "dir": 90,
+       "color": "#0B0F14",
+       "token": "soft"
+      }
+     },
+     {
+      "type": "image",
+      "src": "media/image42.png",
+      "bounds": [
+       460,
+       380,
+       200,
+       200
+      ]
+     },
+     {
+      "type": "text",
+      "id": "7",
+      "bounds": [
+       60,
+       640,
+       300,
+       30
+      ],
+      "bleed": true,
+      "paragraphs": [
+       {
+        "runs": [
+         {
+          "text": "42",
+          "sz": 24.0,
+          "b": true
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "dump_lines": [
+  "{\"pageType\": \"content\", \"proto\": 3,",
+  " \"elements\": [",
+  "  {\"type\": \"text\", \"id\": \"2\", \"bounds\": [60, 40, 900, 80], \"paragraphs\": [{\"runs\": [{\"text\": \"Заголовок\", \"sz\": 40.0, \"b\": true, \"font\": \"SB Sans Display\", \"color\": \"#FFFFFF\"}]}]},",
+  "  {\"type\": \"text\", \"id\": \"3\", \"bounds\": [60, 140, 700, 200], \"paragraphs\": [{\"runs\": [{\"text\": \"Текст\", \"sz\": 16.0, \"color\": \"#CCCCCC\"}], \"bullet\": \"char\", \"bulletChar\": \"—\", \"lineHeight\": 1.2, \"spcBef\": 6}]},",
+  "  {\"type\": \"shape\", \"id\": \"4\", \"shape\": \"roundRect\", \"bounds\": [60, 380, 360, 240], \"fill\": {\"solid\": \"#F1F3FF33\"}, \"line\": {\"w\": 1, \"color\": \"#2FE7C4\"}, \"shadow\": {\"blur\": 20, \"dist\": 4, \"dir\": 90, \"color\": \"#0B0F14\", \"token\": \"soft\"}},",
+  "  {\"type\": \"image\", \"src\": \"media/image42.png\", \"bounds\": [460, 380, 200, 200]},",
+  "  {\"type\": \"text\", \"id\": \"7\", \"bounds\": [60, 640, 300, 30], \"bleed\": true, \"paragraphs\": [{\"runs\": [{\"text\": \"42\", \"sz\": 24.0, \"b\": true}]}]}",
+  " ]}"
+ ],
+ "funcs": {
+  "dsl_color": {
+   "\"#AABBCC\"": "#AABBCC",
+   "{\"hex\": \"#112233\"}": "#112233",
+   "{\"stops\": [{\"pos\": 0, \"color\": {\"hex\": \"#FF0000\"}}, [0.5, \"#00FF00\"], {\"pos\": 1, \"color\": {\"scheme\": \"accent1\"}}], \"angle\": 90}": {
+    "angle": 90,
+    "stops": [
+     [
+      0,
+      "#FF0000"
+     ],
+     [
+      0.5,
+      "#00FF00"
+     ]
+    ]
+   },
+   "{\"stops\": [{\"pos\": 0, \"color\": {\"scheme\": \"accent1\"}}]}": null,
+   "null": null,
+   "42": null
+  },
+  "dsl_fill": {
+   "{\"none\": true}": {
+    "none": true
+   },
+   "{\"solid\": \"#112233\"}": {
+    "solid": "#112233"
+   },
+   "{\"gradient\": {\"angle\": 45, \"stops\": [{\"pos\": 0, \"color\": {\"hex\": \"#FF0000\"}}]}}": {
+    "gradient": {
+     "angle": 45,
+     "stops": [
+      [
+       0,
+       "#FF0000"
+      ]
+     ]
+    }
+   },
+   "{}": null,
+   "null": null
+  },
+  "clamp_canvas": {
+   "[-50, -20, 200, 100]": [
+    0,
+    0,
+    200,
+    100
+   ],
+   "[1200, 700, 300, 200]": [
+    980,
+    520,
+    300,
+    200
+   ],
+   "[0, 0, 2000, 1000]": [
+    0,
+    0,
+    1280,
+    720
+   ],
+   "[100, 100, 50, 50]": [
+    100,
+    100,
+    50,
+    50
+   ]
+  },
+  "placeholder": {
+   "([0, 0, 900, 0], 40, True)": "Заголовок",
+   "([0, 0, 40, 0], 40, True)": "Aa",
+   "([0, 0, 10, 0], 40, True)": "Aa"
+  },
+  "fits_width": {
+   "Заголовок|40|900": true,
+   "Заголовок|40|100": false
+  }
+ }
+}

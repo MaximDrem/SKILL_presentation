@@ -1,0 +1,194 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "background": {
+  "type": "solid",
+  "color": "#FFFFFF"
+ },
+ "elements": [
+  {
+   "id": "sh0",
+   "type": "shape",
+   "shape": "rect",
+   "bounds": [
+    40,
+    40,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "line": {
+    "w": 2.5,
+    "color": "#F59E0B"
+   },
+   "shadow": "soft",
+   "rotation": 15,
+   "flip": {
+    "h": true
+   }
+  },
+  {
+   "id": "sh1",
+   "type": "shape",
+   "shape": "roundRect",
+   "bounds": [
+    240,
+    40,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   },
+   "adjustments": [
+    25000
+   ]
+  },
+  {
+   "id": "sh2",
+   "type": "shape",
+   "shape": "ellipse",
+   "bounds": [
+    440,
+    40,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   }
+  },
+  {
+   "id": "sh3",
+   "type": "shape",
+   "shape": "triangle",
+   "bounds": [
+    640,
+    40,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   },
+   "rotation": 15
+  },
+  {
+   "id": "sh4",
+   "type": "shape",
+   "shape": "rtTriangle",
+   "bounds": [
+    840,
+    40,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "flip": {
+    "h": true
+   }
+  },
+  {
+   "id": "sh5",
+   "type": "shape",
+   "shape": "parallelogram",
+   "bounds": [
+    1040,
+    40,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   },
+   "line": {
+    "w": 2.5,
+    "color": "#F59E0B"
+   }
+  },
+  {
+   "id": "sh6",
+   "type": "shape",
+   "shape": "trapezoid",
+   "bounds": [
+    40,
+    170,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "rotation": 15
+  },
+  {
+   "id": "sh7",
+   "type": "shape",
+   "shape": "diamond",
+   "bounds": [
+    240,
+    170,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   },
+   "shadow": "soft"
+  },
+  {
+   "id": "sh8",
+   "type": "shape",
+   "shape": "pentagon",
+   "bounds": [
+    440,
+    170,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "flip": {
+    "h": true
+   }
+  },
+  {
+   "id": "sh9",
+   "type": "shape",
+   "shape": "hexagon",
+   "bounds": [
+    640,
+    170,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   },
+   "rotation": 15
+  },
+  {
+   "id": "sh10",
+   "type": "shape",
+   "shape": "heptagon",
+   "bounds": [
+    840,
+    170,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "line": {
+    "w": 2.5,
+    "color": "#F59E0B"
+   }
+  }
+ ]
+}

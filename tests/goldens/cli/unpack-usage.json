@@ -1,0 +1,9 @@
+{
+ "argv": [
+  "unpack",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/tiny-clone.pptx"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"usage: deck.py unpack <ref.pptx> --out <dir> [--render | --shots <dir>] [--with-pages]\",\n  \"suggestion\": \"PYTHONPATH=\\\"<SKILL>/site-packages\\\" \\\"<PY>\\\" \\\"<SKILL>/tools/deck\\\" \\\"unpack\\\" \\\"<ref.pptx>\\\" \\\"--out\\\" \\\"<name>-ref\\\"\"\n}\n"
+}

@@ -1,0 +1,26 @@
+{
+  "slide": 1,
+  "part": "ppt/slides/slide1.xml",
+  "background": {
+    "type": "solid",
+    "color": "#FFFFFF",
+    "source": "slide"
+  },
+  "coverageReport": {
+    "recognized": 11,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"sh0","type":"shape","shape":"rect","bounds":[40,40,180,110],"coverage":0.021,"rotation":15,"fill":{"solid":"#2FE7C499"},"line":{"w":3.3,"color":"#F59E0B"},"shadow":{"blur":20,"dist":4,"dir":90,"color":"#0B0F1438","token":"soft"}},
+    {"id":"3","name":"sh1","type":"shape","shape":"roundRect","adjustments":[25000],"bounds":[240,40,180,110],"coverage":0.021,"fill":{"solid":"#1D254D"}},
+    {"id":"4","name":"sh2","type":"shape","shape":"ellipse","bounds":[440,40,180,110],"coverage":0.021,"fill":{"solid":"#2FE7C499"}},
+    {"id":"5","name":"sh3","type":"shape","shape":"triangle","bounds":[640,40,180,110],"coverage":0.021,"rotation":15,"fill":{"solid":"#1D254D"}},
+    {"id":"6","name":"sh4","type":"shape","shape":"rtTriangle","bounds":[840,40,180,110],"coverage":0.021,"fill":{"solid":"#2FE7C499"}},
+    {"id":"7","name":"sh5","type":"shape","shape":"parallelogram","bounds":[1040,40,180,110],"coverage":0.021,"fill":{"solid":"#1D254D"},"line":{"w":3.3,"color":"#F59E0B"}},
+    {"id":"8","name":"sh6","type":"shape","shape":"trapezoid","bounds":[40,170,180,110],"coverage":0.021,"rotation":15,"fill":{"solid":"#2FE7C499"}},
+    {"id":"9","name":"sh7","type":"shape","shape":"diamond","bounds":[240,170,180,110],"coverage":0.021,"fill":{"solid":"#1D254D"},"shadow":{"blur":20,"dist":4,"dir":90,"color":"#0B0F1438","token":"soft"}},
+    {"id":"10","name":"sh8","type":"shape","shape":"pentagon","bounds":[440,170,180,110],"coverage":0.021,"fill":{"solid":"#2FE7C499"}},
+    {"id":"11","name":"sh9","type":"shape","shape":"hexagon","bounds":[640,170,180,110],"coverage":0.021,"rotation":15,"fill":{"solid":"#1D254D"}},
+    {"id":"12","name":"sh10","type":"shape","shape":"heptagon","bounds":[840,170,180,110],"coverage":0.021,"fill":{"solid":"#2FE7C499"},"line":{"w":3.3,"color":"#F59E0B"}}
+  ]
+}

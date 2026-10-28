@@ -1,0 +1,602 @@
+{
+ "theme": "dark",
+ "source": "default_dark.pptx",
+ "protoSlides": [
+  1,
+  2,
+  3,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  56
+ ],
+ "autoProto": {
+  "byPageType": {
+   "cover": 1,
+   "divider": 18,
+   "content": 22,
+   "closing": 56
+  },
+  "table": 44,
+  "chart": 47
+ },
+ "branding": {
+  "slides": {
+   "1": null,
+   "2": null,
+   "3": null,
+   "18": null,
+   "19": null,
+   "20": null,
+   "21": [
+    89,
+    74,
+    221,
+    35
+   ],
+   "22": null,
+   "23": null,
+   "24": null,
+   "25": null,
+   "26": null,
+   "27": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "28": null,
+   "30": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "31": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "32": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "33": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "34": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "35": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "36": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "37": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "38": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "39": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "40": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "41": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "42": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "43": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "44": null,
+   "45": null,
+   "46": null,
+   "47": null,
+   "48": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "49": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "50": null,
+   "51": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "52": [
+    52,
+    32,
+    149,
+    24
+   ],
+   "53": null,
+   "56": null
+  }
+ },
+ "protoMeta": {
+  "1": {
+   "arch": "image2.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "2": {
+   "arch": "image9.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "3": {
+   "arch": "image9.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "18": {
+   "arch": "image5.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "19": {
+   "arch": "image6.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "20": {
+   "arch": "image7.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "21": {
+   "arch": "image3.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "22": {
+   "arch": "image8.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "23": {
+   "arch": "image11.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "24": {
+   "arch": "image9.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "25": {
+   "arch": "image3.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "26": {
+   "arch": "image10.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "27": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "28": {
+   "arch": "image12.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "30": {
+   "arch": "image19.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "31": {
+   "arch": "image20.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "32": {
+   "arch": "image21.jpg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "33": {
+   "arch": "image22.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "34": {
+   "arch": "image21.jpg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "35": {
+   "arch": "image22.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "36": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "37": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "38": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "39": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "40": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "41": {
+   "arch": "image15.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "42": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "43": {
+   "arch": "image15.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "44": {
+   "arch": "image9.jpeg",
+   "degraded": null,
+   "table": true,
+   "chart": false
+  },
+  "45": {
+   "arch": "image9.jpeg",
+   "degraded": null,
+   "table": true,
+   "chart": false
+  },
+  "46": {
+   "arch": "image9.jpeg",
+   "degraded": null,
+   "table": true,
+   "chart": false
+  },
+  "47": {
+   "arch": "image9.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": true
+  },
+  "48": {
+   "arch": "image15.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": true
+  },
+  "49": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": true
+  },
+  "50": {
+   "arch": "image11.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "51": {
+   "arch": "image16.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "52": {
+   "arch": "image17.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "53": {
+   "arch": "image12.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  },
+  "56": {
+   "arch": "image3.jpeg",
+   "degraded": null,
+   "table": false,
+   "chart": false
+  }
+ },
+ "style": {
+  "file": "default_dark.pptx",
+  "slideCount": 56,
+  "slideSizeEMU": [
+   12192000,
+   6858000
+  ],
+  "canvas": [
+   1280,
+   720
+  ],
+  "elementsOrder": "z-order: elements[0] — самый нижний",
+  "theme": {
+   "colors": {
+    "dk1": "000000",
+    "lt1": "FFFFFF",
+    "dk2": "0D0658",
+    "lt2": "ED692B",
+    "accent1": "00ADEE",
+    "accent2": "20BA71",
+    "accent3": "A0E720",
+    "accent4": "2F97AD",
+    "accent5": "64E9E9",
+    "accent6": "FAED00",
+    "hlink": "33AC8B",
+    "folHlink": "00A523"
+   },
+   "clrMap": {
+    "bg1": "lt1",
+    "tx1": "dk1",
+    "bg2": "lt2",
+    "tx2": "dk2",
+    "accent1": "accent1",
+    "accent2": "accent2",
+    "accent3": "accent3",
+    "accent4": "accent4",
+    "accent5": "accent5",
+    "accent6": "accent6",
+    "hlink": "hlink",
+    "folHlink": "folHlink"
+   },
+   "fonts": {
+    "major": "SB Sans Display",
+    "minor": "SB Sans Text"
+   },
+   "embeddedFonts": [
+    "font2.fntdata",
+    "font1.fntdata",
+    "font17.fntdata",
+    "font16.fntdata",
+    "font15.fntdata",
+    "font14.fntdata",
+    "font13.fntdata",
+    "font12.fntdata",
+    "font11.fntdata",
+    "font10.fntdata",
+    "font9.fntdata",
+    "font8.fntdata",
+    "font7.fntdata",
+    "font6.fntdata",
+    "font5.fntdata",
+    "font4.fntdata",
+    "font3.fntdata"
+   ]
+  },
+  "style": {
+   "fonts": {
+    "SB Sans Text Light": 316,
+    "SB Sans Display Semibold": 217,
+    "SB Sans Display": 180,
+    "SB Sans Text": 110,
+    "SB Sans Display Light": 82,
+    "SB Sans Text Semibold": 16,
+    "SBSansDisplay-Light": 7
+   },
+   "fontSizes": {
+    "8": 42,
+    "9": 10,
+    "10": 30,
+    "11": 88,
+    "12": 115,
+    "14": 307,
+    "16": 24,
+    "18": 105,
+    "20": 12,
+    "28": 17,
+    "36": 101,
+    "48": 29,
+    "50": 7,
+    "80": 9,
+    "10.5": 9
+   },
+   "textColors": {
+    "#FFFFFF": 778,
+    "#62ECFF": 36,
+    "#56FF71": 33,
+    "#000000": 16,
+    "#BFBFBF": 15,
+    "#333F48": 5,
+    "#FF3256": 5,
+    "#000333": 2
+   },
+   "shapeFills": {
+    "#000000": 334,
+    "#FFFFFF": 255,
+    "#FFFFFF26": 14,
+    "#56FF71": 13,
+    "#62ECFF": 4,
+    "#FFFFFF21": 4,
+    "#1032A1": 1,
+    "#0882FF": 1,
+    "#ADFFC6": 1,
+    "#BAFFFB": 1,
+    "#FF3256": 1,
+    "#50FA38": 1,
+    "#49F751": 1,
+    "#42F26D": 1,
+    "#37ED90": 1
+   },
+   "gradients": {
+    "{\"angle\":210,\"stops\":[{\"pos\":0,\"color\":{\"hex\":\"#F1F3FF33\",\"scheme\":\"accent1\"}},{\"pos\":1,\"color\":{\"hex\":\"#FFFFFF00\",\"scheme\":\"bg1\"}}]}": 7,
+    "{\"angle\":45,\"stops\":[{\"pos\":0,\"color\":{\"hex\":\"#F1F3FF33\",\"scheme\":\"accent1\"}},{\"pos\":1,\"color\":{\"hex\":\"#FFFFFF00\",\"scheme\":\"bg1\"}}]}": 5,
+    "{\"angle\":45,\"stops\":[{\"pos\":0,\"color\":{\"hex\":\"#F1F3FF33\",\"scheme\":\"accent1\"}},{\"pos\":1,\"color\":{\"hex\":\"#FFFFFF0D\",\"scheme\":\"bg1\"}}]}": 4,
+    "{\"angle\":230,\"stops\":[{\"pos\":0.35,\"color\":{\"hex\":\"#56FF71\"}},{\"pos\":1,\"color\":{\"hex\":\"#56FF71\"}}]}": 3,
+    "{\"angle\":null,\"stops\":[{\"pos\":0.48,\"color\":{\"hex\":\"#64E9E900\",\"scheme\":\"accent5\"}},{\"pos\":0.84,\"color\":{\"hex\":\"#64E9E9\",\"scheme\":\"accent5\"}}]}": 2,
+    "{\"angle\":175,\"stops\":[{\"pos\":0.37,\"color\":{\"hex\":\"#56FF71\"}},{\"pos\":1,\"color\":{\"hex\":\"#000000\",\"scheme\":\"tx1\"}}]}": 2,
+    "{\"angle\":175,\"stops\":[{\"pos\":0.51,\"color\":{\"hex\":\"#62ECFF\"}},{\"pos\":1,\"color\":{\"hex\":\"#000000\",\"scheme\":\"tx1\"}}]}": 2,
+    "{\"angle\":175,\"stops\":[{\"pos\":0.74,\"color\":{\"hex\":\"#1532A1\"}},{\"pos\":1,\"color\":{\"hex\":\"#000000\",\"scheme\":\"tx1\"}}]}": 2,
+    "{\"angle\":359.9,\"stops\":[{\"pos\":0,\"color\":{\"hex\":\"#5BFC1F\"}},{\"pos\":1,\"color\":{\"hex\":\"#0FDEF7\"}}]}": 1,
+    "{\"angle\":null,\"stops\":[{\"pos\":0,\"color\":{\"hex\":\"#A0E72019\"}},{\"pos\":0.3,\"color\":{\"hex\":\"#4BE87B29\"}},{\"pos\":0.6,\"color\":{\"hex\":\"#42E3B447\"}},{\"pos\":1,\"color\":{\"hex\":\"#7AC0FF4F\"}}]}": 1
+   }
+  }
+ },
+ "fonts": {
+  "fonts": {
+   "SB Sans Text Light": 316,
+   "SB Sans Display Semibold": 217,
+   "SB Sans Display": 180,
+   "SB Sans Text": 110,
+   "SB Sans Display Light": 82,
+   "SB Sans Text Semibold": 16,
+   "SBSansDisplay-Light": 7
+  },
+  "theme": {
+   "major": "SB Sans Display",
+   "minor": "SB Sans Text"
+  },
+  "embedded": true,
+  "embeddedFonts": [
+   "font2.fntdata",
+   "font1.fntdata",
+   "font17.fntdata",
+   "font16.fntdata",
+   "font15.fntdata",
+   "font14.fntdata",
+   "font13.fntdata",
+   "font12.fntdata",
+   "font11.fntdata",
+   "font10.fntdata",
+   "font9.fntdata",
+   "font8.fntdata",
+   "font7.fntdata",
+   "font6.fntdata",
+   "font5.fntdata",
+   "font4.fntdata",
+   "font3.fntdata"
+  ]
+ }
+}

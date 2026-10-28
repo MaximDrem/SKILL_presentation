@@ -1,0 +1,70 @@
+{
+  "file": "tiny-clone.pptx",
+  "slideCount": 5,
+  "slideSizeEMU": [
+    12192000,
+    6858000
+  ],
+  "canvas": [
+    1280,
+    720
+  ],
+  "elementsOrder": "z-order: elements[0] — самый нижний",
+  "theme": {
+    "colors": {
+      "dk1": "000000",
+      "lt1": "FFFFFF",
+      "dk2": "1F497D",
+      "lt2": "EEECE1",
+      "accent1": "4F81BD",
+      "accent2": "C0504D",
+      "accent3": "9BBB59",
+      "accent4": "8064A2",
+      "accent5": "4BACC6",
+      "accent6": "F79646",
+      "hlink": "0000FF",
+      "folHlink": "800080"
+    },
+    "clrMap": {
+      "bg1": "lt1",
+      "tx1": "dk1",
+      "bg2": "lt2",
+      "tx2": "dk2",
+      "accent1": "accent1",
+      "accent2": "accent2",
+      "accent3": "accent3",
+      "accent4": "accent4",
+      "accent5": "accent5",
+      "accent6": "accent6",
+      "hlink": "hlink",
+      "folHlink": "folHlink"
+    },
+    "fonts": {
+      "major": "Calibri",
+      "minor": "Calibri"
+    },
+    "embeddedFonts": []
+  },
+  "style": {
+    "fonts": {
+      "Calibri": 14,
+      "SB Sans Display": 1
+    },
+    "fontSizes": {
+      "13": 7,
+      "14": 1,
+      "16": 5,
+      "28": 1,
+      "54": 1
+    },
+    "textColors": {
+      "#000000": 12,
+      "#FFFFFF": 2,
+      "#1A5BD7": 1
+    },
+    "shapeFills": {
+      "#2FE7C466": 1
+    },
+    "gradients": {}
+  }
+}

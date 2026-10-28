@@ -1,0 +1,84 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "background": {
+  "type": "solid",
+  "color": "#0A0F1F"
+ },
+ "elements": [
+  {
+   "id": "ln",
+   "type": "chart",
+   "bounds": [
+    60,
+    90,
+    1160,
+    300
+   ],
+   "chart": {
+    "kind": "line",
+    "legend": true,
+    "title": "Динамика",
+    "series": [
+     {
+      "name": "Выручка",
+      "categories": [
+       "Янв",
+       "Фев",
+       "Мар"
+      ],
+      "values": [
+       1.5,
+       2.5,
+       3.25
+      ]
+     },
+     {
+      "name": "Расходы",
+      "values": [
+       2.0,
+       1.0,
+       4.5
+      ]
+     }
+    ],
+    "colors": [
+     "#2FE7C4",
+     "#F59E0B"
+    ]
+   }
+  },
+  {
+   "id": "dn",
+   "type": "chart",
+   "bounds": [
+    60,
+    420,
+    1160,
+    260
+   ],
+   "chart": {
+    "kind": "doughnut",
+    "series": [
+     {
+      "categories": [
+       "X",
+       "Y",
+       "Z"
+      ],
+      "values": [
+       30,
+       45,
+       25
+      ]
+     }
+    ],
+    "colors": [
+     "#2FE7C4",
+     "#F59E0B",
+     "#8B1A1A"
+    ]
+   }
+  }
+ ]
+}

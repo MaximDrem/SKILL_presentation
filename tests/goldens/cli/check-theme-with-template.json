@@ -1,0 +1,15 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/clone-tiny",
+  "--template",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/tiny-clone.pptx",
+  "--ref",
+  "/tmp/oracle-cli-jp5_xj6n/tiny-ref",
+  "--theme",
+  "dark"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"--theme только для create (без --template/--ref)\",\n  \"suggestion\": \"в clone тему задаёт сам референс-шаблон\"\n}\n"
+}

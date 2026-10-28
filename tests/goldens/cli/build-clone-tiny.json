@@ -1,0 +1,15 @@
+{
+ "argv": [
+  "build",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/clone-tiny",
+  "--template",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/tiny-clone.pptx",
+  "--ref",
+  "/tmp/oracle-cli-jp5_xj6n/tiny-ref",
+  "--out",
+  "/tmp/oracle-cli-jp5_xj6n/clone-tiny.pptx"
+ ],
+ "exit": 0,
+ "stdout": "OK: build (clone) — 2 страниц → <TMP>/clone-tiny.pptx (рендер пропущен: DECK_SKIP_RENDER)\n",
+ "stderr": ""
+}

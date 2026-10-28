@@ -1,0 +1,17 @@
+'use strict';
+const net = require('net');
+const tls = require('tls');
+const http = require('http');
+const https = require('https');
+const dns = require('dns');
+const fail = () => { throw new Error('network disabled for hermetic test'); };
+net.connect = fail;
+net.createConnection = fail;
+net.Socket.prototype.connect = fail;
+tls.connect = fail;
+tls.createConnection = fail;
+http.request = fail;
+https.request = fail;
+dns.lookup = fail;
+dns.resolve = fail;
+if (typeof globalThis.fetch === 'function') globalThis.fetch = () => Promise.reject(new Error('network disabled for hermetic test'));

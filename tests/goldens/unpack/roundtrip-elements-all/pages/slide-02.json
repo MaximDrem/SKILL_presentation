@@ -1,0 +1,33 @@
+{
+  "slide": 2,
+  "part": "ppt/slides/slide2.xml",
+  "background": {
+    "type": "solid",
+    "color": "#FFFFFF",
+    "source": "slide"
+  },
+  "coverageReport": {
+    "recognized": 17,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"sh11","type":"shape","shape":"octagon","bounds":[1040,170,180,110],"coverage":0.021,"fill":{"solid":"#1D254D"}},
+    {"id":"3","name":"sh12","type":"shape","shape":"star5","bounds":[40,300,180,110],"coverage":0.021,"rotation":15,"fill":{"solid":"#2FE7C499"}},
+    {"id":"4","name":"sh13","type":"shape","shape":"star6","bounds":[240,300,180,110],"coverage":0.021,"fill":{"solid":"#1D254D"}},
+    {"id":"5","name":"sh14","type":"shape","shape":"chevron","bounds":[440,300,180,110],"coverage":0.021,"fill":{"solid":"#2FE7C499"},"shadow":{"blur":20,"dist":4,"dir":90,"color":"#0B0F1438","token":"soft"}},
+    {"id":"6","name":"sh15","type":"shape","shape":"homePlate","bounds":[640,300,180,110],"coverage":0.021,"rotation":15,"fill":{"solid":"#1D254D"},"line":{"w":3.3,"color":"#F59E0B"}},
+    {"id":"7","name":"sh16","type":"shape","shape":"rightArrow","bounds":[840,300,180,110],"coverage":0.021,"fill":{"solid":"#2FE7C499"}},
+    {"id":"8","name":"sh17","type":"shape","shape":"leftArrow","bounds":[1040,300,180,110],"coverage":0.021,"fill":{"solid":"#1D254D"}},
+    {"id":"9","name":"sh18","type":"shape","shape":"upArrow","bounds":[40,430,180,110],"coverage":0.021,"rotation":15,"fill":{"solid":"#2FE7C499"}},
+    {"id":"10","name":"sh19","type":"shape","shape":"downArrow","bounds":[240,430,180,110],"coverage":0.021,"fill":{"solid":"#1D254D"}},
+    {"id":"11","name":"sh20","type":"shape","shape":"pie","bounds":[440,430,180,110],"coverage":0.021,"fill":{"solid":"#2FE7C499"},"line":{"w":3.3,"color":"#F59E0B"}},
+    {"id":"12","name":"sh21","type":"shape","shape":"donut","bounds":[640,430,180,110],"coverage":0.021,"rotation":15,"fill":{"solid":"#1D254D"},"shadow":{"blur":20,"dist":4,"dir":90,"color":"#0B0F1438","token":"soft"}},
+    {"id":"13","name":"img","type":"image","src":"image1.png","bounds":[900,420,320,300],"coverage":0.104,"opacity":0.8,"srcRect":{"l":0.1,"r":0.1},"shadow":{"blur":30,"dist":6.7,"dir":90,"color":"#0B0F144D","token":"lift"},"mediaClass":"content","reuse":1},
+    {"id":"14","name":"svg","type":"shape","bounds":[1150,60,64,64],"coverage":0.004,"fill":{"solid":"#1A1A1A"}},
+    {"id":"15","name":"svg 15","type":"shape","bounds":[1150,60,64,64],"coverage":0.004,"fill":{"solid":"#1A1A1A"}},
+    {"id":"16","name":"svg 16","type":"shape","bounds":[1150,60,64,64],"coverage":0.004,"fill":{"solid":"#1A1A1A"}},
+    {"id":"17","name":"txt","type":"shape","shape":"rect","bounds":[40,560,700,140],"coverage":0.106,"fill":{"none":true}},
+    {"type":"text","id":"17-t","name":"txt — текст","bounds":[40,560,700,140],"anchor":"b","paragraphs":[{"runs":[{"text":"пункт один","sz":16,"font":"Calibri","color":"#000000"}],"bullet":"char","bulletChar":"—"},{"runs":[{"text":"пункт два","sz":16,"i":true,"font":"Calibri","color":"#000000"}],"bullet":"none"},{"runs":[{"text":"градиентный текст","sz":20,"b":true,"font":"Calibri","color":{"angle":45,"stops":[{"pos":0,"color":{"hex":"#8B1A1A"}},{"pos":1,"color":{"hex":"#F59E0B"}}]}}],"align":"ctr","lineHeight":1.1,"spcBef":6,"spcAft":2}],"coverage":0.106},
+    {"id":"18","name":"tbl","type":"table","bounds":[760,480,460,200],"coverage":0.1,"table":{"rows":[[{"text":"H","fill":"#1D254D","borders":{"l":{"w":1.3,"color":"#DDE3E8"},"r":{"w":1.3,"color":"#DDE3E8"},"t":{"w":1.3,"color":"#DDE3E8"},"b":{"w":1.3,"color":"#DDE3E8"}}},{},{"text":"h2","fill":"none","borders":{"l":{"w":1.3,"color":"#DDE3E8"},"r":{"w":1.3,"color":"#DDE3E8"},"t":{"w":1.3,"color":"#DDE3E8"},"b":{"w":1.3,"color":"#DDE3E8"}}}],[{"text":"a","borders":{"l":{"w":1.3,"color":"#DDE3E8"},"r":{"w":1.3,"color":"#DDE3E8"},"t":{"w":1.3,"color":"#DDE3E8"},"b":{"w":1.3,"color":"#DDE3E8"}}},{"text":"b","borders":{"l":{"w":2.7,"color":"#FF0000"},"r":{"w":1.3,"color":"#DDE3E8"},"t":{"w":1.3,"color":"#DDE3E8"},"b":{"w":1.3,"color":"#DDE3E8"}}},{"text":"c","borders":{"l":{"w":1.3,"color":"#DDE3E8"},"r":{"w":1.3,"color":"#DDE3E8"},"t":{"w":1.3,"color":"#DDE3E8"},"b":{"w":1.3,"color":"#DDE3E8"}}}],[{},{"text":"e","borders":{"l":{"w":1.3,"color":"#DDE3E8"},"r":{"w":1.3,"color":"#DDE3E8"},"t":{"w":1.3,"color":"#DDE3E8"},"b":{"w":1.3,"color":"#DDE3E8"}}},{"text":"f","borders":{"l":{"w":1.3,"color":"#DDE3E8"},"r":{"w":1.3,"color":"#DDE3E8"},"t":{"w":1.3,"color":"#DDE3E8"},"b":{"w":1.3,"color":"#DDE3E8"}}}]],"tableStyle":"{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}","flags":{"firstRow":false,"lastRow":false,"firstCol":false,"lastCol":false,"bandRow":false,"bandCol":false},"colW":[160,150,150]}}
+  ]
+}

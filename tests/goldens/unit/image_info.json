@@ -1,0 +1,184 @@
+{
+ "cases": [
+  {
+   "file": "alpha.png",
+   "ext": "png",
+   "expected": {
+    "format": "png",
+    "width": 120,
+    "height": 80,
+    "alpha": true
+   }
+  },
+  {
+   "file": "alpha.webp",
+   "ext": "webp",
+   "expected": {
+    "format": "webp",
+    "width": 60,
+    "height": 40,
+    "alpha": true
+   }
+  },
+  {
+   "file": "anim.gif",
+   "ext": "gif",
+   "expected": {
+    "format": "gif",
+    "width": 40,
+    "height": 30,
+    "alpha": false
+   }
+  },
+  {
+   "file": "big.png",
+   "ext": "png",
+   "expected": {
+    "format": "png",
+    "width": 800,
+    "height": 400,
+    "alpha": false
+   }
+  },
+  {
+   "file": "bmp24.bmp",
+   "ext": "bmp",
+   "expected": {
+    "format": "bmp",
+    "width": 50,
+    "height": 40,
+    "alpha": false
+   }
+  },
+  {
+   "file": "bmp32.bmp",
+   "ext": "bmp",
+   "expected": {
+    "format": "bmp",
+    "width": 50,
+    "height": 40,
+    "alpha": true
+   }
+  },
+  {
+   "file": "garbage.bin",
+   "ext": "bin",
+   "expected": {
+    "format": "bin",
+    "width": null,
+    "height": null,
+    "alpha": false
+   }
+  },
+  {
+   "file": "icon.png",
+   "ext": "png",
+   "expected": {
+    "format": "png",
+    "width": 160,
+    "height": 160,
+    "alpha": false
+   }
+  },
+  {
+   "file": "lossy.webp",
+   "ext": "webp",
+   "expected": {
+    "format": "webp",
+    "width": 60,
+    "height": 40,
+    "alpha": false
+   }
+  },
+  {
+   "file": "photo.jpeg",
+   "ext": "jpeg",
+   "expected": {
+    "format": "jpeg",
+    "width": 32,
+    "height": 24,
+    "alpha": false
+   }
+  },
+  {
+   "file": "photo.jpg",
+   "ext": "jpg",
+   "expected": {
+    "format": "jpeg",
+    "width": 64,
+    "height": 48,
+    "alpha": false
+   }
+  },
+  {
+   "file": "pic.png",
+   "ext": "png",
+   "expected": {
+    "format": "png",
+    "width": 400,
+    "height": 300,
+    "alpha": false
+   }
+  },
+  {
+   "file": "picto.svg",
+   "ext": "svg",
+   "expected": {
+    "format": "svg",
+    "width": 384.0,
+    "height": 275.0,
+    "alpha": true
+   }
+  },
+  {
+   "file": "trans.gif",
+   "ext": "gif",
+   "expected": {
+    "format": "gif",
+    "width": 20,
+    "height": 10,
+    "alpha": true
+   }
+  },
+  {
+   "file": "tri.svg",
+   "ext": "svg",
+   "expected": {
+    "format": "svg",
+    "width": 24.0,
+    "height": 24.0,
+    "alpha": true
+   }
+  },
+  {
+   "file": "trns.png",
+   "ext": "png",
+   "expected": {
+    "format": "png",
+    "width": 20,
+    "height": 10,
+    "alpha": true
+   }
+  },
+  {
+   "file": "vbonly.svg",
+   "ext": "svg",
+   "expected": {
+    "format": "svg",
+    "width": 48.0,
+    "height": 24.0,
+    "alpha": true
+   }
+  },
+  {
+   "file": "wide.png",
+   "ext": "png",
+   "expected": {
+    "format": "png",
+    "width": 1000,
+    "height": 500,
+    "alpha": false
+   }
+  }
+ ]
+}

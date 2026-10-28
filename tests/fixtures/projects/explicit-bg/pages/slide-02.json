@@ -1,0 +1,43 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "background": {
+  "type": "gradient",
+  "gradient": {
+   "angle": 90,
+   "stops": [
+    [
+     0,
+     "#0A0F1F"
+    ],
+    [
+     1,
+     "#1D254DCC"
+    ]
+   ]
+  }
+ },
+ "elements": [
+  {
+   "id": "t",
+   "type": "text",
+   "bounds": [
+    66,
+    60,
+    900,
+    70
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Градиентный фон",
+       "sz": 28,
+       "color": "#FFFFFF"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

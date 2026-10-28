@@ -1,0 +1,17 @@
+{
+  "slide": 2,
+  "part": "ppt/slides/slide7.xml",
+  "background": {
+    "type": "theme",
+    "idx": 1001,
+    "scheme": "bg1",
+    "source": "master"
+  },
+  "coverageReport": {
+    "recognized": 1,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"tb","type":"table","bounds":[60,100,700,240],"coverage":0.182,"table":{"rows":[[{"text":"A"},{"text":"B"}],[{"text":"C"},{"text":"D"}]],"tableStyle":"{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}","flags":{"firstRow":false,"lastRow":false,"firstCol":false,"lastCol":false,"bandRow":false,"bandCol":false},"colW":[350,350]}}
+  ]
+}

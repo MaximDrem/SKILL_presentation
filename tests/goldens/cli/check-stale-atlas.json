@@ -1,0 +1,13 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/clone-tiny",
+  "--template",
+  "/tmp/oracle-cli-jp5_xj6n/stale.pptx",
+  "--ref",
+  "/tmp/oracle-cli-jp5_xj6n/stale-ref"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"атлас протух относительно шаблона (_source.json: bytes 46126, файл: bytes 46127)\",\n  \"suggestion\": \"PYTHONPATH=\\\"<SKILL>/site-packages\\\" \\\"<PY>\\\" \\\"<SKILL>/tools/deck\\\" \\\"unpack\\\" \\\"<TMP>/stale.pptx\\\" \\\"--out\\\" \\\"<TMP>/stale-ref\\\"\"\n}\n"
+}

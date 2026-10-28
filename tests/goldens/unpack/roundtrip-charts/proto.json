@@ -1,0 +1,14 @@
+{
+  "1": {
+    "arch": "solid #FFFFFF",
+    "degraded": null,
+    "table": false,
+    "chart": true
+  },
+  "2": {
+    "arch": "solid #0A0F1F",
+    "degraded": null,
+    "table": false,
+    "chart": true
+  }
+}

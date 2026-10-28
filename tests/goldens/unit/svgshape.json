@@ -1,0 +1,74 @@
+{
+ "cases": [
+  {
+   "name": "ok_simple",
+   "ok": true,
+   "vw": 24.0,
+   "vh": 24.0,
+   "paths": [
+    [
+     "M12 2 L22 22 L2 22 Z",
+     "#A0B0C0",
+     1.0
+    ]
+   ]
+  },
+  {
+   "name": "ok_multi",
+   "ok": true,
+   "vw": 100.0,
+   "vh": 50.0,
+   "paths": [
+    [
+     "M0 0 C10 10 20 10 30 0 L40 40 Z",
+     "#FF0000",
+     0.5
+    ],
+    [
+     "M50 50 L60 60 Z",
+     null,
+     1.0
+    ]
+   ]
+  },
+  {
+   "name": "reject_rect",
+   "ok": false,
+   "error": "SvgError: поддерживаются только <path> с solid fill (M/L/C/Z)"
+  },
+  {
+   "name": "reject_relative",
+   "ok": false,
+   "error": "SvgError: поддерживаются только absolute-команды (M/L/C/Z)"
+  },
+  {
+   "name": "reject_no_viewbox",
+   "ok": false,
+   "error": "SvgError: нет viewBox"
+  },
+  {
+   "name": "reject_no_path",
+   "ok": false,
+   "error": "SvgError: нет <path>"
+  },
+  {
+   "name": "reject_stroke",
+   "ok": false,
+   "error": "SvgError: поддерживаются только <path> с solid fill (M/L/C/Z)"
+  },
+  {
+   "name": "reject_garbage_d",
+   "ok": false,
+   "error": "SvgError: мусор в path d: 'X2 2 '"
+  }
+ ],
+ "funcs": {
+  "d_to_ooxml": {
+   "simple": "<a:moveTo><a:pt x=\"0\" y=\"0\"/></a:moveTo><a:lnTo><a:pt x=\"95250\" y=\"95250\"/></a:lnTo><a:close/>",
+   "cubic": "<a:moveTo><a:pt x=\"100\" y=\"100\"/></a:moveTo><a:cubicBezTo><a:pt x=\"300\" y=\"200\"/><a:pt x=\"500\" y=\"300\"/><a:pt x=\"700\" y=\"400\"/></a:cubicBezTo>",
+   "frac": "<a:moveTo><a:pt x=\"3810\" y=\"5715\"/></a:moveTo><a:lnTo><a:pt x=\"14288\" y=\"23812\"/></a:lnTo>"
+  },
+  "sp_xml": "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"7\" name=\"svg 7\"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm rot=\"900000\" flipH=\"1\"><a:off x=\"571500\" y=\"1143000\"/><a:ext cx=\"2286000\" cy=\"457200\"/></a:xfrm><a:custGeom><a:avLst/><a:gdLst/><a:ahLst/><a:cxnLst/><a:rect l=\"0\" t=\"0\" r=\"0\" b=\"0\"/><a:pathLst><a:path w=\"2286000\" h=\"457200\"><a:moveTo><a:pt x=\"0\" y=\"0\"/></a:moveTo><a:lnTo><a:pt x=\"952500\" y=\"190500\"/></a:lnTo><a:close/></a:path></a:pathLst></a:custGeom><a:solidFill><a:srgbClr val=\"A0B0C0\"><a:alpha val=\"50000\"/></a:srgbClr></a:solidFill><a:ln><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr/><a:lstStyle/><a:p/></p:txBody></p:sp>",
+  "sp_xml_nofill": "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"8\" name=\"svg 8\"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"100\" cy=\"100\"/></a:xfrm><a:custGeom><a:avLst/><a:gdLst/><a:ahLst/><a:cxnLst/><a:rect l=\"0\" t=\"0\" r=\"0\" b=\"0\"/><a:pathLst><a:path w=\"100\" h=\"100\"><a:moveTo><a:pt x=\"0\" y=\"0\"/></a:moveTo><a:lnTo><a:pt x=\"100\" y=\"100\"/></a:lnTo><a:close/></a:path></a:pathLst></a:custGeom><a:noFill/><a:ln><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr/><a:lstStyle/><a:p/></p:txBody></p:sp>"
+ }
+}

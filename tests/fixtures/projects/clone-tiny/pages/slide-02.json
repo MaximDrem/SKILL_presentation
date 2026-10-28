@@ -1,0 +1,40 @@
+{
+ "pageType": "content",
+ "proto": 3,
+ "elements": [
+  {
+   "id": "tb",
+   "type": "table",
+   "bounds": [
+    60,
+    100,
+    700,
+    240
+   ],
+   "table": {
+    "colW": [
+     350,
+     350
+    ],
+    "rows": [
+     [
+      {
+       "text": "A"
+      },
+      {
+       "text": "B"
+      }
+     ],
+     [
+      {
+       "text": "C"
+      },
+      {
+       "text": "D"
+      }
+     ]
+    ]
+   }
+  }
+ ]
+}

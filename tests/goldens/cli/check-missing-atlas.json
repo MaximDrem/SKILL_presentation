@@ -1,0 +1,13 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/clone-tiny",
+  "--template",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/tiny-clone.pptx",
+  "--ref",
+  "/tmp/oracle-cli-jp5_xj6n/no-ref"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"в атласе нет _source.json: <TMP>/no-ref\",\n  \"suggestion\": \"PYTHONPATH=\\\"<SKILL>/site-packages\\\" \\\"<PY>\\\" \\\"<SKILL>/tools/deck\\\" \\\"unpack\\\" \\\"<SKILL_JS>/tests/fixtures/tiny-clone.pptx\\\" \\\"--out\\\" \\\"<TMP>/no-ref\\\"\"\n}\n"
+}

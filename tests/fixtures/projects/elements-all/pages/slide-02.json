@@ -1,0 +1,348 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "background": {
+  "type": "solid",
+  "color": "#FFFFFF"
+ },
+ "elements": [
+  {
+   "id": "sh11",
+   "type": "shape",
+   "shape": "octagon",
+   "bounds": [
+    1040,
+    170,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   }
+  },
+  {
+   "id": "sh12",
+   "type": "shape",
+   "shape": "star5",
+   "bounds": [
+    40,
+    300,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "rotation": 15,
+   "flip": {
+    "h": true
+   }
+  },
+  {
+   "id": "sh13",
+   "type": "shape",
+   "shape": "star6",
+   "bounds": [
+    240,
+    300,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   }
+  },
+  {
+   "id": "sh14",
+   "type": "shape",
+   "shape": "chevron",
+   "bounds": [
+    440,
+    300,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "shadow": "soft"
+  },
+  {
+   "id": "sh15",
+   "type": "shape",
+   "shape": "homePlate",
+   "bounds": [
+    640,
+    300,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   },
+   "line": {
+    "w": 2.5,
+    "color": "#F59E0B"
+   },
+   "rotation": 15
+  },
+  {
+   "id": "sh16",
+   "type": "shape",
+   "shape": "rightArrow",
+   "bounds": [
+    840,
+    300,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "flip": {
+    "h": true
+   }
+  },
+  {
+   "id": "sh17",
+   "type": "shape",
+   "shape": "leftArrow",
+   "bounds": [
+    1040,
+    300,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   }
+  },
+  {
+   "id": "sh18",
+   "type": "shape",
+   "shape": "upArrow",
+   "bounds": [
+    40,
+    430,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "rotation": 15
+  },
+  {
+   "id": "sh19",
+   "type": "shape",
+   "shape": "downArrow",
+   "bounds": [
+    240,
+    430,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   }
+  },
+  {
+   "id": "sh20",
+   "type": "shape",
+   "shape": "pie",
+   "bounds": [
+    440,
+    430,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#2FE7C499"
+   },
+   "line": {
+    "w": 2.5,
+    "color": "#F59E0B"
+   },
+   "flip": {
+    "h": true
+   }
+  },
+  {
+   "id": "sh21",
+   "type": "shape",
+   "shape": "donut",
+   "bounds": [
+    640,
+    430,
+    180,
+    110
+   ],
+   "fill": {
+    "solid": "#1D254D"
+   },
+   "shadow": "soft",
+   "rotation": 15
+  },
+  {
+   "id": "img",
+   "type": "image",
+   "src": "media/pic.png",
+   "bounds": [
+    900,
+    420,
+    320,
+    300
+   ],
+   "srcRect": {
+    "l": 0.1,
+    "r": 0.1
+   },
+   "opacity": 0.8,
+   "shadow": "lift"
+  },
+  {
+   "id": "svg",
+   "type": "image",
+   "src": "media/picto.svg",
+   "bounds": [
+    1150,
+    60,
+    64,
+    64
+   ]
+  },
+  {
+   "id": "txt",
+   "type": "text",
+   "bounds": [
+    40,
+    560,
+    700,
+    140
+   ],
+   "anchor": "b",
+   "autofit": "norm",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "пункт один",
+       "sz": 16
+      }
+     ],
+     "bullet": "char",
+     "bulletChar": "—"
+    },
+    {
+     "runs": [
+      {
+       "text": "пункт два",
+       "sz": 16,
+       "i": true
+      }
+     ],
+     "bullet": "none"
+    },
+    {
+     "runs": [
+      {
+       "text": "градиентный текст",
+       "sz": 20,
+       "b": true,
+       "color": {
+        "angle": 45,
+        "stops": [
+         [
+          0,
+          "#8B1A1A"
+         ],
+         [
+          1,
+          "#F59E0B"
+         ]
+        ]
+       }
+      }
+     ],
+     "align": "ctr",
+     "lineHeight": 1.1,
+     "spcBef": 6,
+     "spcAft": 2
+    }
+   ]
+  },
+  {
+   "id": "tbl",
+   "type": "table",
+   "bounds": [
+    760,
+    480,
+    460,
+    200
+   ],
+   "table": {
+    "colW": [
+     160,
+     150,
+     150
+    ],
+    "font": "SB Sans Text",
+    "sz": 12,
+    "inset": 5,
+    "border": {
+     "w": 1,
+     "color": "#DDE3E8"
+    },
+    "rows": [
+     [
+      {
+       "text": "H",
+       "b": true,
+       "fill": "#1D254D",
+       "color": "#FFFFFF",
+       "colSpan": 2
+      },
+      {
+       "text": ""
+      },
+      {
+       "text": "h2",
+       "fill": "none"
+      }
+     ],
+     [
+      {
+       "text": "a",
+       "rowSpan": 2,
+       "align": "ctr"
+      },
+      {
+       "text": "b",
+       "borders": {
+        "l": {
+         "w": 2,
+         "color": "#FF0000"
+        }
+       }
+      },
+      {
+       "text": "c"
+      }
+     ],
+     [
+      {
+       "text": ""
+      },
+      {
+       "text": "e",
+       "i": true
+      },
+      {
+       "text": "f"
+      }
+     ]
+    ]
+   }
+  }
+ ]
+}

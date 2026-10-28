@@ -1,0 +1,300 @@
+{
+ "cases": [
+  {
+   "name": "simple",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:p><a:r><a:rPr lang=\"ru-RU\" sz=\"1800\" dirty=\"0\"/><a:t>Привет</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Привет",
+       "sz": 18.0
+      }
+     ]
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {},
+    "sizes": {
+     "18.0": 1
+    },
+    "colors": {}
+   }
+  },
+  {
+   "name": "rich_runs",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr anchor=\"ctr\"/><a:p><a:pPr algn=\"ctr\"><a:lnSpc><a:spcPct val=\"90000\"/></a:lnSpc><a:spcBef><a:spcPts val=\"600\"/></a:spcBef><a:spcAft><a:spcPts val=\"200\"/></a:spcAft><a:buChar char=\"•\"/></a:pPr><a:r><a:rPr sz=\"2800\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"2FE7C4\"/></a:solidFill><a:latin typeface=\"SB Sans Display\"/></a:rPr><a:t>Заголовок</a:t></a:r><a:r><a:rPr sz=\"2800\" i=\"1\" dirty=\"0\"><a:solidFill><a:schemeClr val=\"tx1\"/></a:solidFill></a:rPr><a:t> курсив</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Заголовок",
+       "sz": 28.0,
+       "b": true,
+       "font": "SB Sans Display",
+       "color": "#2FE7C4"
+      },
+      {
+       "text": " курсив",
+       "sz": 28.0,
+       "i": true,
+       "color": "#1A1A1A"
+      }
+     ],
+     "align": "ctr",
+     "lineHeight": 0.9,
+     "spcBef": 6,
+     "spcAft": 2,
+     "bullet": "•"
+    }
+   ],
+   "bodyPr": {
+    "anchor": "ctr"
+   },
+   "counters": {
+    "fonts": {
+     "SB Sans Display": 1
+    },
+    "sizes": {
+     "28.0": 2
+    },
+    "colors": {
+     "#2FE7C4": 1,
+     "#1A1A1A": 1
+    }
+   }
+  },
+  {
+   "name": "bullet_none_autonum",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:p><a:pPr><a:buNone/></a:pPr><a:r><a:rPr sz=\"1400\"/><a:t>без маркера</a:t></a:r></a:p><a:p><a:pPr><a:buAutoNum type=\"arabicPeriod\"/></a:pPr><a:r><a:rPr sz=\"1400\"/><a:t>нумерованный</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "без маркера",
+       "sz": 14.0
+      }
+     ],
+     "bullet": "none"
+    },
+    {
+     "runs": [
+      {
+       "text": "нумерованный",
+       "sz": 14.0
+      }
+     ],
+     "bullet": "auto"
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {},
+    "sizes": {
+     "14.0": 2
+    },
+    "colors": {}
+   }
+  },
+  {
+   "name": "field_and_link",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:p><a:fld id=\"x\" type=\"slidenum\"><a:rPr sz=\"1200\"/><a:t>3</a:t></a:fld><a:r><a:rPr sz=\"1200\"><a:hlinkClick r:id=\"rId5\"/></a:rPr><a:t>ссылка</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "3",
+       "field": "slidenum",
+       "sz": 12.0
+      },
+      {
+       "text": "ссылка",
+       "sz": 12.0,
+       "link": "https://example.com/"
+      }
+     ]
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {},
+    "sizes": {
+     "12.0": 2
+    },
+    "colors": {},
+    "links": 1
+   }
+  },
+  {
+   "name": "lststyle_fill",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:lstStyle><a:lvl1pPr><a:defRPr sz=\"2000\"><a:solidFill><a:srgbClr val=\"FF0000\"/></a:solidFill></a:defRPr></a:lvl1pPr></a:lstStyle><a:p><a:r><a:rPr dirty=\"0\"/><a:t>наследованный цвет</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "наследованный цвет",
+       "color": "#FF0000",
+       "inherited": [
+        "color"
+       ]
+      }
+     ]
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {},
+    "sizes": {},
+    "colors": {
+     "#FF0000": 1
+    }
+   }
+  },
+  {
+   "name": "lvl2",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:p><a:pPr lvl=\"1\"/><a:r><a:rPr sz=\"1400\"/><a:t>второй уровень</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "второй уровень",
+       "sz": 14.0
+      }
+     ],
+     "lvl": 2
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {},
+    "sizes": {
+     "14.0": 1
+    },
+    "colors": {}
+   }
+  },
+  {
+   "name": "spcpts_lineheight",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:p><a:pPr><a:lnSpc><a:spcPts val=\"2250\"/></a:lnSpc></a:pPr><a:r><a:rPr sz=\"1400\"/><a:t>точный интерлиньяж</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "точный интерлиньяж",
+       "sz": 14.0
+      }
+     ],
+     "lineHeight": "22.5pt"
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {},
+    "sizes": {
+     "14.0": 1
+    },
+    "colors": {}
+   }
+  },
+  {
+   "name": "theme_fonts",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:p><a:r><a:rPr sz=\"1400\"><a:latin typeface=\"+mj-lt\"/></a:rPr><a:t>major</a:t></a:r><a:r><a:rPr sz=\"1400\"><a:latin typeface=\"+mn-lt\"/></a:rPr><a:t>minor</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "major",
+       "sz": 14.0,
+       "font": "SB Sans Display"
+      },
+      {
+       "text": "minor",
+       "sz": 14.0,
+       "font": "SB Sans Text"
+      }
+     ]
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {
+     "SB Sans Display": 1,
+     "SB Sans Text": 1
+    },
+    "sizes": {
+     "14.0": 2
+    },
+    "colors": {}
+   }
+  },
+  {
+   "name": "empty_runs_skipped",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:p><a:r><a:rPr sz=\"1400\"/></a:r></a:p><a:p><a:r><a:rPr sz=\"1400\"/><a:t></a:t></a:r></a:p><a:p><a:r><a:rPr sz=\"1400\"/><a:t>есть текст</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "есть текст",
+       "sz": 14.0
+      }
+     ]
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {},
+    "sizes": {
+     "14.0": 1
+    },
+    "colors": {}
+   }
+  },
+  {
+   "name": "defrpr_inherit",
+   "xml": "<p:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\"><a:bodyPr/><a:p><a:pPr><a:defRPr sz=\"2400\" b=\"1\"><a:solidFill><a:srgbClr val=\"0000FF\"/></a:solidFill></a:defRPr></a:pPr><a:r><a:rPr dirty=\"0\"/><a:t>наследник</a:t></a:r></a:p></p:txBody>",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "наследник",
+       "sz": 24.0,
+       "b": true,
+       "color": "#0000FF"
+      }
+     ]
+    }
+   ],
+   "bodyPr": {},
+   "counters": {
+    "fonts": {},
+    "sizes": {
+     "24.0": 1
+    },
+    "colors": {
+     "#0000FF": 1
+    }
+   }
+  },
+  {
+   "name": "chain_sz",
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Привет",
+       "sz": 18.0
+      }
+     ]
+    }
+   ],
+   "counters": {
+    "fonts": {},
+    "sizes": {
+     "18.0": 1
+    },
+    "colors": {}
+   }
+  }
+ ]
+}

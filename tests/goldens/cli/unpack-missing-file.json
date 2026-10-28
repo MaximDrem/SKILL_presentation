@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "unpack",
+  "/tmp/oracle-cli-jp5_xj6n/no.pptx",
+  "--out",
+  "/tmp/oracle-cli-jp5_xj6n/x"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"file not found: <TMP>/no.pptx\",\n  \"suggestion\": \"проверьте путь к pptx\"\n}\n"
+}

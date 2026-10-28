@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/blank-text",
+  "--template",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/tiny-clone.pptx"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"--template и --ref указываются только вместе (clone)\",\n  \"suggestion\": \"либо оба флага, либо ни одного (create на bundled-шаблоне)\"\n}\n"
+}

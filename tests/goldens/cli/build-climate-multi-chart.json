@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "build",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/climate-multi-chart",
+  "--out",
+  "/tmp/oracle-cli-jp5_xj6n/climate-multi-chart.pptx"
+ ],
+ "exit": 0,
+ "stdout": "WARN theme: --theme не задан — SU-оформление прото не копируется, страницы без explicit background будут белыми: slide-01.json, slide-02.json (для SU-стиля повторите с --theme dark|light; для своего стиля — верно, править не обязательно)\nOK: build (create) — 2 страниц → <TMP>/climate-multi-chart.pptx (рендер пропущен: DECK_SKIP_RENDER)\n",
+ "stderr": ""
+}

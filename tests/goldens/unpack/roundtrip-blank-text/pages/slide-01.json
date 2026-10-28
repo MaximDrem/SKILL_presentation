@@ -1,0 +1,17 @@
+{
+  "slide": 1,
+  "part": "ppt/slides/slide1.xml",
+  "background": {
+    "type": "solid",
+    "color": "#FFFFFF",
+    "source": "slide"
+  },
+  "coverageReport": {
+    "recognized": 1,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"t","type":"shape","shape":"rect","bounds":[66,60,900,70],"coverage":0.068,"fill":{"none":true}},
+    {"type":"text","id":"2-t","name":"t — текст","bounds":[66,60,900,70],"paragraphs":[{"runs":[{"text":"Тестовая страница","sz":28,"b":true,"font":"Calibri","color":"#1A1A1A"}]}],"coverage":0.068}
+  ]
+}

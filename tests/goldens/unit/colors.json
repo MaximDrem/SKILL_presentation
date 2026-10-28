@@ -1,0 +1,354 @@
+{
+ "cases": [
+  {
+   "name": "srgb_plain",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:srgbClr val=\"1a2b3c\"/></a:solidFill>",
+   "expected": {
+    "hex": "#1A2B3C"
+   }
+  },
+  {
+   "name": "srgb_alpha",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:srgbClr val=\"1A2B3C\"><a:alpha val=\"50000\"/></a:srgbClr></a:solidFill>",
+   "expected": {
+    "hex": "#1A2B3C80"
+   }
+  },
+  {
+   "name": "scheme_tx1",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:schemeClr val=\"tx1\"/></a:solidFill>",
+   "expected": {
+    "hex": "#1A1A1A",
+    "scheme": "tx1"
+   }
+  },
+  {
+   "name": "scheme_accent_lumMod",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:schemeClr val=\"accent1\"><a:lumMod val=\"50000\"/></a:schemeClr></a:solidFill>",
+   "expected": {
+    "hex": "#0E7D68",
+    "scheme": "accent1"
+   }
+  },
+  {
+   "name": "scheme_lumMod_lumOff",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:schemeClr val=\"accent1\"><a:lumMod val=\"50000\"/><a:lumOff val=\"25000\"/></a:schemeClr></a:solidFill>",
+   "expected": {
+    "hex": "#25E6C1",
+    "scheme": "accent1"
+   }
+  },
+  {
+   "name": "scheme_shade",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:schemeClr val=\"accent1\"><a:shade val=\"60000\"/></a:schemeClr></a:solidFill>",
+   "expected": {
+    "hex": "#11967C",
+    "scheme": "accent1"
+   }
+  },
+  {
+   "name": "scheme_tint",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:schemeClr val=\"accent1\"><a:tint val=\"40000\"/></a:schemeClr></a:solidFill>",
+   "expected": {
+    "hex": "#ACF5E7",
+    "scheme": "accent1"
+   }
+  },
+  {
+   "name": "scheme_unknown",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:schemeClr val=\"hyperLink\"/></a:solidFill>",
+   "expected": {
+    "scheme": "hyperLink"
+   }
+  },
+  {
+   "name": "sysclr",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:sysClr val=\"windowText\" lastClr=\"000001\"/></a:solidFill>",
+   "expected": {
+    "hex": "#000001"
+   }
+  },
+  {
+   "name": "prst_known",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:prstClr val=\"red\"/></a:solidFill>",
+   "expected": {
+    "hex": "#FF0000"
+   }
+  },
+  {
+   "name": "prst_case",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:prstClr val=\"AliceBlue\"/></a:solidFill>",
+   "expected": {
+    "hex": "#F0F8FF"
+   }
+  },
+  {
+   "name": "prst_unknown",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:prstClr val=\"notacolor\"/></a:solidFill>",
+   "expected": {
+    "prst": "notacolor"
+   }
+  },
+  {
+   "name": "empty_fill",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"/>",
+   "expected": null
+  },
+  {
+   "name": "srgb_alpha_half_round",
+   "xml": "<a:solidFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:srgbClr val=\"FFFFFF\"><a:alpha val=\"50196\"/></a:srgbClr></a:solidFill>",
+   "expected": {
+    "hex": "#FFFFFF80"
+   }
+  },
+  {
+   "name": "grad",
+   "xml": "<a:gradFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:gsLst><a:gs pos=\"0\"><a:srgbClr val=\"0A0F1F\"/></a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"accent1\"><a:alpha val=\"60000\"/></a:schemeClr></a:gs></a:gsLst><a:lin ang=\"2700000\" scaled=\"1\"/></a:gradFill>",
+   "expected": {
+    "angle": 45,
+    "stops": [
+     {
+      "pos": 0.0,
+      "color": {
+       "hex": "#0A0F1F"
+      }
+     },
+     {
+      "pos": 1.0,
+      "color": {
+       "hex": "#2FE7C499",
+       "scheme": "accent1"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "grad_no_lin",
+   "xml": "<a:gradFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:gsLst><a:gs pos=\"50000\"><a:srgbClr val=\"FF0000\"/></a:gs></a:gsLst></a:gradFill>",
+   "expected": {
+    "angle": null,
+    "stops": [
+     {
+      "pos": 0.5,
+      "color": {
+       "hex": "#FF0000"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "name": "shadow_soft",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:effectLst xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:outerShdw blurRad=\"190500\" dist=\"38100\" dir=\"5400000\" rotWithShape=\"0\"><a:srgbClr val=\"0B0F14\"><a:alpha val=\"22000\"/></a:srgbClr></a:outerShdw></a:effectLst></p:spPr>",
+   "expected": {
+    "blur": 190500,
+    "dist": 38100,
+    "dir": 90,
+    "color": "#0B0F1438",
+    "token": "lift"
+   }
+  },
+  {
+   "name": "shadow_lift",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:effectLst xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:outerShdw blurRad=\"400000\" dist=\"90000\" dir=\"2700000\" rotWithShape=\"0\"><a:schemeClr val=\"tx1\"/></a:outerShdw></a:effectLst></p:spPr>",
+   "expected": {
+    "blur": 400000,
+    "dist": 90000,
+    "dir": 45,
+    "color": "#1A1A1A",
+    "token": "lift"
+   }
+  },
+  {
+   "name": "ln_full",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:ln w=\"12700\"><a:solidFill><a:srgbClr val=\"FF0000\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr>",
+   "expected": {
+    "w": 1.3,
+    "color": "#FF0000"
+   }
+  },
+  {
+   "name": "ln_nofill",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:ln><a:noFill/></a:ln></p:spPr>",
+   "expected": null
+  },
+  {
+   "name": "ln_w_only",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:ln w=\"9525\"/></p:spPr>",
+   "expected": {
+    "w": 1
+   }
+  },
+  {
+   "name": "fill_solid",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:solidFill><a:srgbClr val=\"112233\"/></a:solidFill></p:spPr>",
+   "expected": {
+    "solid": "#112233"
+   }
+  },
+  {
+   "name": "fill_grad",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:gradFill xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:gsLst><a:gs pos=\"0\"><a:srgbClr val=\"0A0F1F\"/></a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"accent1\"><a:alpha val=\"60000\"/></a:schemeClr></a:gs></a:gsLst><a:lin ang=\"2700000\" scaled=\"1\"/></a:gradFill></p:spPr>",
+   "expected": {
+    "gradient": {
+     "angle": 45,
+     "stops": [
+      {
+       "pos": 0.0,
+       "color": {
+        "hex": "#0A0F1F"
+       }
+      },
+      {
+       "pos": 1.0,
+       "color": {
+        "hex": "#2FE7C499",
+        "scheme": "accent1"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "name": "fill_none",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:noFill/></p:spPr>",
+   "expected": {
+    "none": true
+   }
+  },
+  {
+   "name": "fill_blip",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:blipFill><a:blip r:embed=\"rId7\"/></a:blipFill></p:spPr>",
+   "expected": {
+    "blip": "rId7"
+   }
+  },
+  {
+   "name": "fill_empty",
+   "xml": "<p:spPr xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"></p:spPr>",
+   "expected": null
+  }
+ ],
+ "funcs": {
+  "hex_to_rgb": {
+   "1A2B3C": [
+    26,
+    43,
+    60
+   ],
+   "000000": [
+    0,
+    0,
+    0
+   ],
+   "FFFFFF": [
+    255,
+    255,
+    255
+   ]
+  },
+  "rgb_to_hex": {
+   "(26, 43, 60)": "1A2B3C",
+   "(0, 0, 0)": "000000",
+   "(255, 255, 255)": "FFFFFF",
+   "(-1, 256, 12.5)": "00FF0D",
+   "(127.5, 0.49, 0.5)": "800001"
+  },
+  "rgb_to_hsl": {
+   "(255, 0, 0)": [
+    0.0,
+    1.0,
+    0.5
+   ],
+   "(26, 43, 60)": [
+    0.5833333333333334,
+    0.3953488372093023,
+    0.16862745098039217
+   ],
+   "(128, 128, 128)": [
+    0,
+    0,
+    0.5019607843137255
+   ],
+   "(47, 231, 196)": [
+    0.4682971014492754,
+    0.793103448275862,
+    0.5450980392156863
+   ],
+   "(0, 0, 0)": [
+    0,
+    0,
+    0.0
+   ],
+   "(255, 255, 255)": [
+    0,
+    0,
+    1.0
+   ]
+  },
+  "hsl_to_rgb": {
+   "(0, 1, 0.5)": [
+    255.0,
+    0.0,
+    0.0
+   ],
+   "(0.6, 0.3, 0.2)": [
+    35.7,
+    37.74,
+    66.3
+   ],
+   "(0, 0, 0.5)": [
+    127.5,
+    127.5,
+    127.5
+   ],
+   "(0.999, 1, 0.99)": [
+    255.0,
+    249.9,
+    249.9051
+   ]
+  },
+  "geo_facts": {
+   "[0, 0, 1280, 720]": {
+    "coverage": 1
+   },
+   "[-10, 0, 100, 100]": {
+    "bleed": true,
+    "coverage": 0.011
+   },
+   "[100, 100, 200, 150]": {
+    "coverage": 0.033
+   },
+   "[1280, 0, 100, 100]": {
+    "bleed": true,
+    "coverage": 0.011
+   },
+   "[0, 0, 640, 360]": {
+    "coverage": 0.25
+   },
+   "[-0.4, -0.4, 100, 100]": {
+    "coverage": 0.011
+   }
+  },
+  "apply_color_mods": {
+   "2FE7C4|lumMod|0.5": "0E7D68",
+   "2FE7C4|lumOff|0.25": "A1F4E4",
+   "2FE7C4|shade|0.6": "11967C",
+   "2FE7C4|tint|0.4": "ACF5E7",
+   "1D254D|lumMod|0.5": "0E0F27",
+   "1D254D|lumOff|0.25": "4043AA",
+   "1D254D|shade|0.6": "11122E",
+   "1D254D|tint|0.4": "8A8CD3",
+   "FFFFFF|lumMod|0.5": "808080",
+   "FFFFFF|lumOff|0.25": "FFFFFF",
+   "FFFFFF|shade|0.6": "999999",
+   "FFFFFF|tint|0.4": "FFFFFF",
+   "000000|lumMod|0.5": "000000",
+   "000000|lumOff|0.25": "404040",
+   "000000|shade|0.6": "000000",
+   "000000|tint|0.4": "999999"
+  }
+ }
+}

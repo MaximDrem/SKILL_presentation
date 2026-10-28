@@ -1,0 +1,183 @@
+{
+ "pageType": "content",
+ "proto": 47,
+ "elements": [
+  {
+   "type": "text",
+   "id": "title",
+   "bounds": [
+    45,
+    80,
+    1100,
+    64
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Выбросы парниковых газов и экстремальные события",
+       "sz": 20,
+       "b": true,
+       "font": "SB Sans Display Semibold",
+       "color": "#FFFFFF"
+      }
+     ],
+     "align": "l"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "subtitle",
+   "bounds": [
+    48,
+    150,
+    1100,
+    36
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "MMT CO₂e (EPA) и число биллион-долларовых событий (NOAA NCEI)",
+       "sz": 16,
+       "font": "SB Sans Text",
+       "color": "#62ECFF"
+      }
+     ],
+     "align": "l"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "id": "ghg-chart",
+   "bounds": [
+    48,
+    215,
+    580,
+    340
+   ],
+   "chart": {
+    "kind": "bar",
+    "series": [
+     {
+      "name": "Выбросы GHG",
+      "categories": [
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024"
+      ],
+      "values": [
+       6565,
+       6540,
+       6470,
+       6495,
+       6280,
+       6220,
+       6080,
+       5810,
+       5740,
+       5700
+      ]
+     }
+    ],
+    "colors": [
+     "#56FF71"
+    ],
+    "legend": false,
+    "title": "Выбросы GHG, MMT CO₂e"
+   }
+  },
+  {
+   "type": "chart",
+   "id": "events-chart",
+   "bounds": [
+    660,
+    215,
+    580,
+    340
+   ],
+   "chart": {
+    "kind": "bar",
+    "series": [
+     {
+      "name": "События",
+      "categories": [
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024"
+      ],
+      "values": [
+       16,
+       22,
+       14,
+       22,
+       22,
+       22,
+       22,
+       20,
+       18,
+       20
+      ]
+     }
+    ],
+    "colors": [
+     "#FF3256"
+    ],
+    "legend": false,
+    "title": "Экстремальные события, шт."
+   }
+  },
+  {
+   "type": "text",
+   "id": "takeaway",
+   "bounds": [
+    48,
+    590,
+    1184,
+    127
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Выбросы −13,2% (Energy −20,5%), но ",
+       "sz": 14,
+       "font": "SB Sans Text",
+       "color": "#FFFFFF"
+      },
+      {
+       "text": "196 экстремальных событий",
+       "sz": 14,
+       "b": true,
+       "font": "SB Sans Text",
+       "color": "#FF3256"
+      },
+      {
+       "text": " за 10 лет (19,6/год). Уровень моря +3,3″, экстремальные осадки +15,6%.",
+       "sz": 14,
+       "font": "SB Sans Text",
+       "color": "#FFFFFF"
+      }
+     ],
+     "align": "l"
+    }
+   ]
+  }
+ ]
+}

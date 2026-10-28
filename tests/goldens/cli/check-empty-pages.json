@@ -1,0 +1,9 @@
+{
+ "argv": [
+  "check",
+  "/tmp/oracle-cli-jp5_xj6n/empty-proj"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"нет pages/ в проекте: <TMP>/empty-proj\",\n  \"suggestion\": \"напишите страницы pages/slide-NN.json (по одной за ответ; грамматика — references/spec.md)\"\n}\n"
+}

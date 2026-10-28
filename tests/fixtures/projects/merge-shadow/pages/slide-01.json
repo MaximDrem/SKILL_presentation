@@ -1,0 +1,53 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "elements": [
+  {
+   "id": "ph",
+   "type": "image",
+   "src": "media/pic.png",
+   "bounds": [
+    400,
+    200,
+    400,
+    300
+   ],
+   "shadow": "soft"
+  },
+  {
+   "id": "tb",
+   "type": "table",
+   "bounds": [
+    66,
+    100,
+    800,
+    300
+   ],
+   "table": {
+    "colW": [
+     400,
+     400
+    ],
+    "rows": [
+     [
+      {
+       "text": "A",
+       "colSpan": 2
+      },
+      {
+       "text": ""
+      }
+     ],
+     [
+      {
+       "text": "B"
+      },
+      {
+       "text": "C"
+      }
+     ]
+    ]
+   }
+  }
+ ]
+}

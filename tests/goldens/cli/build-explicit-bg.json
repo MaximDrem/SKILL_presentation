@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "build",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/explicit-bg",
+  "--out",
+  "/tmp/oracle-cli-jp5_xj6n/explicit-bg.pptx"
+ ],
+ "exit": 0,
+ "stdout": "OK: build (create) — 2 страниц → <TMP>/explicit-bg.pptx (рендер пропущен: DECK_SKIP_RENDER)\n",
+ "stderr": ""
+}

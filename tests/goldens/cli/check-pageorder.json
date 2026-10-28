@@ -1,0 +1,9 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/pageorder"
+ ],
+ "exit": 0,
+ "stdout": "WARN: deck.json pageOrder — неизвестные страницы пропущены: slide-02.json, slide-77.json\nWARN theme: --theme не задан — SU-оформление прото не копируется, страницы без explicit background будут белыми: slide-01.json, slide-2.json (для SU-стиля повторите с --theme dark|light; для своего стиля — верно, править не обязательно)\nOK: check (create) — 2 страниц, HARD-замечаний нет\nпрото: slide-01.json → 1 (явный)\nпрото: slide-2.json → 1 (явный)\n",
+ "stderr": ""
+}

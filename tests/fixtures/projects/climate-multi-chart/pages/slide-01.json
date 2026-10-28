@@ -1,0 +1,136 @@
+{
+ "pageType": "content",
+ "proto": 49,
+ "elements": [
+  {
+   "type": "text",
+   "id": "title",
+   "bounds": [
+    45,
+    80,
+    1014,
+    64
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Изменение климата в США, 2015–2024",
+       "sz": 34,
+       "b": true,
+       "font": "SB Sans Display Semibold",
+       "color": "#FFFFFF"
+      }
+     ],
+     "align": "l"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "subtitle",
+   "bounds": [
+    48,
+    150,
+    1014,
+    36
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Температурная аномалия относительно нормы, °F · NASA GISS, NOAA NCEI",
+       "sz": 16,
+       "font": "SB Sans Text",
+       "color": "#62ECFF"
+      }
+     ],
+     "align": "l"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "id": "temp-chart",
+   "bounds": [
+    48,
+    210,
+    1184,
+    360
+   ],
+   "chart": {
+    "kind": "line",
+    "series": [
+     {
+      "name": "Аномалия, °F",
+      "categories": [
+       "2015",
+       "2016",
+       "2017",
+       "2018",
+       "2019",
+       "2020",
+       "2021",
+       "2022",
+       "2023",
+       "2024"
+      ],
+      "values": [
+       1.02,
+       0.9,
+       1.01,
+       0.99,
+       0.82,
+       0.92,
+       1.07,
+       0.94,
+       0.94,
+       1.19
+      ]
+     }
+    ],
+    "colors": [
+     "#62ECFF"
+    ],
+    "legend": false,
+    "title": "Температурная аномалия, °F"
+   }
+  },
+  {
+   "type": "text",
+   "id": "takeaway",
+   "bounds": [
+    48,
+    600,
+    1184,
+    102
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "2024 — самый тёплый год в истории: ",
+       "sz": 14,
+       "font": "SB Sans Text",
+       "color": "#FFFFFF"
+      },
+      {
+       "text": "+1,19°F",
+       "sz": 14,
+       "b": true,
+       "font": "SB Sans Text",
+       "color": "#56FF71"
+      },
+      {
+       "text": ". Все 10 лет в топе тёплых; средняя аномалия +0,99°F, накопленный рост +16,7%.",
+       "sz": 14,
+       "font": "SB Sans Text",
+       "color": "#FFFFFF"
+      }
+     ],
+     "align": "l"
+    }
+   ]
+  }
+ ]
+}

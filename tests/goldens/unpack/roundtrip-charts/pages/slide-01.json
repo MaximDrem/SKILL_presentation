@@ -1,0 +1,17 @@
+{
+  "slide": 1,
+  "part": "ppt/slides/slide1.xml",
+  "background": {
+    "type": "solid",
+    "color": "#FFFFFF",
+    "source": "slide"
+  },
+  "coverageReport": {
+    "recognized": 2,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"ch","type":"chart","part":"ppt/charts/chart1.xml","bounds":[60,90,560,300],"coverage":0.182,"chart":{"kind":"bar","series":[{"name":"S1","categories":["A","B"],"values":[1,2]}],"colors":["#8B1A1A"]}},
+    {"id":"3","name":"pi","type":"chart","part":"ppt/charts/chart2.xml","bounds":[660,90,560,300],"coverage":0.182,"chart":{"kind":"pie","series":[{"name":"S","categories":["A","B"],"values":[1,2]}],"colors":["#8B1A1A"]}}
+  ]
+}

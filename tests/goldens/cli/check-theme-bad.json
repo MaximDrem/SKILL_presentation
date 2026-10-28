@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/blank-text",
+  "--theme",
+  "blue"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"--theme ∈ dark|light (сейчас: \\\"blue\\\")\",\n  \"suggestion\": \"--theme dark — тёмная SU 2026; --theme light — светлая\"\n}\n"
+}

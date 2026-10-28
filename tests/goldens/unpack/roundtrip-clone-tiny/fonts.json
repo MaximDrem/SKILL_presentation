@@ -1,0 +1,11 @@
+{
+  "fonts": {
+    "Calibri": 5
+  },
+  "theme": {
+    "major": "Calibri",
+    "minor": "Calibri"
+  },
+  "embedded": false,
+  "embeddedFonts": []
+}

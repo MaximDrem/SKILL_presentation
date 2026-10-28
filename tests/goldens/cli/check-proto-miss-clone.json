@@ -1,0 +1,13 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/plan-missing",
+  "--template",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/tiny-clone.pptx",
+  "--ref",
+  "/tmp/oracle-cli-jp5_xj6n/tiny-ref"
+ ],
+ "exit": 2,
+ "stdout": "HARD ×1 — план по страницам (переписать целиком ТОЛЬКО эти):\nHARD plan.md: напишите недостающие страницы\n",
+ "stderr": "{\n  \"error\": \"check: 1 замечаний\",\n  \"plan\": [\n    \"plan.md: напишите недостающие страницы\"\n  ],\n  \"failures\": [\n    {\n      \"page\": \"plan.md\",\n      \"action\": \"напишите недостающие страницы\",\n      \"msg\": \"[HARD] страницы из plan.md отсутствуют на диске: slide-02.json, slide-03.json — напишите их целиком по plan.md\"\n    }\n  ],\n  \"warnings\": [],\n  \"suggestion\": \"примените план по страницам: каждую затронутую pages/*.json перепишите целиком (whole-file write, все страницы за один шаг) и повторите check; WARN-строки — advisory, страницы только с WARN не трогайте\"\n}\n"
+}

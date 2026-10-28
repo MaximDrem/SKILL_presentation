@@ -1,0 +1,1028 @@
+{
+ "cases": [
+  {
+   "name": "aspect_30plus",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/wide.png",
+        "bounds": [
+         60,
+         200,
+         400,
+         400
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [
+     {
+      "page": "s.json",
+      "el": "i",
+      "action": "h→200px",
+      "msg": "[HARD] картинка «media/wide.png» растянута (100%): кадр 1000×500 в bounds 400×400 — пропорции менять нельзя; h→200px (или w→800px, либо srcRect)"
+     }
+    ],
+    "warn": []
+   }
+  },
+  {
+   "name": "aspect_10",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/wide.png",
+        "bounds": [
+         60,
+         200,
+         440,
+         200
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": [
+     "s.json i: картинка «media/wide.png» растянута (10%): кадр 1000×500 в bounds 440×200 — default: h→220px (или w→400px, либо srcRect) (нужно исправить)"
+    ]
+   }
+  },
+  {
+   "name": "aspect_8_boundary",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/wide.png",
+        "bounds": [
+         60,
+         200,
+         432,
+         200
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": [
+     "s.json i: картинка «media/wide.png» растянута (8%): кадр 1000×500 в bounds 432×200 — default: h→216px (или w→400px, либо srcRect) (нужно исправить)"
+    ]
+   }
+  },
+  {
+   "name": "srcrect_fix",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/wide.png",
+        "bounds": [
+         60,
+         200,
+         200,
+         200
+        ],
+        "srcRect": {
+         "l": 0.25,
+         "t": 0,
+         "r": 0.25,
+         "b": 0
+        }
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "upscale_warn",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/icon.png",
+        "bounds": [
+         60,
+         200,
+         400,
+         400
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": [
+     "s.json i: картинка «media/icon.png» растянута крупнее исходника (160×160px → 400×400px на слайде) — будет мыло; default: bounds ≤ 160×160px, либо это иконка-слот, не главный визуал (нужно исправить)"
+    ]
+   }
+  },
+  {
+   "name": "upscale_empty_srcrect",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/icon.png",
+        "bounds": [
+         60,
+         200,
+         400,
+         400
+        ],
+        "srcRect": {}
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": [
+     "s.json i: картинка «media/icon.png» растянута крупнее исходника (160×160px → 400×400px на слайде) — будет мыло; default: bounds ≤ 160×160px, либо это иконка-слот, не главный визуал (нужно исправить)"
+    ]
+   }
+  },
+  {
+   "name": "upscale_boundary",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/icon.png",
+        "bounds": [
+         60,
+         200,
+         240,
+         240
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "downscale_ok",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/big.png",
+        "bounds": [
+         60,
+         200,
+         400,
+         200
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "alpha_6",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         200,
+         560,
+         220
+        ],
+        "fill": {
+         "solid": "#FFFFFF0E"
+        }
+       },
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#FFFFFF"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#0A0F1F"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": [
+     "s.json s: фигура почти невидима (alpha 5%) — default: alpha→10%; если фигура не нужна — уберите (править не обязательно)"
+    ]
+   }
+  },
+  {
+   "name": "alpha_6_boundary",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         200,
+         560,
+         220
+        ],
+        "fill": {
+         "solid": "#FFFFFF0F"
+        }
+       },
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#FFFFFF"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#0A0F1F"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": [
+     "s.json s: фигура почти невидима (alpha 6%) — default: alpha→10%; если фигура не нужна — уберите (править не обязательно)"
+    ]
+   }
+  },
+  {
+   "name": "alpha_90_grad",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         200,
+         560,
+         220
+        ],
+        "fill": {
+         "gradient": {
+          "angle": 0,
+          "stops": [
+           [
+            0,
+            "#FF0000E0"
+           ],
+           [
+            1,
+            "#00FF00"
+           ]
+          ]
+         }
+        }
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": [
+     "alpha 88% в градиентных стопах: 1 эл. на страницах s.json — LO/P7/приложение рендерят по-разному; default: solid с alpha или непрозрачный градиент к цвету фона (править не обязательно)"
+    ]
+   }
+  },
+  {
+   "name": "alpha_90_boundary",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         200,
+         560,
+         220
+        ],
+        "fill": {
+         "gradient": {
+          "angle": 0,
+          "stops": [
+           [
+            0,
+            "#FF0000E6"
+           ],
+           [
+            1,
+            "#00FF00"
+           ]
+          ]
+         }
+        }
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "contrast_low",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#AAAAAA"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#999999"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": [
+     "s.json t: текст «Текст для контраста» цвета #AAAAAA сливается с подложкой (контраст 1.2 < 2.5) — default: замените на #555555 (контраст 2.6) или другой с контрастом ≥2.5 (править не обязательно)"
+    ]
+   }
+  },
+  {
+   "name": "contrast_ok",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#1A1A1A"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "contrast_underlay_card",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         200,
+         560,
+         220
+        ],
+        "fill": {
+         "solid": "#1D254D"
+        }
+       },
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#FFFFFF"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "contrast_underlay_gradient",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         200,
+         560,
+         220
+        ],
+        "fill": {
+         "gradient": {
+          "angle": 90,
+          "stops": [
+           [
+            0,
+            "#0A0F1F"
+           ],
+           [
+            1,
+            "#1D254D"
+           ]
+          ]
+         }
+        }
+       },
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#FFFFFF"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#0A0F1F"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "underlay_from_proto",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#0A0F1F"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "underlays": {
+    "s.json": [
+     12,
+     12,
+     12
+    ]
+   },
+   "expected": {
+    "hard": [],
+    "warn": [
+     "s.json t: текст «Текст для контраста» цвета #0A0F1F сливается с подложкой (контраст 1.0 < 2.5) — default: замените на #545762 (контраст 2.7) или другой с контрастом ≥2.5 (править не обязательно)"
+    ]
+   }
+  },
+  {
+   "name": "no_bg_no_underlay",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#0A0F1F"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "alpha_text_composite",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#FFFFFF80"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#0A0F1F"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "missing_image_file",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "i",
+        "type": "image",
+        "src": "media/nothere.png",
+        "bounds": [
+         60,
+         200,
+         400,
+         400
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  },
+  {
+   "name": "shape_no_fill",
+   "pages": [
+    {
+     "file": "s.json",
+     "spec": {
+      "pageType": "content",
+      "proto": 1,
+      "elements": [
+       {
+        "id": "s",
+        "type": "shape",
+        "shape": "rect",
+        "bounds": [
+         60,
+         200,
+         560,
+         220
+        ],
+        "fill": {
+         "none": true
+        }
+       },
+       {
+        "id": "t",
+        "type": "text",
+        "bounds": [
+         80,
+         220,
+         400,
+         40
+        ],
+        "paragraphs": [
+         {
+          "runs": [
+           {
+            "text": "Текст для контраста",
+            "sz": 18,
+            "color": "#1A1A1A"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "background": {
+       "type": "solid",
+       "color": "#FFFFFF"
+      }
+     }
+    }
+   ],
+   "underlays": null,
+   "expected": {
+    "hard": [],
+    "warn": []
+   }
+  }
+ ],
+ "funcs": {
+  "parse": {
+   "#1A1A1A": [
+    26,
+    26,
+    26,
+    255
+   ],
+   "#FFFFFF80": [
+    255,
+    255,
+    255,
+    128
+   ],
+   "#fff": null,
+   "12345678": [
+    18,
+    52,
+    86,
+    120
+   ],
+   "GGGGGG": null,
+   "#12345": null,
+   "1234567890": null
+  },
+  "lum": {
+   "#000000": 0.0,
+   "#FFFFFF": 1.0,
+   "#2FE7C4": 0.6174168774157116,
+   "#1D254D": 0.021201684497544275
+  },
+  "contrast": {
+   "#000000|#FFFFFF": 21.0,
+   "#777777|#888888": 1.2632533688247014,
+   "#1A1A1A|#FFFFFF": 17.40432753274219
+  },
+  "composite": {
+   "#FFFFFF80|#000000": [
+    128,
+    128,
+    128
+   ],
+   "#FF0000FF|#00FF00": [
+    255,
+    0,
+    0
+   ],
+   "#00000000|#FFFFFF": [
+    255,
+    255,
+    255
+   ]
+  },
+  "fix_color": {
+   "#AAAAAA|#999999": [
+    "#555555",
+    2.6167445356096306
+   ],
+   "#1A1A1A|#FFFFFF": [
+    "#191919",
+    17.581691183046004
+   ],
+   "#FFFFFF|#0A0F1F": [
+    "#FFFFFF",
+    19.073200182021534
+   ]
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "background": {
+  "type": "solid",
+  "color": "#F2F2F7"
+ },
+ "elements": [
+  {
+   "id": "t",
+   "type": "text",
+   "bounds": [
+    66,
+    60,
+    900,
+    70
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Явный фон",
+       "sz": 28,
+       "b": true,
+       "color": "#1A1A1A"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

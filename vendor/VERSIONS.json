@@ -1,0 +1,133 @@
+{
+  "generated": "dev-time by .oracle/vendor.mjs + .oracle/bundle-pptxgenjs.cjs",
+  "packages": {
+    "fflate": {
+      "version": "0.8.3",
+      "license": "MIT",
+      "sha256": "38c2cd824402407b43153c782274aec2ea83ea688e4aa0b743c5f2c305857d92",
+      "vendored": "fflate (esm/ + lib/node.cjs + lib/browser.cjs)"
+    },
+    "pptxgenjs": {
+      "version": "4.0.1",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs (official dist/pptxgen.cjs.js entry)"
+    },
+    "jszip": {
+      "version": "3.10.2",
+      "license": "(MIT OR GPL-3.0-or-later)",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "image-size": {
+      "version": "1.2.1",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "lie": {
+      "version": "3.3.0",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "immediate": {
+      "version": "3.0.6",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "pako": {
+      "version": "1.0.11",
+      "license": "(MIT AND Zlib)",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "queue": {
+      "version": "6.0.2",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "readable-stream": {
+      "version": "2.3.8",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "setimmediate": {
+      "version": "1.0.5",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "core-util-is": {
+      "version": "1.0.3",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "inherits": {
+      "version": "2.0.4",
+      "license": "ISC",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "isarray": {
+      "version": "1.0.0",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "process-nextick-args": {
+      "version": "2.0.1",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "safe-buffer": {
+      "version": "5.1.2",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "string_decoder": {
+      "version": "1.1.1",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "util-deprecate": {
+      "version": "1.0.2",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs"
+    },
+    "sizeof": {
+      "version": "1.0.0",
+      "license": "MIT",
+      "vendored": "pptxgenjs.bundle.cjs",
+      "via": "pptxgenjs (shim-alias → image-size; license как у image-size)"
+    },
+    "pngjs": {
+      "version": "7.0.0",
+      "license": "MIT",
+      "vendored": "pngjs"
+    },
+    "jpeg-js": {
+      "version": "0.4.4",
+      "license": "BSD-3-Clause",
+      "vendored": "jpeg-js"
+    },
+    "python-pptx": {
+      "version": "1.0.2",
+      "license": "MIT",
+      "vendored": "python-pptx (pptx/templates/default.pptx — data parity)"
+    },
+    "xlsx-templates": {
+      "version": "XlsxWriter 3.2.9 output",
+      "license": "BSD-2-Clause",
+      "vendored": "xlsx-templates (fixed workbook parts — data parity)"
+    }
+  }
+}

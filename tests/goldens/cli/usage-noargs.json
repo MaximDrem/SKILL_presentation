@@ -1,0 +1,6 @@
+{
+ "argv": [],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"usage: deck.py build <projectDir> --out <deck.pptx> [--theme dark|light] [--template <ref.pptx> --ref <name>-ref/] [--app <path>]\\n       deck.py check <projectDir> [--theme dark|light] [--template <ref.pptx> --ref <name>-ref/]\\n       deck.py unpack <ref.pptx> --out <dir> [--render | --shots <dir>] [--with-pages]\"\n}\n"
+}

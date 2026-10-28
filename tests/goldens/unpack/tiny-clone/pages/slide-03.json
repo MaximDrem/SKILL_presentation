@@ -1,0 +1,17 @@
+{
+  "slide": 3,
+  "part": "ppt/slides/slide3.xml",
+  "background": {
+    "type": "theme",
+    "idx": 1001,
+    "scheme": "bg1",
+    "source": "master"
+  },
+  "coverageReport": {
+    "recognized": 1,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"Table 1","type":"table","bounds":[60,100,700,240],"coverage":0.182,"table":{"rows":[[{"text":"Шапка на всю строку","fill":"#1A1A1A"},{"fill":"#1A1A1A"},{"fill":"#1A1A1A"}],[{"text":"A1"},{"text":"B1"},{"text":"C1"}],[{"text":"A2"},{"text":"B2"},{"text":"C2"}]],"tableStyle":"{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}","flags":{"firstRow":true,"lastRow":false,"firstCol":false,"lastCol":false,"bandRow":true,"bandCol":false},"colW":[300,200,200]}}
+  ]
+}

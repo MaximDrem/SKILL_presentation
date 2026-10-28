@@ -1,0 +1,10 @@
+{
+  "name": "gigatool-skill-work-js",
+  "version": "4.0.0",
+  "description": "SKILL_WORK presentation skill — CommonJS port (Node/Electron Node-mode), self-contained",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node tests/run-tests.cjs"
+  }
+}

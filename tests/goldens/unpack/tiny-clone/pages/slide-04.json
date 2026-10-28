@@ -1,0 +1,18 @@
+{
+  "slide": 4,
+  "part": "ppt/slides/slide4.xml",
+  "background": {
+    "type": "theme",
+    "idx": 1001,
+    "scheme": "bg1",
+    "source": "master"
+  },
+  "coverageReport": {
+    "recognized": 2,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"Chart 1","type":"chart","part":"ppt/charts/chart1.xml","bounds":[40,120,560,400],"coverage":0.243,"chart":{"kind":"bar","series":[{"name":"Серия 1","categories":["Янв","Фев","Мар"],"values":[1.5,2.5,3.25]},{"name":"Серия 2","categories":["Янв","Фев","Мар"],"values":[2,1,4.5]}],"legend":true}},
+    {"id":"3","name":"Chart 2","type":"chart","part":"ppt/charts/chart2.xml","bounds":[660,120,560,400],"coverage":0.243,"chart":{"kind":"pie","series":[{"name":"Доля","categories":["А","Б"],"values":[30.5,69.5]}]}}
+  ]
+}

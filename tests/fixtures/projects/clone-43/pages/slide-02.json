@@ -1,0 +1,26 @@
+{
+ "pageType": "content",
+ "proto": 2,
+ "elements": [
+  {
+   "id": "t2",
+   "type": "text",
+   "bounds": [
+    60,
+    320,
+    400,
+    40
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "подпись клон",
+       "sz": 14
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

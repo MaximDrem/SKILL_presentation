@@ -1,0 +1,614 @@
+{
+ "cases": [
+  {
+   "name": "explicit_missing",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "elements": [
+       {
+        "type": "text",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ],
+      "proto": 99
+     }
+    }
+   ],
+   "info": {
+    "5": {
+     "arch": "solid #0A0F1F"
+    },
+    "7": {
+     "arch": "solid #0A0F1F"
+    }
+   },
+   "auto": null,
+   "a": {
+    "mode": "clone"
+   },
+   "expected": {
+    "mappings": [],
+    "failures": [
+     {
+      "page": "slide-01.json",
+      "action": "proto→5",
+      "msg": "[HARD] прототип 99 недоступен: такого proto в атласе нет (витрина или несуществующий слайд); доступные proto: 5, 7 — укажите proto из списка (типы — в STYLE.md «## Contents»); default: proto 5 (pageType-матч)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "explicit_degraded",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "elements": [
+       {
+        "type": "text",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ],
+      "proto": 7
+     }
+    }
+   ],
+   "info": {
+    "5": {
+     "arch": "solid #0A0F1F"
+    },
+    "7": {
+     "arch": "solid #0A0F1F",
+     "degraded": [
+      {
+       "kind": "SmartArt"
+      }
+     ]
+    }
+   },
+   "auto": null,
+   "a": {
+    "mode": "clone"
+   },
+   "expected": {
+    "mappings": [],
+    "failures": [
+     {
+      "page": "slide-01.json",
+      "action": "proto→5",
+      "msg": "[HARD] прототип 7 degraded (нераспознано: SmartArt); default: proto 5 (чистый, тот же архетип)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "explicit_ok",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "elements": [
+       {
+        "type": "text",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ],
+      "proto": 5
+     }
+    }
+   ],
+   "info": {
+    "5": {
+     "arch": "solid #0A0F1F"
+    },
+    "7": {
+     "arch": "solid #0A0F1F"
+    }
+   },
+   "auto": null,
+   "a": {
+    "mode": "clone"
+   },
+   "expected": {
+    "mappings": [
+     {
+      "file": "slide-01.json",
+      "page": null,
+      "proto": 5,
+      "how": "явный"
+     }
+    ],
+    "failures": []
+   }
+  },
+  {
+   "name": "auto_table_match",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "elements": [
+       {
+        "type": "table",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "info": {
+    "1": {
+     "arch": "solid #111111"
+    },
+    "2": {
+     "arch": "media/bg.png"
+    },
+    "3": {
+     "arch": "solid #111111",
+     "table": true
+    },
+    "4": {
+     "arch": "solid #111111",
+     "chart": true
+    },
+    "9": {
+     "arch": "none"
+    }
+   },
+   "auto": {
+    "byPageType": {
+     "cover": 1,
+     "content": 3,
+     "closing": 9
+    },
+    "table": 3,
+    "chart": 4
+   },
+   "a": {
+    "mode": "create"
+   },
+   "expected": {
+    "mappings": [
+     {
+      "file": "slide-01.json",
+      "page": null,
+      "proto": 3,
+      "how": "таблица-матч"
+     }
+    ],
+    "failures": []
+   }
+  },
+  {
+   "name": "auto_chart_match",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "elements": [
+       {
+        "type": "chart",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "info": {
+    "1": {
+     "arch": "solid #111111"
+    },
+    "2": {
+     "arch": "media/bg.png"
+    },
+    "3": {
+     "arch": "solid #111111",
+     "table": true
+    },
+    "4": {
+     "arch": "solid #111111",
+     "chart": true
+    },
+    "9": {
+     "arch": "none"
+    }
+   },
+   "auto": {
+    "byPageType": {
+     "cover": 1,
+     "content": 3,
+     "closing": 9
+    },
+    "table": 3,
+    "chart": 4
+   },
+   "a": {
+    "mode": "create"
+   },
+   "expected": {
+    "mappings": [
+     {
+      "file": "slide-01.json",
+      "page": null,
+      "proto": 4,
+      "how": "чарт-матч"
+     }
+    ],
+    "failures": []
+   }
+  },
+  {
+   "name": "auto_pagetype_cover",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "cover",
+      "elements": [
+       {
+        "type": "text",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "info": {
+    "1": {
+     "arch": "solid #111111"
+    },
+    "2": {
+     "arch": "media/bg.png"
+    },
+    "3": {
+     "arch": "solid #111111",
+     "table": true
+    },
+    "4": {
+     "arch": "solid #111111",
+     "chart": true
+    },
+    "9": {
+     "arch": "none"
+    }
+   },
+   "auto": {
+    "byPageType": {
+     "cover": 1,
+     "content": 3,
+     "closing": 9
+    },
+    "table": 3,
+    "chart": 4
+   },
+   "a": {
+    "mode": "create"
+   },
+   "expected": {
+    "mappings": [
+     {
+      "file": "slide-01.json",
+      "page": null,
+      "proto": 1,
+      "how": "pageType"
+     }
+    ],
+    "failures": []
+   }
+  },
+  {
+   "name": "auto_pagetype_noauto",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "closing",
+      "elements": [
+       {
+        "type": "text",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "info": {
+    "1": {
+     "arch": "solid #111111"
+    },
+    "2": {
+     "arch": "media/bg.png"
+    },
+    "3": {
+     "arch": "solid #111111",
+     "table": true
+    },
+    "4": {
+     "arch": "solid #111111",
+     "chart": true
+    },
+    "9": {
+     "arch": "none"
+    }
+   },
+   "auto": null,
+   "a": {
+    "mode": "create"
+   },
+   "expected": {
+    "mappings": [
+     {
+      "file": "slide-01.json",
+      "page": null,
+      "proto": 9,
+      "how": "pageType"
+     }
+    ],
+    "failures": []
+   }
+  },
+  {
+   "name": "auto_pagetype_divider",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "divider",
+      "elements": [
+       {
+        "type": "text",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "info": {
+    "1": {
+     "arch": "solid #111111"
+    },
+    "2": {
+     "arch": "media/bg.png"
+    },
+    "3": {
+     "arch": "solid #111111",
+     "table": true
+    },
+    "4": {
+     "arch": "solid #111111",
+     "chart": true
+    },
+    "9": {
+     "arch": "none"
+    }
+   },
+   "auto": null,
+   "a": {
+    "mode": "create"
+   },
+   "expected": {
+    "mappings": [
+     {
+      "file": "slide-01.json",
+      "page": null,
+      "proto": 2,
+      "how": "pageType"
+     }
+    ],
+    "failures": []
+   }
+  },
+  {
+   "name": "missing_no_default_in_info",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "cover",
+      "elements": [
+       {
+        "type": "text",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ],
+      "proto": 42
+     }
+    }
+   ],
+   "info": {
+    "3": {
+     "arch": "none",
+     "degraded": [
+      {
+       "kind": "x"
+      }
+     ]
+    },
+    "7": {
+     "arch": "none"
+    }
+   },
+   "auto": null,
+   "a": {
+    "mode": "create"
+   },
+   "expected": {
+    "mappings": [],
+    "failures": [
+     {
+      "page": "slide-01.json",
+      "action": "proto→7",
+      "msg": "[HARD] прототип 42 недоступен: такого proto в атласе нет (витрина или несуществующий слайд); доступные proto: 3, 7 — укажите proto из списка (типы — в slides.md «## Contents»); default: proto 7 (pageType-матч)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "degraded_no_clean_sibling",
+   "pages": [
+    {
+     "file": "slide-01.json",
+     "spec": {
+      "pageType": "content",
+      "elements": [
+       {
+        "type": "text",
+        "bounds": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      ],
+      "proto": 2
+     }
+    }
+   ],
+   "info": {
+    "2": {
+     "arch": "media/bg.png",
+     "degraded": [
+      {
+       "kind": "ole"
+      }
+     ]
+    }
+   },
+   "auto": null,
+   "a": {
+    "mode": "clone"
+   },
+   "expected": {
+    "mappings": [],
+    "failures": [
+     {
+      "page": "slide-01.json",
+      "msg": "[HARD] прототип 2 degraded (нераспознано: ole)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "arch_keys",
+   "expected": [
+    "image5.png",
+    "image7.png",
+    "solid #0A0F1F",
+    "solid bg1",
+    "theme",
+    "none",
+    "solid #111111"
+   ]
+  },
+  {
+   "name": "pages_proto_info",
+   "input": {
+    "1": {
+     "elements": [
+      {
+       "type": "text"
+      },
+      {
+       "type": "table"
+      }
+     ],
+     "background": {
+      "type": "solid",
+      "color": "#111111"
+     },
+     "coverageReport": {
+      "recognized": 5,
+      "unrecognized": [
+       {
+        "kind": "SmartArt",
+        "name": "d1"
+       }
+      ]
+     }
+    },
+    "2": {
+     "elements": [],
+     "background": {
+      "type": "none"
+     },
+     "coverageReport": {
+      "recognized": 2,
+      "unrecognized": []
+     }
+    }
+   },
+   "expected": {
+    "1": {
+     "arch": "solid #111111",
+     "degraded": [
+      {
+       "kind": "SmartArt",
+       "name": "d1"
+      }
+     ],
+     "table": true,
+     "chart": false
+    },
+    "2": {
+     "arch": "none",
+     "degraded": null,
+     "table": false,
+     "chart": false
+    }
+   }
+  }
+ ]
+}

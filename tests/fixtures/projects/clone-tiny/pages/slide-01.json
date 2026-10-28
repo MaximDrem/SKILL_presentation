@@ -1,0 +1,28 @@
+{
+ "pageType": "cover",
+ "proto": 1,
+ "elements": [
+  {
+   "id": "t",
+   "type": "text",
+   "bounds": [
+    60,
+    280,
+    1160,
+    120
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Клон эталона",
+       "sz": 54,
+       "b": true,
+       "color": "#FFFFFF"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

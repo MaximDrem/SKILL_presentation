@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "unpack",
+  "/tmp/oracle-cli-jp5_xj6n/bad.pptx",
+  "--out",
+  "/tmp/oracle-cli-jp5_xj6n/badref"
+ ],
+ "exit": 2,
+ "stdout": "",
+ "stderr": "{\n  \"error\": \"не pptx или файл повреждён: <TMP>/bad.pptx\",\n  \"suggestion\": \"нужен читаемый .pptx/.zip; проверьте файл и повторите\"\n}\n"
+}

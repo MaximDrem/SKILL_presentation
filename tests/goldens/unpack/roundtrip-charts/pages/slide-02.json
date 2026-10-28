@@ -1,0 +1,17 @@
+{
+  "slide": 2,
+  "part": "ppt/slides/slide2.xml",
+  "background": {
+    "type": "solid",
+    "color": "#0A0F1F",
+    "source": "slide"
+  },
+  "coverageReport": {
+    "recognized": 2,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"ln","type":"chart","part":"ppt/charts/chart3.xml","bounds":[60,90,1160,300],"coverage":0.378,"chart":{"kind":"line","series":[{"name":"Выручка","categories":["Янв","Фев","Мар"],"values":[1.5,2.5,3.25]},{"name":"Расходы","categories":["Янв","Фев","Мар"],"values":[2,1,4.5]}],"colors":["#2FE7C4","#F59E0B"],"legend":true,"title":"Динамика"}},
+    {"id":"3","name":"dn","type":"chart","part":"ppt/charts/chart4.xml","bounds":[60,420,1160,260],"coverage":0.327,"chart":{"kind":"doughnut","series":[{"name":"Ряд 1","categories":["X","Y","Z"],"values":[30,45,25]}],"colors":["#2FE7C4"]}}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+ "argv": [
+  "check",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/dark-text",
+  "--theme",
+  "dark"
+ ],
+ "exit": 0,
+ "stdout": "OK: check (create) — 1 страниц, HARD-замечаний нет\nпрото: slide-01.json → 1 (явный)\n",
+ "stderr": ""
+}

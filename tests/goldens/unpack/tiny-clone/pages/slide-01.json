@@ -1,0 +1,19 @@
+{
+  "slide": 1,
+  "part": "ppt/slides/slide1.xml",
+  "background": {
+    "type": "theme",
+    "idx": 1001,
+    "scheme": "bg1",
+    "source": "master"
+  },
+  "coverageReport": {
+    "recognized": 2,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"bg-pic","type":"image","src":"image1.png","bounds":[0,0,1280,720],"coverage":1,"mediaClass":"background","reuse":1},
+    {"id":"3","name":"TextBox 2","type":"shape","shape":"rect","bounds":[60,280,1160,120],"coverage":0.151,"fill":{"none":true}},
+    {"type":"text","id":"3-t","name":"TextBox 2 — текст","bounds":[60,280,1160,120],"paragraphs":[{"runs":[{"text":"Крошечный эталон","sz":54,"b":true,"font":"SB Sans Display","color":"#FFFFFF"}]}],"coverage":0.151}
+  ]
+}

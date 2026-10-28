@@ -1,0 +1,10 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "elements": [
+  {"id": "numcat", "type": "chart", "bounds": [60, 90, 560, 280],
+   "chart": {"kind": "bar", "series": [{"name": "S1", "categories": [2020, 2021, 2022], "values": [1.5, -0.0, 9007199254740993]}]}},
+  {"id": "nocolors", "type": "chart", "bounds": [660, 90, 560, 280],
+   "chart": {"kind": "bar", "series": [{"name": "=1+1", "categories": ["=SUM(1)", "2024", "B"], "values": [1, 2, 3]}], "colors": []}}
+ ]
+}

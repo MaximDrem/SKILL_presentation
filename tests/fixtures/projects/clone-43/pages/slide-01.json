@@ -1,0 +1,27 @@
+{
+ "pageType": "content",
+ "proto": 1,
+ "elements": [
+  {
+   "id": "t",
+   "type": "text",
+   "bounds": [
+    60,
+    60,
+    840,
+    80
+   ],
+   "paragraphs": [
+    {
+     "runs": [
+      {
+       "text": "Клон 4:3",
+       "sz": 32,
+       "b": true
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

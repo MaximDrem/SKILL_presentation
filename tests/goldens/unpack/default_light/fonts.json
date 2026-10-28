@@ -1,0 +1,18 @@
+{
+  "fonts": {
+    "SB Sans Text Light": 315,
+    "SB Sans Display Semibold": 226,
+    "SB Sans Display": 175,
+    "SB Sans Text": 102,
+    "SB Sans Display Light": 82,
+    "SB Sans Text Semibold": 22,
+    "SBSansDisplay-Light": 7,
+    "Calibri": 2
+  },
+  "theme": {
+    "major": "Calibri Light",
+    "minor": "Calibri"
+  },
+  "embedded": false,
+  "embeddedFonts": []
+}

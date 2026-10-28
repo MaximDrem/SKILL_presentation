@@ -1,0 +1,13 @@
+{
+ "argv": [
+  "build",
+  "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/dark-text",
+  "--theme",
+  "dark",
+  "--out",
+  "/tmp/oracle-cli-jp5_xj6n/dark-text.pptx"
+ ],
+ "exit": 0,
+ "stdout": "OK: build (create) — 1 страниц → <TMP>/dark-text.pptx (рендер пропущен: DECK_SKIP_RENDER)\n",
+ "stderr": ""
+}

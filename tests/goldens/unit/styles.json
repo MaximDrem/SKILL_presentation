@@ -1,0 +1,66 @@
+{
+ "lvl": {
+  "1": {
+   "sz": 18.0,
+   "b": true,
+   "fontRaw": "F1",
+   "colorNode": "<node>"
+  },
+  "2": {
+   "sz": 14.0,
+   "fontRaw": "F2"
+  }
+ },
+ "tx": {
+  "titleStyle": {
+   "1": {
+    "sz": 44.0
+   }
+  },
+  "bodyStyle": {
+   "1": {
+    "sz": 18.0
+   }
+  },
+  "otherStyle": {
+   "1": {
+    "sz": 12.0
+   }
+  }
+ },
+ "ph": {
+  "title": {
+   "1": {
+    "sz": 40.0
+   }
+  },
+  "body": {
+   "1": {
+    "sz": 16.0
+   }
+  }
+ },
+ "funcs": {
+  "tx_style_class": {
+   "title": "titleStyle",
+   "ctrTitle": "titleStyle",
+   "body": "bodyStyle",
+   "subTitle": "bodyStyle",
+   "dt": "otherStyle",
+   "ftr": "otherStyle",
+   "sldNum": "otherStyle",
+   "null": "otherStyle"
+  },
+  "resolve_chain": {
+   "first_hit": 11,
+   "second_hit": 22,
+   "lvl_fallback": 33,
+   "lvl_missing_to_1": 44,
+   "miss": null,
+   "empty": null
+  }
+ },
+ "xml_lvl": "<a:lstStyle xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:lvl1pPr><a:defRPr sz=\"1800\" b=\"1\"><a:solidFill><a:srgbClr val=\"112233\"/></a:solidFill><a:latin typeface=\"F1\"/></a:defRPr></a:lvl1pPr><a:lvl2pPr><a:defRPr sz=\"1400\"><a:latin typeface=\"F2\"/></a:defRPr></a:lvl2pPr></a:lstStyle>",
+ "xml_master": "<p:sldMaster xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><p:txStyles><p:titleStyle><a:lvl1pPr><a:defRPr sz=\"4400\"/></a:lvl1pPr></p:titleStyle><p:bodyStyle><a:lvl1pPr><a:defRPr sz=\"1800\"/></a:lvl1pPr></p:bodyStyle><p:otherStyle><a:lvl1pPr><a:defRPr sz=\"1200\"/></a:lvl1pPr></p:otherStyle></p:txStyles></p:sldMaster>",
+ "xml_part": "<p:sld xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><p:cSld><p:spTree><p:sp><p:nvSpPr><p:cNvPr id=\"2\" name=\"t\"/><p:cNvSpPr/><p:nvPr><p:ph type=\"title\"/></p:nvPr></p:nvSpPr><p:txBody><a:bodyPr/><a:lstStyle><a:lvl1pPr><a:defRPr sz=\"4000\"/></a:lvl1pPr></a:lstStyle></p:txBody></p:sp><p:sp><p:nvSpPr><p:cNvPr id=\"3\" name=\"b\"/><p:cNvSpPr/><p:nvPr><p:ph/></p:nvPr></p:nvSpPr><p:txBody><a:bodyPr/><a:lstStyle><a:lvl1pPr><a:defRPr sz=\"1600\"/></a:lvl1pPr></a:lstStyle></p:txBody></p:sp></p:spTree></p:cSld></p:sld>"
+}
