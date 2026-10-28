@@ -64,11 +64,17 @@ interpreted).
    later. One line per slide: its proto (from the «## Contents» `type`
    column — one cover, one main content archetype, 1–2 accent protos),
    its title, its theses from the user's content, its decor files (from
-   step 2's enumeration). Template:
+   step 2's enumeration). For every visual specify its role:
+   `hero | semantic-marker | background-decor`. 3D is allowed only as a
+   semantically relevant hero; SVG pictograms only as semantic markers for
+   a thesis/card/step. Repeated card grids must not mix these roles or
+   replace one semantic SVG marker with a 3D illustration. Do not depict
+   the same concept in both 3D and SVG on one slide. Template:
 
    ```
    # План: <тема> — N слайдов, стиль «<имя референса>»
    # Стиль: rounding=round, mood=photo. Исключены (content): image27.png
+   # Роли: 3D только hero; SVG только semantic-marker; одна семья внутри сетки.
    # Декор — только акценты/фон, никогда не главный визуал слайда.
    1. cover — proto 1 (титульный референса). Заголовок «…», подзаголовок
       «…»; расположение по паттерну обложки; decor: image5.png.
