@@ -86,5 +86,5 @@
 
 Fonts, text styles and empty layout placeholders come from the selected proto.
 The agent creates logos and visual examples explicitly. For semantic SVG markers
-use only `decor/CATALOG.md`; for 3D/hero visuals use assets supplied by the user
-or created by the agent.
+and 3D/hero visuals use assets from `decor/CATALOG.md` when useful, or assets
+supplied by the user or created by the agent.

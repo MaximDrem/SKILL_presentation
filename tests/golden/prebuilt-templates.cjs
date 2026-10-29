@@ -90,7 +90,7 @@ test('prebuilt: 18 уникальных фонов и ни одного лишн
     const template = JSON.parse(fs.readFileSync(path.join(SKILL_JS, 'templates', `default_${theme}-ref/template.json`), 'utf8'));
     assert.strictEqual(template.branding, undefined);
   }
-  assert.deepStrictEqual(fs.readdirSync(path.join(SKILL_JS, 'templates/default-ref/decor')).sort(), ['CATALOG.md', 'pictograms']);
+  assert.deepStrictEqual(fs.readdirSync(path.join(SKILL_JS, 'templates/default-ref/decor')).sort(), ['CATALOG.md', 'blobs', 'icons3d', 'illustrations', 'other', 'pictograms']);
   const index = JSON.parse(fs.readFileSync(path.join(SKILL_JS, 'templates/default-ref/decor/pictograms/picto-index.json'), 'utf8'));
   for (const [file] of index.rows) {
     assert.ok(fs.existsSync(path.join(SKILL_JS, 'templates/default-ref/decor/pictograms', file)), `нет ${file}`);
