@@ -1,0 +1,21 @@
+{
+  "source": "clone-tiny.pptx",
+  "files": {
+    "image1.png": {
+      "format": "png",
+      "width": 120,
+      "height": 80,
+      "alpha": true,
+      "md5": "a17677197e8b4810d5d154b7a41053d2",
+      "bytes": 592,
+      "class": "background",
+      "usedBy": [
+        {
+          "slide": 1,
+          "part": "ppt/slides/slide6.xml",
+          "role": "background"
+        }
+      ]
+    }
+  }
+}

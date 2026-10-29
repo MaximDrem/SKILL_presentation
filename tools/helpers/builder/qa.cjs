@@ -160,7 +160,32 @@ function qaWarnings(pages, underlays = null, projectDir = null) {
             if (_contrast(eff, under) < CONTRAST_MIN) {
               const txt = [...String(r.text || "")].slice(0, 25).join("");
               const [fix, ratio] = _fixColor(p.slice(0, 3), under);
-              warns.push(`${item.file} ${eid}: текст «${txt}» цвета ${c} сливается с подложкой (контраст ${pyFixed(_contrast(eff, under), 1)} < ${pyFixed(CONTRAST_MIN, 1)}) — default: замените на ${fix} (контраст ${pyFixed(ratio, 1)}) или другой с контрастом ≥${pyFixed(CONTRAST_MIN, 1)} (править не обязательно)`);
+              warns.push(`${item.file} ${eid}: текст «${txt}» цвета ${c} сливается с подложкой (контраст ${pyFixed(_contrast(eff, under), 1)} < ${pyFixed(CONTRAST_MIN, 1)}) — default: замените на ${fix} (контраст ${pyFixed(ratio, 1)}) или другой с контрастом ≥${pyFixed(CONTRAST_MIN, 1)} (нужно исправить)`);
+            }
+          }
+        }
+      } else if (el.type === "table" && _obj(el.table)) {
+        const tb = el.table;
+        for (const [ri, row] of _list(tb.rows).entries()) {
+          for (const [ci, cell] of _list(row).entries()) {
+            if (!_obj(cell)) continue;
+            const col = cell.color || tb.color;
+            if (typeof col !== "string") continue;
+            const parsed = _parse(col);
+            if (!parsed) continue;
+            let under = null;
+            if (typeof cell.fill === "string" && cell.fill !== "none") {
+              const fill = _parse(cell.fill);
+              if (fill) under = bgRgb === null || bgRgb === undefined ? fill.slice(0, 3) : _composite(fill, bgRgb);
+            } else {
+              under = bgRgb;
+            }
+            if (under === null || under === undefined) continue;
+            const eff = _composite(parsed, under);
+            if (_contrast(eff, under) < CONTRAST_MIN) {
+              const txt = [...String(cell.text || "")].slice(0, 25).join("");
+              const [fix, ratio] = _fixColor(parsed.slice(0, 3), under);
+              warns.push(`${item.file} ${eid} [${ri + 1},${ci + 1}]: текст «${txt}» цвета ${col} сливается с заливкой ячейки (контраст ${pyFixed(_contrast(eff, under), 1)} < ${pyFixed(CONTRAST_MIN, 1)}) — default: замените на ${fix} (контраст ${pyFixed(ratio, 1)}) или другой с контрастом ≥${pyFixed(CONTRAST_MIN, 1)} (нужно исправить)`);
             }
           }
         }

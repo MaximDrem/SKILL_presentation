@@ -1,0 +1,12 @@
+{
+  "fonts": {
+    "SB Sans Text": 7,
+    "Calibri": 3
+  },
+  "theme": {
+    "major": "Calibri",
+    "minor": "Calibri"
+  },
+  "embedded": false,
+  "embeddedFonts": []
+}

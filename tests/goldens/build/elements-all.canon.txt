@@ -4962,6 +4962,7 @@ PART ppt/slides/slide2.xml
                       </>
                       <{http://schemas.openxmlformats.org/drawingml/2006/main}prstDash val="solid"/>
                     </>
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
                   </>
                 </>
                 <{http://schemas.openxmlformats.org/drawingml/2006/main}tc>
@@ -5002,6 +5003,7 @@ PART ppt/slides/slide2.xml
                       </>
                       <{http://schemas.openxmlformats.org/drawingml/2006/main}prstDash val="solid"/>
                     </>
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
                   </>
                 </>
                 <{http://schemas.openxmlformats.org/drawingml/2006/main}tc>
@@ -5042,6 +5044,7 @@ PART ppt/slides/slide2.xml
                       </>
                       <{http://schemas.openxmlformats.org/drawingml/2006/main}prstDash val="solid"/>
                     </>
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
                   </>
                 </>
               </>
@@ -5092,6 +5095,7 @@ PART ppt/slides/slide2.xml
                       </>
                       <{http://schemas.openxmlformats.org/drawingml/2006/main}prstDash val="solid"/>
                     </>
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
                   </>
                 </>
                 <{http://schemas.openxmlformats.org/drawingml/2006/main}tc>
@@ -5132,6 +5136,7 @@ PART ppt/slides/slide2.xml
                       </>
                       <{http://schemas.openxmlformats.org/drawingml/2006/main}prstDash val="solid"/>
                     </>
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
                   </>
                 </>
               </>

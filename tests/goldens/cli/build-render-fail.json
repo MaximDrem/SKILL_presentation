@@ -6,7 +6,7 @@
   "/tmp/oracle-cli-jp5_xj6n/render-fail.pptx"
  ],
  "exit": 3,
- "stdout": "WARN qa: slide-01.json t: текст «Тестовая страница» цвета #1A1A1A сливается с подложкой (контраст 1.1 < 2.5) — default: замените на #535353 (контраст 2.5) или другой с контрастом ≥2.5 (править не обязательно)\nWARN theme: --theme не задан — SU-оформление прото не копируется, страницы без explicit background будут белыми: slide-01.json (для SU-стиля повторите с --theme dark|light; для своего стиля — верно, править не обязательно)\n",
+ "stdout": "WARN qa: slide-01.json t: текст «Тестовая страница» цвета #1A1A1A сливается с подложкой (контраст 1.1 < 2.5) — default: замените на #535353 (контраст 2.5) или другой с контрастом ≥2.5 (нужно исправить)\nWARN theme: --theme не задан — SU-оформление прото не копируется, страницы без explicit background будут белыми: slide-01.json (для SU-стиля повторите с --theme dark|light; для своего стиля — верно, править не обязательно)\n",
  "stderr": "{\n  \"error\": \"рендер невозможен: не задан GIGATOOL_NODE (бинарь приложения)\",\n  \"suggestion\": \"env -u ELECTRON_RUN_AS_NODE \\\"<бинарь приложения>\\\" [<путь приложения из GIGATOOL_APP_PATH> -- для dev] --pptx-verify \\\"<deck>\\\" --out-dir \\\"<dir>\\\"\"\n}\n",
  "outExists": true
 }

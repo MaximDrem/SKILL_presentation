@@ -374,7 +374,7 @@ function rebuildTbl(el, k) {
         insertRPrChild(rPr, solidFillXml(mk(NS_A, "_tmp"), splitHex(col)[0]));
       }
       const fill = cspec.fill;
-      if (fill === "none") {
+      if (!fill || fill === "none") {
         removeL(tcPr, "solidFill");
         removeL(tcPr, "noFill");
         sub(tcPr, NS_A, "noFill");

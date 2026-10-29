@@ -1,0 +1,20 @@
+{
+  "slide": 2,
+  "part": "ppt/slides/slide2.xml",
+  "background": {
+    "type": "theme",
+    "idx": 1001,
+    "scheme": "bg1",
+    "source": "master"
+  },
+  "coverageReport": {
+    "recognized": 2,
+    "unrecognized": []
+  },
+  "elements": [
+    {"id":"2","name":"TextBox 1","type":"shape","shape":"rect","bounds":[60,60,700,60],"coverage":0.046,"fill":{"none":true}},
+    {"type":"text","id":"2-t","name":"TextBox 1 — текст","bounds":[60,60,700,60],"paragraphs":[{"runs":[{"text":"Пункты и ссылки","sz":28,"b":true,"font":"Calibri","color":"#000000"}]}],"coverage":0.046},
+    {"id":"3","name":"TextBox 2","type":"shape","shape":"rect","bounds":[60,160,700,300],"coverage":0.228,"fill":{"none":true}},
+    {"type":"text","id":"3-t","name":"TextBox 2 — текст","bounds":[60,160,700,300],"paragraphs":[{"runs":[{"text":"первый пункт","sz":16,"font":"Calibri","color":"#000000"}],"align":"l","bullet":"char","bulletChar":"•"},{"runs":[{"text":"второй ","sz":16,"font":"Calibri","color":"#000000"},{"text":"жирный","sz":16,"b":true,"font":"Calibri","color":"#000000"},{"text":" и ","sz":16,"font":"Calibri","color":"#000000"},{"text":"ссылка","sz":16,"font":"Calibri","color":"#1A5BD7"}]}],"coverage":0.228}
+  ]
+}

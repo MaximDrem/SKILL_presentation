@@ -1,0 +1,21 @@
+{
+  "source": "elements-all.pptx",
+  "files": {
+    "image1.png": {
+      "format": "png",
+      "width": 400,
+      "height": 300,
+      "alpha": false,
+      "md5": "717e999ad2edc8c507254e3e6e7af1ea",
+      "bytes": 1065,
+      "class": "content",
+      "usedBy": [
+        {
+          "slide": 2,
+          "part": "ppt/slides/slide2.xml",
+          "role": "picture"
+        }
+      ]
+    }
+  }
+}

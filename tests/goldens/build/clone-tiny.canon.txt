@@ -3353,7 +3353,9 @@ PART ppt/slides/slide7.xml
                       </>
                     </>
                   </>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}tcPr anchor="ctr" marB="22860" marL="47625" marR="47625" marT="22860"/>
+                  <{http://schemas.openxmlformats.org/drawingml/2006/main}tcPr anchor="ctr" marB="22860" marL="47625" marR="47625" marT="22860">
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
+                  </>
                 </>
                 <{http://schemas.openxmlformats.org/drawingml/2006/main}tc>
                   <{http://schemas.openxmlformats.org/drawingml/2006/main}txBody>
@@ -3366,7 +3368,9 @@ PART ppt/slides/slide7.xml
                       </>
                     </>
                   </>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}tcPr anchor="ctr" marB="22860" marL="47625" marR="47625" marT="22860"/>
+                  <{http://schemas.openxmlformats.org/drawingml/2006/main}tcPr anchor="ctr" marB="22860" marL="47625" marR="47625" marT="22860">
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
+                  </>
                 </>
               </>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}tr h="1143000">
@@ -3381,7 +3385,9 @@ PART ppt/slides/slide7.xml
                       </>
                     </>
                   </>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}tcPr anchor="ctr" marB="22860" marL="47625" marR="47625" marT="22860"/>
+                  <{http://schemas.openxmlformats.org/drawingml/2006/main}tcPr anchor="ctr" marB="22860" marL="47625" marR="47625" marT="22860">
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
+                  </>
                 </>
                 <{http://schemas.openxmlformats.org/drawingml/2006/main}tc>
                   <{http://schemas.openxmlformats.org/drawingml/2006/main}txBody>
@@ -3394,7 +3400,9 @@ PART ppt/slides/slide7.xml
                       </>
                     </>
                   </>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}tcPr anchor="ctr" marB="22860" marL="47625" marR="47625" marT="22860"/>
+                  <{http://schemas.openxmlformats.org/drawingml/2006/main}tcPr anchor="ctr" marB="22860" marL="47625" marR="47625" marT="22860">
+                    <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
+                  </>
                 </>
               </>
             </>

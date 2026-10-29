@@ -1,0 +1,12 @@
+{
+  "fonts": {
+    "Calibri": 14,
+    "SB Sans Display": 1
+  },
+  "theme": {
+    "major": "Calibri",
+    "minor": "Calibri"
+  },
+  "embedded": false,
+  "embeddedFonts": []
+}

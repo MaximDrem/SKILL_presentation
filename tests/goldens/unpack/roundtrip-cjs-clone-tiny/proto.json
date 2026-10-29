@@ -1,0 +1,14 @@
+{
+  "1": {
+    "arch": "image1.png",
+    "degraded": null,
+    "table": false,
+    "chart": false
+  },
+  "2": {
+    "arch": "theme",
+    "degraded": null,
+    "table": true,
+    "chart": false
+  }
+}

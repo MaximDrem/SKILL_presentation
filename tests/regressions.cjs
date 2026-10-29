@@ -13,6 +13,7 @@ const { Package, Part } = require("../tools/helpers/builder/opc.cjs");
 const { setTitle } = require("../tools/helpers/builder/chart-normalize.cjs");
 const { buildWorkbook } = require("../tools/helpers/builder/xlsxwrite.cjs");
 const { encodePng, decodeImage, newImage } = require("../tools/helpers/raster.cjs");
+const { qaWarnings } = require("../tools/helpers/builder/qa.cjs");
 
 const A = 'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"';
 const P = 'xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"';
@@ -75,6 +76,38 @@ test("regression: image opacity >= 1 не создаёт alphaModFix; 0.5 → am
   const amf = findL(findL(findL(pic, "blipFill"), "blip"), "alphaModFix");
   assert.ok(amf, "opacity=0.5: alphaModFix обязателен");
   assert.strictEqual(amf.attrs.get("amt"), "50000");
+});
+
+test("regression: table default noFill и contrast WARN", () => {
+  const gf = parseFrag(`<p:graphicFrame ${P} ${A}><p:nvGraphicFramePr><p:nvPr/></p:nvGraphicFramePr>` +
+    `<a:graphic><a:graphicData><a:tbl><a:tblPr/><a:tblGrid><a:gridCol w="476250"/><a:gridCol w="476250"/></a:tblGrid></a:tbl></a:graphicData></a:graphic></p:graphicFrame>`);
+  norm.normalizeTable(gf, { bounds: [0, 0, 100, 50], table: {
+    colW: [50, 50], rows: [[{ text: "H1", fill: "#12363F" }, { text: "H2", fill: "#12363F" }], [{ text: "body1" }, { text: "body2" }]],
+  } }, 9525);
+  const rows = findL(findL(findL(gf, "graphic"), "graphicData"), "tbl").children.filter((e) => e instanceof El && e.local === "tr");
+  for (const cell of rows[0].children.filter((e) => e instanceof El && e.local === "tc")) {
+    assert.ok(findL(findL(cell, "tcPr"), "solidFill"), "явный header fill потерян");
+  }
+  for (const cell of rows[1].children.filter((e) => e instanceof El && e.local === "tc")) {
+    assert.ok(findL(findL(cell, "tcPr"), "noFill"), "ячейка без fill обязана быть прозрачной");
+  }
+  const spec = { background: { type: "solid", color: "#FFFFFF" }, elements: [
+    { id: "tbl", type: "table", bounds: [0, 0, 100, 100], table: { colW: [100], rows: [[{ text: "bad", color: "#E8F1F4" }]] } },
+  ] };
+  const [hard, warns] = qaWarnings([{ file: "s.json", spec }]);
+  assert.deepStrictEqual(hard, []);
+  assert.strictEqual(warns.length, 1);
+  assert.ok(warns[0].includes("s.json tbl [1,1]") && warns[0].includes("нужно исправить"), warns[0]);
+  const [, underlayWarns] = qaWarnings([{ file: "u.json", spec: {
+    background: { type: "solid", color: "#FFFFFF" }, elements: [
+      { id: "txt", type: "text", bounds: [0, 0, 100, 30], paragraphs: [{ runs: [{ text: "bad", color: "#AAAAAA" }] }],
+    } ] } }]);
+  assert.ok(underlayWarns[0].includes("нужно исправить"), underlayWarns[0]);
+  const [hardDark, warnsDark] = qaWarnings([{ file: "d.json", spec: {
+    background: { type: "solid", color: "#000000" }, elements: [
+      { id: "tbl", type: "table", bounds: [0, 0, 100, 100], table: { colW: [100], rows: [[{ text: "good", color: "#E8F1F4" }]] } },
+    ] } }]);
+  assert.deepStrictEqual([hardDark, warnsDark], [[], []]);
 });
 
 test("regression: half-EMU rounding — bounds перезаписываются pyRound (ties-to-even)", () => {
