@@ -1,338 +1,338 @@
 {
-  "1": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "2": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "3": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "4": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "5": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "6": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "7": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "8": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "9": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "10": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "11": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "12": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "13": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "14": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "15": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "16": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "17": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "18": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "19": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "20": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "21": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "22": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "23": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "24": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "25": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "26": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "27": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "28": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "29": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "30": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "31": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "32": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "33": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "34": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "35": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "36": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "37": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "38": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "39": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "40": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "41": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "42": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "43": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "44": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": true,
-    "chart": false
-  },
-  "45": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": true,
-    "chart": false
-  },
-  "46": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": true,
-    "chart": false
-  },
-  "47": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": true
-  },
-  "48": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": true
-  },
-  "49": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": true
-  },
-  "50": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "51": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "52": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "53": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "54": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "55": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  },
-  "56": {
-    "arch": "solid bg1",
-    "degraded": null,
-    "table": false,
-    "chart": false
-  }
+ "1": {
+  "arch": "image1.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "2": {
+  "arch": "image9.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "3": {
+  "arch": "image9.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "4": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "5": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "6": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "7": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "8": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "9": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "10": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "11": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "12": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "13": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "14": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "15": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "16": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "17": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "18": {
+  "arch": "image4.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "19": {
+  "arch": "image4.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "20": {
+  "arch": "image4.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "21": {
+  "arch": "image4.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "22": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "23": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "24": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "25": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "26": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "27": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "28": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "29": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "30": {
+  "arch": "image8.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "31": {
+  "arch": "image8.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "32": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "33": {
+  "arch": "image3.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "34": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "35": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "36": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "37": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "38": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "39": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "40": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "41": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "42": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "43": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "44": {
+  "arch": "image7.jpg",
+  "degraded": null,
+  "table": true,
+  "chart": false
+ },
+ "45": {
+  "arch": "image7.jpg",
+  "degraded": null,
+  "table": true,
+  "chart": false
+ },
+ "46": {
+  "arch": "image7.jpg",
+  "degraded": null,
+  "table": true,
+  "chart": false
+ },
+ "47": {
+  "arch": "image6.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": true
+ },
+ "48": {
+  "arch": "image6.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": true
+ },
+ "49": {
+  "arch": "image6.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": true
+ },
+ "50": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "51": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "52": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "53": {
+  "arch": "image2.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "54": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "55": {
+  "arch": "solid bg1",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ },
+ "56": {
+  "arch": "image5.jpg",
+  "degraded": null,
+  "table": false,
+  "chart": false
+ }
 }

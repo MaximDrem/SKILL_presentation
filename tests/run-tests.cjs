@@ -16,7 +16,7 @@ const SUITES = [
   "tests/golden/opc-integrity.cjs",
   "tests/golden/errors-envelope.cjs",
   "tests/golden/render-verify.cjs",
-  "tests/golden/prepare-templates.cjs",
+  "tests/golden/prebuilt-templates.cjs",
   "tests/golden/unpack-parity.cjs",
   "tests/golden/cli.cjs",
   "tests/golden/build-parity.cjs",

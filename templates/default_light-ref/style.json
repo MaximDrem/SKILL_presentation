@@ -1,0 +1,55 @@
+{
+  "file": "default_light.pptx",
+  "slideCount": 57,
+  "slideSizeEMU": [
+    12192000,
+    6858000
+  ],
+  "canvas": [
+    1280,
+    720
+  ],
+  "elementsOrder": "z-order: elements[0] — самый нижний",
+  "theme": {
+    "colors": {
+      "dk1": "000000",
+      "lt1": "FFFFFF",
+      "dk2": "283438",
+      "lt2": "FFFFFF",
+      "accent1": "56FF71",
+      "accent2": "5CFF8D",
+      "accent3": "00E0FF",
+      "accent4": "61ECFF",
+      "accent5": "55FF70",
+      "accent6": "5CFF8D",
+      "hlink": "0563C1",
+      "folHlink": "954F72"
+    },
+    "clrMap": {
+      "bg1": "lt1",
+      "tx1": "dk1",
+      "bg2": "lt2",
+      "tx2": "dk2",
+      "accent1": "accent1",
+      "accent2": "accent2",
+      "accent3": "accent3",
+      "accent4": "accent4",
+      "accent5": "accent5",
+      "accent6": "accent6",
+      "hlink": "hlink",
+      "folHlink": "folHlink"
+    },
+    "fonts": {
+      "major": "Calibri Light",
+      "minor": "Calibri"
+    },
+    "embeddedFonts": []
+  },
+  "style": {
+    "fonts": {},
+    "fontSizes": {},
+    "textColors": {},
+    "shapeFills": {},
+    "gradients": {}
+  }
+}

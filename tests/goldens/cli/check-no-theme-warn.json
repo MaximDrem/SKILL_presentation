@@ -4,6 +4,6 @@
   "/home/maksi/gigatool_skill_v3/SKILL_WORK_js/tests/fixtures/projects/blank-text"
  ],
  "exit": 0,
- "stdout": "WARN qa: slide-01.json t: текст «Тестовая страница» цвета #1A1A1A сливается с подложкой (контраст 1.5 < 2.5) — default: замените на #767676 (контраст 2.6) или другой с контрастом ≥2.5 (править не обязательно)\nWARN theme: --theme не задан — SU-оформление прото не копируется, страницы без explicit background будут белыми: slide-01.json (для SU-стиля повторите с --theme dark|light; для своего стиля — верно, править не обязательно)\nOK: check (create) — 1 страниц, HARD-замечаний нет\nпрото: slide-01.json → 1 (явный)\n",
+ "stdout": "WARN qa: slide-01.json t: текст «Тестовая страница» цвета #1A1A1A сливается с подложкой (контраст 1.1 < 2.5) — default: замените на #535353 (контраст 2.5) или другой с контрастом ≥2.5 (править не обязательно)\nWARN theme: --theme не задан — SU-оформление прото не копируется, страницы без explicit background будут белыми: slide-01.json (для SU-стиля повторите с --theme dark|light; для своего стиля — верно, править не обязательно)\nOK: check (create) — 1 страниц, HARD-замечаний нет\nпрото: slide-01.json → 1 (явный)\n",
  "stderr": ""
 }

@@ -1,0 +1,27 @@
+{
+  "fonts": {},
+  "theme": {
+    "major": "SB Sans Display",
+    "minor": "SB Sans Text"
+  },
+  "embedded": true,
+  "embeddedFonts": [
+    "font1.fntdata",
+    "font2.fntdata",
+    "font3.fntdata",
+    "font4.fntdata",
+    "font5.fntdata",
+    "font6.fntdata",
+    "font7.fntdata",
+    "font8.fntdata",
+    "font9.fntdata",
+    "font10.fntdata",
+    "font11.fntdata",
+    "font12.fntdata",
+    "font13.fntdata",
+    "font14.fntdata",
+    "font15.fntdata",
+    "font16.fntdata",
+    "font17.fntdata"
+  ]
+}

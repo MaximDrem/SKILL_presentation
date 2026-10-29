@@ -52,380 +52,237 @@
   "table": 44,
   "chart": 47
  },
- "branding": {
-  "slides": {
-   "1": null,
-   "2": null,
-   "3": null,
-   "18": null,
-   "19": null,
-   "20": null,
-   "21": [
-    89,
-    74,
-    221,
-    35
-   ],
-   "22": null,
-   "23": null,
-   "24": null,
-   "25": null,
-   "26": null,
-   "27": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "28": null,
-   "30": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "31": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "32": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "33": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "34": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "35": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "36": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "37": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "38": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "39": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "40": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "41": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "42": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "43": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "44": null,
-   "45": null,
-   "46": null,
-   "47": null,
-   "48": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "49": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "50": null,
-   "51": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "52": [
-    52,
-    32,
-    149,
-    24
-   ],
-   "53": null,
-   "56": null
-  }
- },
  "protoMeta": {
   "1": {
-   "arch": "image2.jpeg",
+   "arch": "image1.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "2": {
-   "arch": "image9.jpeg",
+   "arch": "image9.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "3": {
-   "arch": "image9.jpeg",
+   "arch": "image9.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "18": {
-   "arch": "image5.jpeg",
+   "arch": "image4.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "19": {
-   "arch": "image6.jpeg",
+   "arch": "image4.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "20": {
-   "arch": "image7.jpeg",
+   "arch": "image4.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "21": {
-   "arch": "image3.jpeg",
+   "arch": "image4.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "22": {
-   "arch": "image8.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "23": {
-   "arch": "image11.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "24": {
-   "arch": "image9.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "25": {
-   "arch": "image3.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "26": {
-   "arch": "image10.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "27": {
-   "arch": "image16.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "28": {
-   "arch": "image12.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "30": {
-   "arch": "image19.jpeg",
+   "arch": "image8.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "31": {
-   "arch": "image20.jpeg",
+   "arch": "image8.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "32": {
-   "arch": "image21.jpg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "33": {
-   "arch": "image22.jpeg",
+   "arch": "image3.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "34": {
-   "arch": "image21.jpg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "35": {
-   "arch": "image22.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "36": {
-   "arch": "image16.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "37": {
-   "arch": "image16.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "38": {
-   "arch": "image16.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "39": {
-   "arch": "image16.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "40": {
-   "arch": "image16.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "41": {
-   "arch": "image15.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "42": {
-   "arch": "image16.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "43": {
-   "arch": "image15.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "44": {
-   "arch": "image9.jpeg",
+   "arch": "image7.jpg",
    "degraded": null,
    "table": true,
    "chart": false
   },
   "45": {
-   "arch": "image9.jpeg",
+   "arch": "image7.jpg",
    "degraded": null,
    "table": true,
    "chart": false
   },
   "46": {
-   "arch": "image9.jpeg",
+   "arch": "image7.jpg",
    "degraded": null,
    "table": true,
    "chart": false
   },
   "47": {
-   "arch": "image9.jpeg",
+   "arch": "image6.jpg",
    "degraded": null,
    "table": false,
    "chart": true
   },
   "48": {
-   "arch": "image15.jpeg",
+   "arch": "image6.jpg",
    "degraded": null,
    "table": false,
    "chart": true
   },
   "49": {
-   "arch": "image16.jpeg",
+   "arch": "image6.jpg",
    "degraded": null,
    "table": false,
    "chart": true
   },
   "50": {
-   "arch": "image11.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "51": {
-   "arch": "image16.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "52": {
-   "arch": "image17.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "53": {
-   "arch": "image12.jpeg",
+   "arch": "image2.jpg",
    "degraded": null,
    "table": false,
    "chart": false
   },
   "56": {
-   "arch": "image3.jpeg",
+   "arch": "image5.jpg",
    "degraded": null,
    "table": false,
    "chart": false
@@ -477,23 +334,23 @@
     "minor": "SB Sans Text"
    },
    "embeddedFonts": [
-    "font2.fntdata",
-    "font1.fntdata",
-    "font17.fntdata",
-    "font16.fntdata",
-    "font15.fntdata",
-    "font14.fntdata",
-    "font13.fntdata",
-    "font12.fntdata",
-    "font11.fntdata",
-    "font10.fntdata",
-    "font9.fntdata",
-    "font8.fntdata",
-    "font7.fntdata",
-    "font6.fntdata",
-    "font5.fntdata",
     "font4.fntdata",
-    "font3.fntdata"
+    "font9.fntdata",
+    "font7.fntdata",
+    "font15.fntdata",
+    "font2.fntdata",
+    "font5.fntdata",
+    "font10.fntdata",
+    "font13.fntdata",
+    "font8.fntdata",
+    "font3.fntdata",
+    "font11.fntdata",
+    "font16.fntdata",
+    "font1.fntdata",
+    "font6.fntdata",
+    "font14.fntdata",
+    "font17.fntdata",
+    "font12.fntdata"
    ]
   },
   "style": {
@@ -580,23 +437,23 @@
   },
   "embedded": true,
   "embeddedFonts": [
-   "font2.fntdata",
-   "font1.fntdata",
-   "font17.fntdata",
-   "font16.fntdata",
-   "font15.fntdata",
-   "font14.fntdata",
-   "font13.fntdata",
-   "font12.fntdata",
-   "font11.fntdata",
-   "font10.fntdata",
-   "font9.fntdata",
-   "font8.fntdata",
-   "font7.fntdata",
-   "font6.fntdata",
-   "font5.fntdata",
    "font4.fntdata",
-   "font3.fntdata"
+   "font9.fntdata",
+   "font7.fntdata",
+   "font15.fntdata",
+   "font2.fntdata",
+   "font5.fntdata",
+   "font10.fntdata",
+   "font13.fntdata",
+   "font8.fntdata",
+   "font3.fntdata",
+   "font11.fntdata",
+   "font16.fntdata",
+   "font1.fntdata",
+   "font6.fntdata",
+   "font14.fntdata",
+   "font17.fntdata",
+   "font12.fntdata"
   ]
  }
 }

@@ -30,10 +30,7 @@ function normOut(s, tmp) {
   const Q = '\\\\?"';
   s = s.replace(new RegExp(`ELECTRON_RUN_AS_NODE=1 ${Q}\\$GIGATOOL_NODE${Q} ${Q}<SKILL_JS>[/\\\\]+tools[/\\\\]+deck\\.(cjs|py)${Q}`, "g"), "<DECK>");
   s = s.replace(new RegExp(`PYTHONPATH=${Q}<SKILL>[/\\\\]+site-packages${Q} ${Q}<PY>${Q} ${Q}<SKILL>[/\\\\]+tools[/\\\\]+deck(\\.py)?${Q}`, "g"), "<DECK>");
-  s = s.replace(new RegExp(`ELECTRON_RUN_AS_NODE=1 ${Q}\\$GIGATOOL_NODE${Q} ${Q}<SKILL_JS>[/\\\\]+tools[/\\\\]+helpers[/\\\\]+build_templates[/\\\\]+prepare_templates\\.(cjs|py)${Q}`, "g"), "<PREPARE>");
-  s = s.replace(new RegExp(`PYTHONPATH=${Q}<SKILL>[/\\\\]+site-packages${Q} ${Q}<PY>${Q} ${Q}<SKILL>[/\\\\]+tools[/\\\\]+helpers[/\\\\]+build_templates[/\\\\]+prepare_templates\\.py${Q}`, "g"), "<PREPARE>");
   s = s.replace(/deck\.cjs/g, "deck.py");
-  s = s.replace(/prepare_templates\.cjs/g, "prepare_templates.py");
   return s;
 }
 

@@ -1,15 +1,12 @@
 PART [Content_Types].xml
 <{http://schemas.openxmlformats.org/package/2006/content-types}Types>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Default ContentType="application/x-fontdata" Extension="fntdata"/>
-  <{http://schemas.openxmlformats.org/package/2006/content-types}Default ContentType="image/jpeg" Extension="jpeg"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Default ContentType="image/jpeg" Extension="jpg"/>
-  <{http://schemas.openxmlformats.org/package/2006/content-types}Default ContentType="image/png" Extension="png"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Default ContentType="application/vnd.openxmlformats-package.relationships+xml" Extension="rels"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Default ContentType="application/xml" Extension="xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml" PartName="/docProps/app.xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-package.core-properties+xml" PartName="/docProps/core.xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml" PartName="/ppt/handoutMasters/handoutMaster1.xml"/>
-  <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="image/svg+xml" PartName="/ppt/media/image1.svg"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml" PartName="/ppt/notesMasters/notesMaster1.xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.presProps+xml" PartName="/ppt/presProps.xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml" PartName="/ppt/presentation.xml"/>
@@ -432,28 +429,7 @@ PART ppt/handoutMasters/handoutMaster1.xml
     </>
   </>
 </>
-BIN ppt/media/image1.svg sha256:4c4d5187586de6a5171a8baa6531cd7b2cd0b528b0cafb0d57c38914120d443c
-BIN ppt/media/image10.jpeg sha256:588c273ca3bf850c7713aa8e4d221923a213d3d2cd29f2f4dd7b4ef65ad2c982
-BIN ppt/media/image11.jpeg sha256:314cd591e8ada96f76682bd0deb7b7e2a02b0894e6c054b78bf85146d7fa8ab0
-BIN ppt/media/image12.jpeg sha256:8c3950529492be172abd69b683956a1b4cdc6bd9635b7824a2b031c50c7ded10
-BIN ppt/media/image13.jpeg sha256:0725226220689e5ddee30726cc1fa606324bc7876c6c039d827e7f95830e4b44
-BIN ppt/media/image14.jpeg sha256:dc14bb470742bbfe548def0363117269d509cfb3e97aaebb28678192fcab4a2e
-BIN ppt/media/image15.jpeg sha256:bb717a6679bb8d3d4a88fed7db85b5388694104c1442fbf3a01beba1d90be3ad
-BIN ppt/media/image16.jpeg sha256:92652f1a4cfb1eec5e7c6923722186ba1327c48fa5cb3d9c919665d1690c94c9
-BIN ppt/media/image17.jpeg sha256:32e6aaa8af22726d7bd14eb5230f044b0d65ba42575593af542c73d1cae6ac9b
-BIN ppt/media/image18.jpeg sha256:84373b0bd3f59cf2d7cb7cbd1950cdc2b7a4f319f6212f99746f5b73767972b8
-BIN ppt/media/image19.jpeg sha256:065dcd02209ba2243785d190d54b85fb4ebbb4124b0edb23401dedf5561c00ce
-BIN ppt/media/image2.jpeg sha256:7e57b516b7de1f6bc101f99aafc7bc28e052f1385b96030f9a93888e6075344c
-BIN ppt/media/image20.jpeg sha256:3a8a41e1c63cad91b470e4383c588c6c343fdaf9a15c0fdd67c111e8ab353d2d
-BIN ppt/media/image21.jpg sha256:50a0c88f45f29e9b7ddecd68f7868d61b0374b5a9a460114486107788802f7f4
-BIN ppt/media/image22.jpeg sha256:9efc62fcdb7ecb1f6cc1f3471fee9e0304169d45277ab41c692ead0aecc4845d
-BIN ppt/media/image3.jpeg sha256:e5340b10f7264fe783482b43490dfff6d36d19c2ca64fe8a27cbf654ecc149ac
-BIN ppt/media/image4.png sha256:9dc3198cc05baa97589c4c26a61e294439da5c4a9e0ddce5991a79c3ac57b224
-BIN ppt/media/image5.jpeg sha256:edd36bab6bfd278cc744661d39276c70baf1c5766226a5f39b97fda05425d360
-BIN ppt/media/image6.jpeg sha256:3171a1c69eaaee144a96a52d1fdd65adf6c82342e1056835e4d4b7171646ccfa
-BIN ppt/media/image7.jpeg sha256:d0bbed1dd50ff5a9e3dccce776d6a7fdbba10b389da276e6a01289014a5a1382
-BIN ppt/media/image8.jpeg sha256:3873a772100a6cced8c66a35e3b183a605806d0af984ee0540d0effb28a77afd
-BIN ppt/media/image9.jpeg sha256:fdb65d1f1ea6bd28535e70ee779ca50f5f81a3ff1ae6f50ee14d3e81692ce08e
+BIN ppt/media/image1.jpg sha256:83b264ccafa1c52cc64fa027a0d91f0f9491ad44ab5c19a83258178198073956
 PART ppt/notesMasters/_rels/notesMaster1.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../theme/theme2.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme"/>
@@ -1232,119 +1208,86 @@ PART ppt/presentation.xml
 PART ppt/slideLayouts/_rels/slideLayout1.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" TargetMode="External" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image1.svg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout10.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image10.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout11.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image11.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout12.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image12.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout13.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image13.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image14.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId4" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout14.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image15.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout15.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image16.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout16.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image17.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout17.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image18.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout18.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image19.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout19.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image20.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout2.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image2.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout20.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image21.jpg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout21.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image22.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout3.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image3.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image4.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout4.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image5.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout5.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image6.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout6.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image7.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout7.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image8.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout8.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image3.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/_rels/slideLayout9.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideMasters/slideMaster1.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster"/>
-  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image9.jpeg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slideLayouts/slideLayout1.xml
 <{http://schemas.openxmlformats.org/presentationml/2006/main}sldLayout preserve="1">
@@ -1414,7 +1357,7 @@ PART ppt/slideLayouts/slideLayout1.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}p>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Текст заголовка 2"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -1486,7 +1429,7 @@ PART ppt/slideLayouts/slideLayout1.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец текста\n"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -1517,7 +1460,7 @@ PART ppt/slideLayouts/slideLayout1.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}fld id="{8694583C-1372-4011-817E-52B3A6677622}" type="slidenum">
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr lang="ru-RU" smtClean="0"/>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"‹#›"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}endParaRPr dirty="0" lang="ru-RU"/>
           </>
@@ -1597,302 +1540,8 @@ PART ppt/slideLayouts/slideLayout1.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Заголовок блока"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" id="11" name="Рисунок 10"/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}link="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1588" cy="1588"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" id="12" name="Рисунок 11"/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}link="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1588" cy="1588"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" id="13" name="Рисунок 12"/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}link="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1588" cy="1588"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" id="14" name="Рисунок 13"/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}link="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1588" cy="1588"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="15" name="Рисунок 14">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{F81DE017-3EDD-C049-8227-72C426B9B735}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi val="0"/>
-              </>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{96DAC541-7B7A-43D3-8B79-37D633B846F1}">
-                <{http://schemas.microsoft.com/office/drawing/2016/SVG/main}svgBlip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="576001" y="302400"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1432560" cy="225117"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{A35C1261-AB38-25EB-F270-51B133CE4206}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}link="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1588" cy="1588"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{84F49F31-C5D8-B5AF-8F41-DA0A19FBEBC3}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}link="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1588" cy="1588"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" id="5" name="Рисунок 4">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{1D4D9BFB-F5F0-0B75-16DE-DB07A6B03AB0}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}link="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1588" cy="1588"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="http://9AF63770E53DE8DDF9995A521138D60A.dms.sberbank.ru/9AF63770E53DE8DDF9995A521138D60A-0AA3C0FD1608A3AD06877213F42D883A-4A047BAE9BFE11B2E493D089584F7A14/1.png" id="7" name="Рисунок 6">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{065A523F-ED15-2A65-A0C3-2A037DCC5C18}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}link="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1588" cy="1588"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="9" name="Рисунок 8">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{D9862D8B-D587-3CCA-57EC-573324311286}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi val="0"/>
-              </>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{96DAC541-7B7A-43D3-8B79-37D633B846F1}">
-                <{http://schemas.microsoft.com/office/drawing/2016/SVG/main}svgBlip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="576001" y="302400"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1432560" cy="225117"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
           </>
         </>
       </>
@@ -1923,42 +1572,6 @@ PART ppt/slideLayouts/slideLayout10.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{F56CE0A9-00A5-7FB4-2F4D-797A3BF1A921}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -2007,7 +1620,7 @@ PART ppt/slideLayouts/slideLayout10.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -2058,7 +1671,7 @@ PART ppt/slideLayouts/slideLayout10.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец подзаголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -2089,42 +1702,6 @@ PART ppt/slideLayouts/slideLayout11.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{BB6EACBD-92DD-363B-7BAB-59CF2885F7EF}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -2173,7 +1750,7 @@ PART ppt/slideLayouts/slideLayout11.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -2224,7 +1801,7 @@ PART ppt/slideLayouts/slideLayout11.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец подзаголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -2255,42 +1832,6 @@ PART ppt/slideLayouts/slideLayout12.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{7F13B087-C98F-F581-9E4B-21A8DD7BD8D9}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -2339,7 +1880,7 @@ PART ppt/slideLayouts/slideLayout12.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -2390,7 +1931,7 @@ PART ppt/slideLayouts/slideLayout12.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец подзаголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -2421,114 +1962,6 @@ PART ppt/slideLayouts/slideLayout13.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Рисунок 2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{4A4B73F8-5E86-5C16-6BEA-31F662505842}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="6" name="Рисунок 5">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{E77FF82C-DCC2-4F84-723F-63D29D81557F}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{64DF899A-2219-2D98-E894-87FA47DEBFC2}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId4">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
     </>
@@ -2570,78 +2003,6 @@ PART ppt/slideLayouts/slideLayout14.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="10" name="Рисунок 9">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{A056ADC3-7E69-6752-3D8E-0DF856175747}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{39628681-8C08-D824-A185-B92BBE64BFA5}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
     </>
     <{http://schemas.openxmlformats.org/presentationml/2006/main}extLst>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
@@ -2681,77 +2042,6 @@ PART ppt/slideLayouts/slideLayout15.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Рисунок 2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{279B1664-9B40-40D2-9C62-E929AD95A078}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}srcRect/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="1"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12207978" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{5335A154-0F39-261B-1114-8A64D314A1E0}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
     </>
     <{http://schemas.openxmlformats.org/presentationml/2006/main}extLst>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
@@ -2785,77 +2075,6 @@ PART ppt/slideLayouts/slideLayout16.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{95355CC3-975C-1E92-533D-579F39BE35D7}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}srcRect/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm flipV="1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{ED309647-75E7-B829-4423-32D51ACD4E94}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
     </>
     <{http://schemas.openxmlformats.org/presentationml/2006/main}extLst>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
@@ -2887,78 +2106,6 @@ PART ppt/slideLayouts/slideLayout17.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Рисунок 2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{1A8B7479-BEEB-92A0-2D09-6906034BD62A}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{48060692-8FF2-9CA7-1AE2-F247A7E0AD62}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
     </>
@@ -2998,42 +2145,6 @@ PART ppt/slideLayouts/slideLayout18.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="6" name="Рисунок 5">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{BD02D9FD-D999-CC10-052A-CE895ADB0933}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -3082,7 +2193,7 @@ PART ppt/slideLayouts/slideLayout18.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -3133,44 +2244,8 @@ PART ppt/slideLayouts/slideLayout18.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец подзаголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{FFA38C30-57CA-32CD-6792-C06C009058C1}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
           </>
         </>
       </>
@@ -3213,78 +2288,6 @@ PART ppt/slideLayouts/slideLayout19.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Рисунок 2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{5AD01C53-8D91-9492-7CF0-C0D6C80E5CEB}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{91D2BD11-04B4-1190-639D-50CAE3C3BD17}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
     </>
     <{http://schemas.openxmlformats.org/presentationml/2006/main}extLst>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
@@ -3322,42 +2325,6 @@ PART ppt/slideLayouts/slideLayout2.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="5" name="Рисунок 4">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{B6B2847A-13C7-A425-0B8E-A38CFD2318E6}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -3402,7 +2369,7 @@ PART ppt/slideLayouts/slideLayout2.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}p>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Название презентации"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -3450,7 +2417,7 @@ PART ppt/slideLayouts/slideLayout2.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Подзаголовок"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -3504,72 +2471,6 @@ PART ppt/slideLayouts/slideLayout20.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{5B1F7BBB-263C-6BA2-6174-BCDA8F159D41}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{6B39BD18-0B88-44A5-5FAA-35732932D46F}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
     </>
     <{http://schemas.openxmlformats.org/presentationml/2006/main}extLst>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
@@ -3609,78 +2510,6 @@ PART ppt/slideLayouts/slideLayout21.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Рисунок 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{B7F17C25-9793-C064-6568-21402FBEAB1F}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm flipV="1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Рисунок 2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{AF7555FD-EA4A-03D4-5665-7AD8C630694C}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="494001" y="303628"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1420524" cy="226197"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
     </>
     <{http://schemas.openxmlformats.org/presentationml/2006/main}extLst>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
@@ -3718,42 +2547,6 @@ PART ppt/slideLayouts/slideLayout3.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="5" name="Рисунок 4">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{77FDF463-3F7C-D97B-A458-574B23F12B5B}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -3802,100 +2595,8 @@ PART ppt/slideLayouts/slideLayout3.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvSpPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="2" name="Прямоугольник 1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{45ED4612-4EE8-5736-6015-E89FD98A8C2E}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvSpPr/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="383177" y="209006"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="1663337" cy="435428"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}solidFill>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}srgbClr val="000000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}ln>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}style>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}lnRef idx="2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}schemeClr val="accent1">
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}shade val="50000"/>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRef idx="1">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}schemeClr val="accent1"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}effectRef idx="0">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}schemeClr val="accent1"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}fontRef idx="minor">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}schemeClr val="lt1"/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}txBody>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}bodyPr anchor="ctr" rtlCol="0"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}lstStyle/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}p>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr algn="ctr"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}endParaRPr dirty="0" lang="ru-RU">
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}solidFill>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}srgbClr val="000333"/>
-              </>
-            </>
-          </>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{A6FDCA23-7B07-BAB9-5C0E-53A2BDC3EA18}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="842963" y="703497"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="2102102" cy="334728"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
           </>
         </>
       </>
@@ -3925,42 +2626,6 @@ PART ppt/slideLayouts/slideLayout4.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="6" name="Рисунок 5">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{187A4403-F9F8-C958-F088-D23066C0D76F}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -4009,7 +2674,7 @@ PART ppt/slideLayouts/slideLayout4.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -4058,42 +2723,6 @@ PART ppt/slideLayouts/slideLayout5.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="5" name="Рисунок 4">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{07BE2712-375E-7C3D-FA51-13E4D0FD7E55}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
         <{http://schemas.openxmlformats.org/presentationml/2006/main}nvSpPr>
           <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Заголовок 2">
@@ -4140,7 +2769,7 @@ PART ppt/slideLayouts/slideLayout5.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -4189,42 +2818,6 @@ PART ppt/slideLayouts/slideLayout6.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="4" name="Рисунок 3">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{4DCA0DFA-0C41-64AC-086D-94D9F1C28BAE}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
         <{http://schemas.openxmlformats.org/presentationml/2006/main}nvSpPr>
           <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Заголовок 2">
@@ -4271,7 +2864,7 @@ PART ppt/slideLayouts/slideLayout6.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -4302,42 +2895,6 @@ PART ppt/slideLayouts/slideLayout7.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Рисунок 2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{E03BF728-2896-9B76-20A2-AF2CCD89E3BF}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -4386,7 +2943,7 @@ PART ppt/slideLayouts/slideLayout7.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -4437,7 +2994,7 @@ PART ppt/slideLayouts/slideLayout7.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец подзаголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -4486,28 +3043,6 @@ PART ppt/slideLayouts/slideLayout8.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="5" name="Рисунок 4"/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2"/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr bwMode="auto">
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-        </>
-      </>
     </>
     <{http://schemas.openxmlformats.org/presentationml/2006/main}extLst>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
@@ -4534,43 +3069,6 @@ PART ppt/slideLayouts/slideLayout9.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="0" cy="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chOff x="0" y="0"/>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}chExt cx="0" cy="0"/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="3" name="Рисунок 2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <{http://schemas.microsoft.com/office/drawing/2014/main}creationId id="{8B997872-A2C9-C480-1D85-D9A12048FD2B}"/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}picLocks noChangeAspect="1"/>
-          </>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr userDrawn="1"/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip cstate="screen" {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}extLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <{http://schemas.microsoft.com/office/drawing/2010/main}useLocalDpi/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="0" y="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="12192000" cy="6858000"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}prstGeom prst="rect">
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
@@ -4619,7 +3117,7 @@ PART ppt/slideLayouts/slideLayout9.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -4670,7 +3168,7 @@ PART ppt/slideLayouts/slideLayout9.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="0" marL="0"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец подзаголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -4782,35 +3280,35 @@ PART ppt/slideMasters/slideMaster1.xml
             </>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец текста"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}p>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="1"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Второй уровень"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}p>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="2"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Третий уровень"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}p>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="3"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Четвертый уровень"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}p>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr lvl="4"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Пятый уровень"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -4886,7 +3384,7 @@ PART ppt/slideMasters/slideMaster1.xml
             <{http://schemas.openxmlformats.org/drawingml/2006/main}fld id="{8694583C-1372-4011-817E-52B3A6677622}" type="slidenum">
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr lang="ru-RU" smtClean="0"/>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}pPr/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"‹#›"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}endParaRPr dirty="0" lang="ru-RU"/>
           </>
@@ -4925,7 +3423,7 @@ PART ppt/slideMasters/slideMaster1.xml
           <{http://schemas.openxmlformats.org/drawingml/2006/main}p>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}r>
               <{http://schemas.openxmlformats.org/drawingml/2006/main}rPr dirty="0" lang="ru-RU"/>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}t>"Образец заголовка"</>
+              <{http://schemas.openxmlformats.org/drawingml/2006/main}t/>
             </>
           </>
         </>
@@ -5250,10 +3748,22 @@ PART ppt/slideMasters/slideMaster1.xml
 PART ppt/slides/_rels/slide57.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideLayouts/slideLayout2.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout"/>
+  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image1.jpg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slides/slide57.xml
 <{http://schemas.openxmlformats.org/presentationml/2006/main}sld>
   <{http://schemas.openxmlformats.org/presentationml/2006/main}cSld>
+    <{http://schemas.openxmlformats.org/presentationml/2006/main}bg>
+      <{http://schemas.openxmlformats.org/presentationml/2006/main}bgPr>
+        <{http://schemas.openxmlformats.org/drawingml/2006/main}blipFill>
+          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId2"/>
+          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
+            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
+          </>
+        </>
+        <{http://schemas.openxmlformats.org/drawingml/2006/main}effectLst/>
+      </>
+    </>
     <{http://schemas.openxmlformats.org/presentationml/2006/main}spTree>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}nvGrpSpPr>
         <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="1" name=""/>

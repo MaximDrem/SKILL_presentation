@@ -1,0 +1,73 @@
+{
+  "file": "default_dark.pptx",
+  "slideCount": 56,
+  "slideSizeEMU": [
+    12192000,
+    6858000
+  ],
+  "canvas": [
+    1280,
+    720
+  ],
+  "elementsOrder": "z-order: elements[0] — самый нижний",
+  "theme": {
+    "colors": {
+      "dk1": "000000",
+      "lt1": "FFFFFF",
+      "dk2": "0D0658",
+      "lt2": "ED692B",
+      "accent1": "00ADEE",
+      "accent2": "20BA71",
+      "accent3": "A0E720",
+      "accent4": "2F97AD",
+      "accent5": "64E9E9",
+      "accent6": "FAED00",
+      "hlink": "33AC8B",
+      "folHlink": "00A523"
+    },
+    "clrMap": {
+      "bg1": "lt1",
+      "tx1": "dk1",
+      "bg2": "lt2",
+      "tx2": "dk2",
+      "accent1": "accent1",
+      "accent2": "accent2",
+      "accent3": "accent3",
+      "accent4": "accent4",
+      "accent5": "accent5",
+      "accent6": "accent6",
+      "hlink": "hlink",
+      "folHlink": "folHlink"
+    },
+    "fonts": {
+      "major": "SB Sans Display",
+      "minor": "SB Sans Text"
+    },
+    "embeddedFonts": [
+      "font1.fntdata",
+      "font2.fntdata",
+      "font3.fntdata",
+      "font4.fntdata",
+      "font5.fntdata",
+      "font6.fntdata",
+      "font7.fntdata",
+      "font8.fntdata",
+      "font9.fntdata",
+      "font10.fntdata",
+      "font11.fntdata",
+      "font12.fntdata",
+      "font13.fntdata",
+      "font14.fntdata",
+      "font15.fntdata",
+      "font16.fntdata",
+      "font17.fntdata"
+    ]
+  },
+  "style": {
+    "fonts": {},
+    "fontSizes": {},
+    "textColors": {},
+    "shapeFills": {},
+    "gradients": {}
+  }
+}

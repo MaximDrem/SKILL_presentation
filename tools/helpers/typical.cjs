@@ -152,8 +152,8 @@ function typicalExample(page, ptype, protoNo, mediaClass, srcResolver) {
 // Python: separators (", ", ": "), float с «.0». Float-поля по схеме DSL:
 // sz/lineHeight/rotation/opacity всегда float в unpack-выходе; значения chart
 // series.values — float; остальные числа прошли _num (int если целое).
-const FLOAT_KEYS = new Set(["sz"]);
-const FLOAT_ARRAY_KEYS = new Set(["values"]);
+const FLOAT_KEYS = new Set(["sz", "pos"]);
+const FLOAT_ARRAY_KEYS = new Set(["values", "stops"]);
 
 function _dumpNum(v, floaty) {
   if (floaty && Number.isInteger(v) && Math.abs(v) < 1e21) return String(v) + ".0";
@@ -170,7 +170,7 @@ function _dumpVal(v, floaty) {
   if (typeof v === "string") return pyJsonString(v);
   if (Array.isArray(v)) return "[" + v.map((x) => _dumpVal(x, floaty)).join(", ") + "]";
   return "{" + Object.entries(v).map(([k, x]) =>
-    pyJsonString(String(k)) + ": " + _dumpVal(x, FLOAT_ARRAY_KEYS.has(k))).join(", ") + "}";
+    pyJsonString(String(k)) + ": " + _dumpVal(x, FLOAT_KEYS.has(k) || FLOAT_ARRAY_KEYS.has(k))).join(", ") + "}";
 }
 
 function dumpExampleLines(ex) {

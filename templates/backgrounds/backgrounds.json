@@ -1,0 +1,24 @@
+{
+  "dark": {
+    "cover": {"file": "templates/backgrounds/dark/cover.jpg", "description": "Тёмный фон, зелёно-голубое свечение слева снизу; правая часть свободна для крупного заголовка.", "proto": [1]},
+    "content": {"file": "templates/backgrounds/dark/content.jpg", "description": "Тёмный фон, мягкое свечение слева; центр и правая часть — для основного контента.", "proto": [22, 23, 24, 25, 26, 27, 28, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 50, 51, 52, 53]},
+    "two-columns": {"file": "templates/backgrounds/dark/two-columns.jpg", "description": "Тёмный фон, свечение справа; левая колонка — текст, правая — hero/визуал.", "proto": [33]},
+    "divider": {"file": "templates/backgrounds/dark/divider.jpg", "description": "Тёмный фон, холодное свечение справа сверху; центр свободен для короткого названия раздела.", "proto": [18, 19, 20, 21]},
+    "closing": {"file": "templates/backgrounds/dark/closing.jpg", "description": "Тёмный фон, свечение снизу; верх и центр — для финального тезиса и CTA.", "proto": [56]},
+    "chart": {"file": "templates/backgrounds/dark/chart.jpg", "description": "Тёмный фон, широкое свечение сверху; нижняя часть приглушена для charts и data.", "proto": [47, 48, 49]},
+    "table": {"file": "templates/backgrounds/dark/table.jpg", "description": "Тёмный фон, свечение сверху слева; ровная нижняя область для таблиц.", "proto": [44, 45, 46]},
+    "quote": {"file": "templates/backgrounds/dark/quote.jpg", "description": "Тёмный фон, мягкое свечение сверху; минимум визуального шума для цитаты.", "proto": [30, 31]},
+    "accent": {"file": "templates/backgrounds/dark/accent.jpg", "description": "Тёмный фон, свечение слева сверху; для showcase и акцентных карточек.", "proto": [2, 3]}
+  },
+  "light": {
+    "cover": {"file": "templates/backgrounds/light/cover.jpg", "description": "Светлый фон, зелёно-жёлтое свечение слева; правая часть — для заголовка.", "proto": [1]},
+    "content": {"file": "templates/backgrounds/light/content.jpg", "description": "Светлый фон, холодное свечение справа сверху; центр и нижняя часть — для контента.", "proto": [23, 24, 25, 26, 27, 28, 29, 33, 34, 37, 38, 39, 40, 41, 42, 43, 44, 51, 52, 53]},
+    "two-columns": {"file": "templates/backgrounds/light/two-columns.jpg", "description": "Светлый фон, свечение слева; правая часть нейтральна для визуала.", "proto": [35, 36]},
+    "divider": {"file": "templates/backgrounds/light/divider.jpg", "description": "Светлый фон, свечение слева снизу; центр — для короткого названия раздела.", "proto": [18, 19, 20, 21, 22]},
+    "closing": {"file": "templates/backgrounds/light/closing.jpg", "description": "Светлый фон, холодное свечение слева снизу; верх и центр — для CTA.", "proto": [57]},
+    "chart": {"file": "templates/backgrounds/light/chart.jpg", "description": "Светлый фон, широкое свечение сверху; нижняя часть — для charts и data.", "proto": [48, 49, 50]},
+    "table": {"file": "templates/backgrounds/light/table.jpg", "description": "Светлый фон, мягкое холодное свечение справа сверху; для таблиц.", "proto": [45, 46, 47]},
+    "quote": {"file": "templates/backgrounds/light/quote.jpg", "description": "Светлый фон, мягкое свечение справа сверху; для цитаты и короткого тезиса.", "proto": [31, 32]},
+    "accent": {"file": "templates/backgrounds/light/accent.jpg", "description": "Светлый фон, широкое свечение сверху; для showcase и акцентных карточек.", "proto": [2, 3]}
+  }
+}

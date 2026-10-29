@@ -5,7 +5,7 @@ const path = require("path");
 const crypto = require("crypto");
 
 const { DECOR_NAMES } = require("../consts.cjs");
-const { bFail, deckCmd, skillCmd, skillRoot } = require("../errors.cjs");
+const { bFail, deckCmd, skillRoot } = require("../errors.cjs");
 const { pyJsonDumps, pyJsonString } = require("../numfmt.cjs");
 const { parse: jsonLoads } = require("../jsonpy.cjs");
 const { El } = require("../xml.cjs");
@@ -191,7 +191,7 @@ function _collect(args, needOut, cmd) {
     protoInfo = Object.fromEntries(Object.entries(protoMeta).map(([n, m]) => [parseInt(n, 10), m]));
     if (!Object.keys(protoInfo).length) {
       bFail(2, { error: `в атласе нет template.json/protoMeta: ${atlasDir}`,
-                 suggestion: skillCmd(path.join("tools", "helpers", "build_templates", "prepare_templates.cjs"), "--force") });
+                 suggestion: "повреждён prebuilt-атлас bundled-шаблона; восстановите templates/default_*-ref/ из пакета скилла" });
     }
   }
   const mmFile = path.join(atlasDir, "media-map.json");
@@ -282,31 +282,6 @@ function _collect(args, needOut, cmd) {
       warnings.push("WARN theme: --theme не задан — SU-оформление прото не копируется, страницы без "
                     + `explicit background будут белыми: ${noBg.join(", ")} `
                     + "(для SU-стиля повторите с --theme dark|light; для своего стиля — верно, править не обязательно)");
-    }
-  }
-  if (a.mode === "create" && !noTheme) {
-    const zones = (((template || {}).branding || {}).slides) || {};
-    for (const m of protos) {
-      const z = zones[String(m.proto)];
-      if (!z) continue;
-      const [zx0, zy0, zx1, zy1] = [z[0], z[1], z[0] + z[2], z[1] + z[3]];
-      _list(m.page.spec.elements).forEach((el, ei) => {
-        const b = _obj(el) ? el.bounds : null;
-        if (!(Array.isArray(b) && b.length === 4)) return;
-        if (Math.min(b[0] + b[2], zx1) - Math.max(b[0], zx0) > 0 && Math.min(b[1] + b[3], zy1) - Math.max(b[1], zy0) > 0) {
-          const cand = [];
-          if (zy1 + 4 > b[1]) cand.push([zy1 + 4 - b[1], `вниз на ${zy1 + 4 - b[1]}px (y: ${b[1]}→${zy1 + 4})`]);
-          if (zy0 - 4 - b[3] >= 0 && b[1] > zy0 - 4 - b[3]) cand.push([b[1] - (zy0 - 4 - b[3]), `вверх на ${b[1] - (zy0 - 4 - b[3])}px (y: ${b[1]}→${zy0 - 4 - b[3]})`]);
-          if (zx1 + 4 > b[0]) cand.push([zx1 + 4 - b[0], `вправо на ${zx1 + 4 - b[0]}px (x: ${b[0]}→${zx1 + 4})`]);
-          if (zx0 - 4 - b[2] >= 0 && b[0] > zx0 - 4 - b[2]) cand.push([b[0] - (zx0 - 4 - b[2]), `влево на ${b[0] - (zx0 - 4 - b[2])}px (x: ${b[0]}→${zx0 - 4 - b[2]})`]);
-          cand.sort((p1, p2) => (typeof p1[0] === "number" && typeof p2[0] === "number" ? p1[0] - p2[0] : 0) || String(p1[1]).localeCompare(String(p2[1])));
-          const hint = cand.length ? `сместите ${cand[0][1]}` : "уберите элемент из зоны логотипа";
-          warnings.push(
-            `WARN branding: ${m.file} el#${ei + 1}: пересекается с зоной логотипа SberUser ` +
-            `(${z[0]},${z[1]},${z[2]}×${z[3]}) фона прототипа ${m.proto} — ` +
-            `не пишите текст поверх брендинга: ${hint} (править не обязательно)`);
-        }
-      });
     }
   }
   return { a, pages, protos, failures, no_theme: noTheme, warnings, templatePath, atlasDir, mediaClass, underlays };

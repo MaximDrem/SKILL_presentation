@@ -9,7 +9,7 @@ const { pagesProtoInfo } = require("../builder/proto.cjs");
 const { overlapCheck } = require("../builder/overlap.cjs");
 const { textfitCheck } = require("../builder/textfit.cjs");
 const { bFail, deckCmd } = require("../errors.cjs");
-const { pyJsonString, jsNumStr, pyJsonDumps, pyStrNum } = require("../numfmt.cjs");
+const { pyJsonString, jsNumStr, pyJsonDumps, pyStrNum, pyRepr } = require("../numfmt.cjs");
 const { isPyFloat, isPyInt } = require("../jsonpy.cjs");
 const { XFORM_ID, parseBgPart, parseElements } = require("./elements.cjs");
 const { imageInfo } = require("./image.cjs");
@@ -602,12 +602,22 @@ function run(args) {
   md.push(`- Theme fonts: major ${themeFonts.major || "?"}, minor ${themeFonts.minor || "?"}; embedded: ${names.some((n) => n.startsWith("ppt/fonts/")) ? "yes" : "no"}`);
   md.push("");
 
+  const pyValue = (v, key = "") => {
+    if (key === "" && typeof v === "string") return v;
+    if (isPyFloat(v) || isPyInt(v)) return pyRepr(v);
+    if (Array.isArray(v)) return `[${v.map((x) => pyValue(x)).join(", ")}]`;
+    if (v && typeof v === "object") {
+      return `{${Object.entries(v).map(([k, x]) => `${pyRepr(k)}: ${pyValue(x, k)}`).join(", ")}}`;
+    }
+    if ((key === "angle" || key === "pos") && typeof v === "number" && Number.isInteger(v)) return `${v}.0`;
+    return pyRepr(v);
+  };
   const _slimEl = (el) => {
     const t = el.type;
     const b = el.bounds;
     const bs = Array.isArray(b) ? "[" + b.map(String).join(",") + "]" : "?";
     if (t === "shape") {
-      let s = `shape ${el.shape} ${bs}`;
+      let s = `shape ${pyValue(el.shape)} ${bs}`;
       if (el.adjustments) s += ` adj${pyStrNum(el.adjustments[0])}`;
       const f = el.fill || {};
       if (f.solid) s += ` fill ${f.solid}`;
@@ -636,7 +646,7 @@ function run(args) {
       const txt = (el.paragraphs || []).map((para) => (para.runs || []).map((r) => r.text || "").join("")).join("").trim().slice(0, 24);
       let st = "";
       if (r0) {
-        st = `${r0.sz ? pyStrNum(r0.sz) : "?"}pt${r0.b ? " b" : ""} ${r0.font || "?"} ${r0.color || ""}`;
+        st = `${r0.sz ? pyStrNum(r0.sz) : "?"}pt${r0.b ? " b" : ""} ${r0.font || "?"} ${r0.color ? pyValue(r0.color) : ""}`;
       }
       return `text ${bs} ${el.anchor || ""} ${st} «${txt}»`.replace(/  /g, " ").trim();
     }

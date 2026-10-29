@@ -1,35 +1,27 @@
 {
-  "fonts": {
-    "SB Sans Text Light": 316,
-    "SB Sans Display Semibold": 217,
-    "SB Sans Display": 180,
-    "SB Sans Text": 110,
-    "SB Sans Display Light": 82,
-    "SB Sans Text Semibold": 16,
-    "SBSansDisplay-Light": 7
-  },
+  "fonts": {},
   "theme": {
     "major": "SB Sans Display",
     "minor": "SB Sans Text"
   },
   "embedded": true,
   "embeddedFonts": [
-    "font2.fntdata",
     "font1.fntdata",
-    "font17.fntdata",
-    "font16.fntdata",
-    "font15.fntdata",
-    "font14.fntdata",
-    "font13.fntdata",
-    "font12.fntdata",
-    "font11.fntdata",
-    "font10.fntdata",
-    "font9.fntdata",
-    "font8.fntdata",
-    "font7.fntdata",
-    "font6.fntdata",
-    "font5.fntdata",
+    "font2.fntdata",
+    "font3.fntdata",
     "font4.fntdata",
-    "font3.fntdata"
+    "font5.fntdata",
+    "font6.fntdata",
+    "font7.fntdata",
+    "font8.fntdata",
+    "font9.fntdata",
+    "font10.fntdata",
+    "font11.fntdata",
+    "font12.fntdata",
+    "font13.fntdata",
+    "font14.fntdata",
+    "font15.fntdata",
+    "font16.fntdata",
+    "font17.fntdata"
   ]
 }

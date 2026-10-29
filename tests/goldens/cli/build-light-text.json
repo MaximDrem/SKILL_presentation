@@ -8,6 +8,6 @@
   "/tmp/oracle-cli-jp5_xj6n/light-text.pptx"
  ],
  "exit": 0,
- "stdout": "WARN branding: slide-01.json el#1: пересекается с зоной логотипа SberUser (89,74,221×35) фона прототипа 1 — не пишите текст поверх брендинга: сместите вниз на 53px (y: 60→113) (править не обязательно)\nOK: build (create) — 1 страниц → <TMP>/light-text.pptx (рендер пропущен: DECK_SKIP_RENDER)\n",
+ "stdout": "OK: build (create) — 1 страниц → <TMP>/light-text.pptx (рендер пропущен: DECK_SKIP_RENDER)\n",
  "stderr": ""
 }

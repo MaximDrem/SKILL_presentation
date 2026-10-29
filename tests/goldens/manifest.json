@@ -45,36 +45,6 @@
    "lines": 132
   },
   {
-   "file": "tools/helpers/build_templates/__init__.py",
-   "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-   "lines": 0
-  },
-  {
-   "file": "tools/helpers/build_templates/calibrate_widths.py",
-   "sha1": "c1aa659e7a9accc06f9a9c341fe2a48e8f071400",
-   "lines": 164
-  },
-  {
-   "file": "tools/helpers/build_templates/get_all_photos.py",
-   "sha1": "6b48a55eac89b9edc673b7204c542b9f77556781",
-   "lines": 145
-  },
-  {
-   "file": "tools/helpers/build_templates/labels.py",
-   "sha1": "d40c4773bffe908cd66ccb2be75a6f7a54601736",
-   "lines": 378
-  },
-  {
-   "file": "tools/helpers/build_templates/picto_svg.py",
-   "sha1": "e27e428386438af8782a19b1cbff0de92791bebd",
-   "lines": 229
-  },
-  {
-   "file": "tools/helpers/build_templates/prepare_templates.py",
-   "sha1": "80d043e4a9bede17acd8aeffcf794b692ddb4638",
-   "lines": 584
-  },
-  {
    "file": "tools/helpers/builder/__init__.py",
    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
    "lines": 0

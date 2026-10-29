@@ -35,12 +35,10 @@ copied from the atlas or the brief, not interpreted).
    1. `references/spec.md` — the JSON contract.
    Then by path:
    - **SU path:**
-     2. `templates/default-ref/slides.md` — WHOLE (shared by both themes):
-        «## Contents» of YOUR theme (every proto you may use; `logo` =
-        brand zone to keep free of text), «## Типовые слайды» (canonical
-        examples with real decor placement — your geometry source),
-        «## Цвета и фоны» of YOUR theme (palette/fonts/sizes to copy
-        literally, proto backgrounds);
+     2. `templates/default-ref/slides.md` — WHOLE: proto roles, backgrounds
+        and inherited text styles. The template supplies backgrounds and
+        text styles; add any logo or decor explicitly as page elements
+        only when semantically needed;
      3. `templates/default-ref/decor/CATALOG.md` — WHOLE: the full
         decor inventory with descriptions.
    - **From-scratch path:**

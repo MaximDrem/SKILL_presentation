@@ -1,18 +1,18 @@
 {
   "1": {
-    "arch": "theme",
+    "arch": "image1.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "2": {
-    "arch": "theme",
+    "arch": "image9.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "3": {
-    "arch": "theme",
+    "arch": "image9.jpg",
     "degraded": null,
     "table": false,
     "chart": false
@@ -102,73 +102,73 @@
     "chart": false
   },
   "18": {
-    "arch": "theme",
+    "arch": "image4.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "19": {
-    "arch": "theme",
+    "arch": "image4.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "20": {
-    "arch": "theme",
+    "arch": "image4.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "21": {
-    "arch": "theme",
+    "arch": "image4.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "22": {
-    "arch": "theme",
+    "arch": "image4.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "23": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "24": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "25": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "26": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "27": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "28": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "29": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
@@ -180,139 +180,139 @@
     "chart": false
   },
   "31": {
-    "arch": "theme",
+    "arch": "image8.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "32": {
-    "arch": "theme",
+    "arch": "image8.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "33": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "34": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "35": {
-    "arch": "theme",
+    "arch": "image3.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "36": {
-    "arch": "theme",
+    "arch": "image3.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "37": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "38": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "39": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "40": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "41": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "42": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "43": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "44": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "45": {
-    "arch": "theme",
+    "arch": "image7.jpg",
     "degraded": null,
-    "table": true,
+    "table": false,
     "chart": false
   },
   "46": {
-    "arch": "theme",
+    "arch": "image7.jpg",
     "degraded": null,
-    "table": true,
+    "table": false,
     "chart": false
   },
   "47": {
-    "arch": "theme",
+    "arch": "image7.jpg",
     "degraded": null,
-    "table": true,
+    "table": false,
     "chart": false
   },
   "48": {
-    "arch": "theme",
+    "arch": "image6.jpg",
     "degraded": null,
     "table": false,
-    "chart": true
+    "chart": false
   },
   "49": {
-    "arch": "theme",
+    "arch": "image6.jpg",
     "degraded": null,
     "table": false,
-    "chart": true
+    "chart": false
   },
   "50": {
-    "arch": "theme",
+    "arch": "image6.jpg",
     "degraded": null,
     "table": false,
-    "chart": true
+    "chart": false
   },
   "51": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "52": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
   },
   "53": {
-    "arch": "theme",
+    "arch": "image2.jpg",
     "degraded": null,
     "table": false,
     "chart": false
@@ -336,7 +336,7 @@
     "chart": false
   },
   "57": {
-    "arch": "theme",
+    "arch": "image5.jpg",
     "degraded": null,
     "table": false,
     "chart": false
