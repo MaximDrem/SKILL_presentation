@@ -35,10 +35,10 @@ copied from the atlas or the brief, not interpreted).
    1. `references/spec.md` — the JSON contract.
    Then by path:
    - **SU path:**
-     2. `templates/default-ref/slides.md` — WHOLE: proto roles, backgrounds
-        and inherited text styles. The template supplies backgrounds and
-        text styles; add any logo or decor explicitly as page elements
-        only when semantically needed;
+     2. `templates/default-ref/slides.md` — WHOLE: proto roles, backgrounds,
+        inherited text styles and JSON decor-placement examples. The
+        template supplies backgrounds and text styles; add any logo or
+        decor explicitly as page elements only when semantically needed;
      3. `templates/default-ref/decor/CATALOG.md` — WHOLE: the full
         decor inventory with descriptions.
    - **From-scratch path:**
