@@ -78,13 +78,31 @@ copied from the atlas or the brief, not interpreted).
    **Titles and theses come verbatim from the user's brief** — synonyms
    and rewordings are forbidden.
 
-6. **Fix loop:** `ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" … deck.cjs check "<deck>" [--theme …]`
-   → apply every `plan[]` entry by rewriting whole pages with `write`
-   (protocol: SKILL.md Rules) → re-check. Until zero HARD.
+6. **Fix loop** — apply every `plan[]` entry by rewriting whole pages with
+   `write` (protocol: SKILL.md Rules) → re-check. Until zero HARD.
 
-7. **Build once:** `ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" … deck.cjs build "<deck>" --out "<abs>/<deck>.pptx" [--theme …]`
-   — the `--theme` decision from step 1 applies to both commands,
-   never mixed.
+   macOS / Linux / zsh / bash:
+   ```bash
+   ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" check "<deck>" [--theme dark|light]
+   ```
+
+   Windows (PowerShell):
+   ```powershell
+   $env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" check "<deck>" [--theme dark|light]
+   ```
+
+7. **Build once** — the `--theme` decision from step 1 applies to both
+   commands, never mixed.
+
+   macOS / Linux / zsh / bash:
+   ```bash
+   ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" build "<deck>" --out "<abs>/<deck>.pptx" [--theme dark|light]
+   ```
+
+   Windows (PowerShell):
+   ```powershell
+   $env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" build "<deck>" --out "<abs>/<deck>.pptx" [--theme dark|light]
+   ```
 
 8. **Review + deliver** — protocols: SKILL.md («After build: the verify
    lines», «Delivery message»). Code only.

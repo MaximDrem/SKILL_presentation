@@ -19,8 +19,18 @@ interpreted).
 
 ## Steps
 
-1. **Unpack the reference — one bash, inside your Working directory:**
-   `ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$SKILL/tools/deck.cjs" unpack "<ref.pptx>" --out "<name>-ref"`
+1. **Unpack the reference — one command, inside your Working directory.**
+
+   macOS / Linux / zsh / bash:
+   ```bash
+   ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" unpack "<ref.pptx>" --out "<name>-ref"
+   ```
+
+   Windows (PowerShell):
+   ```powershell
+   $env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" unpack "<ref.pptx>" --out "<name>-ref"
+   ```
+
    Engine verify-issues it may print (OUT OF BOUNDS, TEXT CLIPPED, …)
    describe the ORIGINAL deck — never act on them, never "fix" the
    reference. The output ends with a numbered intake list = step 2.
@@ -36,7 +46,7 @@ interpreted).
       «## Contents» with a per-slide `type` column; «## Decor» digest.
       Canvas is ALWAYS **1280×720**, including the STYLE.md patterns —
       never rescale or "convert" coordinates.
-   2. only if the intake list contains `thumbs-*.png` (unpack ran with
+   2. only if the intake list contains `thumbs*.png` (unpack ran with
       renders): `read_image` on each — extract exactly two words:
       `rounding=sharp|round` (drives shape `adjustments`: 6000 | 25000)
       and `mood=photo|vector` (drives illustration choices). If unsure or

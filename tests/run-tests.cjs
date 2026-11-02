@@ -22,6 +22,7 @@ const SUITES = [
   "tests/golden/build-parity.cjs",
   "tests/mutation.cjs",
   "tests/regressions.cjs",
+  "tests/prompt-contract.cjs",
   "tests/ported32.cjs",
   "tests/package-acceptance.cjs",
   "tests/vendor-smoke.cjs",

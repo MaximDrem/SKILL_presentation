@@ -38,17 +38,27 @@ run only via the bundled Node runtime in Electron Node-mode
 (ELECTRON_RUN_AS_NODE=1 $GIGATOOL_NODE) — never system node, never npm install
 at runtime.
 
-```bash
-SKILL="$HOME/.wsc/config/skills/presentation"  # or $OPENCODE_BASE_DIR/config/skills/presentation
+### macOS / Linux / zsh / bash
 
+```bash
 # Check pages without building — the fix loop (cheap, text-only)
 # CREATE with the SU look: add --theme dark (or light) to BOTH check and
 # build — nothing is inherited without it. CREATE with the user's own
 # style: no --theme at all (then every page needs its own `background`).
-ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$SKILL/tools/deck.cjs" check "<projectDir>" [--theme dark|light]
+ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" check "<projectDir>" [--theme dark|light]
 
 # Build a deck: validate → assemble → render → engine verify, ONE final call
-ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$SKILL/tools/deck.cjs" build "<projectDir>" --out "<abs>/deck.pptx" [--theme dark|light]
+ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" build "<projectDir>" --out "<abs>/deck.pptx" [--theme dark|light]
+```
+
+### Windows (PowerShell)
+
+```powershell
+# Check pages without building — the fix loop (cheap, text-only)
+$env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" check "<projectDir>" [--theme dark|light]
+
+# Build a deck: validate → assemble → render → engine verify, ONE final call
+$env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" build "<projectDir>" --out "<abs>/deck.pptx" [--theme dark|light]
 ```
 
 Workflow-specific flags and commands are in your workflow file.
@@ -88,9 +98,9 @@ at sibling boxes) — apply them as printed.
 - **Never explore the environment** (fonts, packages, OS, binaries,
   paths outside your Working directory) — the skill bundles everything
   it needs; a genuinely missing tool comes back as an error envelope,
-  never as something to probe for. `$GIGATOOL_NODE` and `$SKILL` are
-  pre-set by the runtime — use them literally, never probe or derive
-  their values.
+  never as something to probe for. `$GIGATOOL_NODE` is pre-set by the runtime —
+  use it literally; the deck path is the absolute seeded path shown above,
+  with no extra environment variables to define or probe.
 - **One action per reply.** Write one `pages/slide-NN.json` per reply,
   then the next — no idle replies in between. (If a page you believe
   written is missing, `check` will name it — trust the tool, not memory.)
