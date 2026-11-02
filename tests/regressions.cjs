@@ -14,6 +14,7 @@ const { setTitle } = require("../tools/helpers/builder/chart-normalize.cjs");
 const { buildWorkbook } = require("../tools/helpers/builder/xlsxwrite.cjs");
 const { encodePng, decodeImage, newImage } = require("../tools/helpers/raster.cjs");
 const { qaWarnings } = require("../tools/helpers/builder/qa.cjs");
+const { validate } = require("../tools/helpers/builder/validate.cjs");
 
 const A = 'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"';
 const P = 'xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"';
@@ -48,6 +49,18 @@ function mkTextSp() {
     `<p:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="100" cy="100"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></p:spPr>` +
     `<p:txBody><a:bodyPr/><a:p><a:pPr/><a:r><a:rPr lang="en-US" dirty="0"/><a:t>x</a:t></a:r></a:p></p:txBody></p:sp>`);
 }
+
+test("regression: arc shape поддерживается валидатором и prstGeom", () => {
+  const el = { id: "a", type: "shape", shape: "arc", bounds: [0, 0, 100, 100], adjustments: [12000, 34000] };
+  assert.deepStrictEqual(validate({ projectDir: "/tmp" }, [{ file: "s.json", spec: { pageType: "content", elements: [el] } }]), []);
+  const sp = mkShape();
+  findL(findL(sp, "spPr"), "prstGeom").attrs.set("prst", "arc");
+  norm.normalizeShape(sp, el, 9525);
+  assert.strictEqual(findL(findL(sp, "spPr"), "prstGeom").attrs.get("prst"), "arc");
+  const gds = findL(findL(sp, "spPr"), "prstGeom").children.filter((e) => e instanceof El && e.local === "avLst")[0]
+    .children.filter((e) => e instanceof El && e.local === "gd");
+  assert.deepStrictEqual(gds.map((gd) => [gd.attrs.get("name"), gd.attrs.get("fmla")]), [["adj1", "val 12000"], ["adj2", "val 34000"]]);
+});
 
 test("regression: text run color #RRGGBBAA → только RGB, без alpha child", () => {
   const el = { type: "text", bounds: [0, 0, 10, 10], paragraphs: [{ runs: [{ text: "x", color: "#FF000080" }] }] };

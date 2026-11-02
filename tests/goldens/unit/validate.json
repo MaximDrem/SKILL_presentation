@@ -1157,7 +1157,7 @@
     {
      "page": "slide-01.json",
      "el": "1",
-     "msg": "shape \"cloud\" ∉ пресетам (chevron,diamond,donut,downArrow,ellipse,heptagon,hexagon,homePlate,leftArrow,octagon,parallelogram,pentagon,pie,rect,rightArrow,roundRect,rtTriangle,star5,star6,trapezoid,triangle,upArrow)"
+     "msg": "shape \"cloud\" ∉ пресетам (arc,chevron,diamond,donut,downArrow,ellipse,heptagon,hexagon,homePlate,leftArrow,octagon,parallelogram,pentagon,pie,rect,rightArrow,roundRect,rtTriangle,star5,star6,trapezoid,triangle,upArrow)"
     }
    ]
   },
@@ -1189,7 +1189,7 @@
     {
      "page": "slide-01.json",
      "el": "1",
-     "msg": "shape \"straightConnector1\" ∉ пресетам (chevron,diamond,donut,downArrow,ellipse,heptagon,hexagon,homePlate,leftArrow,octagon,parallelogram,pentagon,pie,rect,rightArrow,roundRect,rtTriangle,star5,star6,trapezoid,triangle,upArrow); линий в пресетах нет — сделайте линию как shape rect с h=1..3px и fill.solid (без line)"
+     "msg": "shape \"straightConnector1\" ∉ пресетам (arc,chevron,diamond,donut,downArrow,ellipse,heptagon,hexagon,homePlate,leftArrow,octagon,parallelogram,pentagon,pie,rect,rightArrow,roundRect,rtTriangle,star5,star6,trapezoid,triangle,upArrow); линий в пресетах нет — сделайте линию как shape rect с h=1..3px и fill.solid (без line)"
     }
    ]
   },

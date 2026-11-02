@@ -7,7 +7,7 @@ const EMOJI_RE = /[¶←-⇿⌀-➿⬀-⯿️\u{1f000}-\u{1faff}]/u;
 const PHOTO_STUB_RE = /^\s*(фото(графия)?|место для фото|скриншот|изображение|картинка|photo|image|screenshot|picture)\s*[.…]?\s*$/i;
 const UNRENDERABLE = new Set(["svg", "wmf", "emf", "wdp", "jxr", "tif", "tiff"]);
 const IMG_EXT = new Set(["png", "jpg", "jpeg", "gif", "webp", "bmp"]);
-const BUILD_SHAPES = new Set(["rect", "roundRect", "ellipse", "triangle", "rtTriangle", "parallelogram", "trapezoid", "diamond", "pentagon", "hexagon", "heptagon", "octagon", "star5", "star6", "chevron", "homePlate", "rightArrow", "leftArrow", "upArrow", "downArrow", "pie", "donut"]);
+const BUILD_SHAPES = new Set(["rect", "roundRect", "ellipse", "arc", "triangle", "rtTriangle", "parallelogram", "trapezoid", "diamond", "pentagon", "hexagon", "heptagon", "octagon", "star5", "star6", "chevron", "homePlate", "rightArrow", "leftArrow", "upArrow", "downArrow", "pie", "donut"]);
 // DSL shape name == OOXML prst (MSO_SHAPE.* в python-порте — те же токены)
 const SHAPE_MAP = Object.fromEntries([...BUILD_SHAPES].map((s) => [s, s]));
 const SHADOW_TOKENS = {

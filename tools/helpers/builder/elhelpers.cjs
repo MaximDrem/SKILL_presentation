@@ -15,7 +15,7 @@ const AVLST_DEFAULTS = {
   hexagon: [["adj", 25000], ["vf", 115470]], triangle: [["adj", 50000]],
   leftArrow: [["adj1", 50000], ["adj2", 50000]], octagon: [["adj", 29289]],
   ellipse: [], parallelogram: [["adj", 25000]], homePlate: [["adj", 50000]],
-  pie: [["adj1", 0], ["adj2", 16200000]], rect: [], pentagon: [["hf", 105146], ["vf", 110557]],
+  pie: [["adj1", 0], ["adj2", 16200000]], arc: [["adj1", 16200000], ["adj2", 0]], rect: [], pentagon: [["hf", 105146], ["vf", 110557]],
   rightArrow: [["adj1", 50000], ["adj2", 50000]], rtTriangle: [], roundRect: [["adj", 16667]],
   star5: [["adj", 19098], ["hf", 105146], ["vf", 110557]], star6: [["adj", 28868], ["hf", 115470]],
   trapezoid: [["adj", 25000]], upArrow: [["adj1", 50000], ["adj2", 50000]],
