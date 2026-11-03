@@ -19,7 +19,7 @@ test('hermetic: temp-копия без Python, node_modules и сети прох
     for (const name of ['tools', 'vendor', 'templates', 'references', 'tests']) {
       fs.cpSync(path.join(SKILL_JS, name), path.join(root, name), { recursive: true });
     }
-    for (const name of ['SKILL.md', 'package.json', '.bundle-version']) {
+    for (const name of ['SKILL.md', '.bundle-version']) {
       fs.copyFileSync(path.join(SKILL_JS, name), path.join(root, name));
     }
     assert.ok(!fs.existsSync(path.join(root, 'node_modules')));

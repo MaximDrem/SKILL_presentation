@@ -12,7 +12,7 @@ const outDir = process.argv[process.argv.indexOf("--out-dir") + 1];
 fs.mkdirSync(outDir, { recursive: true });
 
 // валидный PNG 32×24 через vendored pngjs
-const { PNG } = require(path.join(process.env.__SKILL_JS, "vendor", "pngjs"));
+const { PNG } = require(path.join(process.env.__SKILL_JS, "vendor", "pngjs", "lib", "png.js"));
 const n = parseInt(process.env.__FAKE_SLIDES || "5", 10);
 for (let i = 1; i <= n; i++) {
   const png = new PNG({ width: 32, height: 24 });

@@ -6,8 +6,6 @@ previewDescription: Работа с презентациями
 
 # Presentation
 
-**Version 4.0.0** — CJS/PptxGenJS production path (vendored pptxgenjs@4.0.1), no bundled Python.
-
 Build real `.pptx` files. You author slides as JSON page-specs; the bundled
 tools validate, assemble, render and engine-verify the result.
 

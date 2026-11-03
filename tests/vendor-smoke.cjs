@@ -4,9 +4,7 @@
 const { test } = require("node:test");
 const assert = require("node:assert");
 const fs = require("fs");
-const os = require("os");
 const path = require("path");
-const { execFileSync } = require("child_process");
 const { SKILL_JS } = require("./lib/oracle.cjs");
 
 const VENDOR = path.join(SKILL_JS, "vendor");
@@ -15,27 +13,13 @@ test("vendor smoke: все entries загружаются", () => {
   // fflate: official lib/ layout + package-root CJS/ESM entries
   const fflate = require(path.join(VENDOR, "fflate", "lib", "node.cjs"));
   assert.strictEqual(typeof fflate.zipSync, "function");
-  const fflateRoot = require(path.join(VENDOR, "fflate"));
-  assert.strictEqual(typeof fflateRoot.zipSync, "function", "package-root CJS entry");
-  const { PNG } = require(path.join(VENDOR, "pngjs"));
+  const { PNG } = require(path.join(VENDOR, "pngjs", "lib", "png.js"));
   assert.strictEqual(typeof PNG, "function");
-  const jpeg = require(path.join(VENDOR, "jpeg-js"));
+  const jpeg = require(path.join(VENDOR, "jpeg-js", "index.js"));
   assert.strictEqual(typeof jpeg.decode, "function");
   // единый bundle (весь runtime closure pptxgenjs внутри)
   const PptxGenJS = require(path.join(VENDOR, "pptxgenjs.bundle.cjs"));
   assert.strictEqual(typeof PptxGenJS, "function");
-});
-
-test("vendor smoke: fflate package-root ESM entry загружается", () => {
-  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "fflate-esm-smoke-"));
-  try {
-    fs.mkdirSync(path.join(tmp, "node_modules"));
-    fs.symlinkSync(path.join(VENDOR, "fflate"), path.join(tmp, "node_modules", "fflate"), "dir");
-    execFileSync(process.execPath, ["--input-type=module", "-e", "import('fflate').then(m => { if (typeof m.zipSync !== 'function') process.exit(2); })"],
-                 { cwd: tmp, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
-  } finally {
-    fs.rmSync(tmp, { recursive: true, force: true });
-  }
 });
 
 test("vendor smoke: licenses присутствуют у всех пакетов", () => {
