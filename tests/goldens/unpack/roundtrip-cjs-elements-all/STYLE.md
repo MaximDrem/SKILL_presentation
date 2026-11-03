@@ -9,14 +9,14 @@ there is nothing else to read.
 | # | type | layout | first text | els | T/C |
 |---|---|---|---|---|---|
 | 1 | cover | slideLayout7 |  | 11 | — |
-| 2 | table | slideLayout7 | пункт один пункт два градиентный текст | 18 | T |
+| 2 | table | slideLayout7 | пункт один пункт два градиентный текст | 16 | T |
 
 ## Style
 
 - Fonts: SB Sans Text ×7, Calibri ×3
 - Font sizes: 12 ×7, 16 ×2, 20 ×1
 - Text colors: #000000 ×8, #FFFFFF ×1
-- Shape fills: #2FE7C499 ×11, #1D254D ×11, #1A1A1A ×3
+- Shape fills: #2FE7C499 ×11, #1D254D ×11
 - Theme: dk1 #000000 lt1 #FFFFFF dk2 #1F497D lt2 #EEECE1 accent1 #4F81BD accent2 #C0504D accent3 #9BBB59 accent4 #8064A2 accent5 #4BACC6 accent6 #F79646 hlink #0000FF folHlink #800080
 - clrMap: bg1→lt1 tx1→dk1 bg2→lt2 tx2→dk2
 - Theme fonts: major Calibri, minor Calibri; embedded: no
@@ -60,7 +60,7 @@ don't copy 1:1: keep bounds logic, replace texts/colors with your content)
  ]}
 ```
 
-## Media (1): background 0 · decor 0 · content 1 · unrenderable 0
+## Media (2): background 0 · decor 0 · content 1 · unrenderable 1
 
 Class: **background** — page background (p:bg or full-bleed, use only as background); **decor** — has alpha (can overlay); **content** — opaque non-background; **unrenderable** — svg/wmf/emf/wdp. Files are `media/<name>` bit-for-bit; the table below carries class, px size and where-used.
 

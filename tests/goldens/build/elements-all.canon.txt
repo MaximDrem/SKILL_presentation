@@ -7,6 +7,7 @@ PART [Content_Types].xml
   <{http://schemas.openxmlformats.org/package/2006/content-types}Default ContentType="application/xml" Extension="xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml" PartName="/docProps/app.xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-package.core-properties+xml" PartName="/docProps/core.xml"/>
+  <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="image/svg+xml" PartName="/ppt/media/image1.svg"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.presProps+xml" PartName="/ppt/presProps.xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml" PartName="/ppt/presentation.xml"/>
   <{http://schemas.openxmlformats.org/package/2006/content-types}Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml" PartName="/ppt/slideLayouts/slideLayout1.xml"/>
@@ -101,6 +102,7 @@ PART ppt/_rels/presentation.xml.rels
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId8" Target="slides/slide2.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide"/>
 </>
 BIN ppt/media/image1.png sha256:b150b90c3ddeaff2fa2080b99b370bb9c78be752bbf33b7d15947a6f84537538
+BIN ppt/media/image1.svg sha256:4f3f85ca0ca4cd48f9f2cfeaf24bb5712fae5f99500a67b10110c1f9bc5416cb
 PART ppt/presProps.xml
 <{http://schemas.openxmlformats.org/presentationml/2006/main}presentationPr>
   <{http://schemas.openxmlformats.org/presentationml/2006/main}extLst>
@@ -3234,6 +3236,7 @@ PART ppt/slides/_rels/slide2.xml.rels
 <{http://schemas.openxmlformats.org/package/2006/relationships}Relationships>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId1" Target="../slideLayouts/slideLayout7.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout"/>
   <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId2" Target="../media/image1.png" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+  <{http://schemas.openxmlformats.org/package/2006/relationships}Relationship Id="rId3" Target="../media/image1.svg" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
 </>
 PART ppt/slides/slide1.xml
 <{http://schemas.openxmlformats.org/presentationml/2006/main}sld>
@@ -4342,398 +4345,28 @@ PART ppt/slides/slide2.xml
           </>
         </>
       </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvSpPr>
+      <{http://schemas.openxmlformats.org/presentationml/2006/main}pic>
+        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPicPr>
           <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="gid:2:12" id="14" name="svg"/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvSpPr/>
+          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPicPr/>
           <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
+        </>
+        <{http://schemas.openxmlformats.org/presentationml/2006/main}blipFill>
+          <{http://schemas.openxmlformats.org/drawingml/2006/main}blip {http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed="rId3"/>
+          <{http://schemas.openxmlformats.org/drawingml/2006/main}stretch>
+            <{http://schemas.openxmlformats.org/drawingml/2006/main}fillRect/>
+          </>
         </>
         <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
           <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="10953750" y="571500"/>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="609600" cy="609600"/>
           </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}custGeom>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}gdLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ahLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}cxnLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}rect b="0" l="0" r="0" t="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}pathLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}path h="609600" w="609600">
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}moveTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="243840" y="53163"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="264160" y="7088"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="309880" y="-14177"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="347980" y="10633"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="472440" y="81516"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="485140" y="88605"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="495300" y="106326"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="497840" y="127591"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="535940" y="432391"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="538480" y="453656"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="535940" y="474921"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="530860" y="492642"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="530860" y="496186"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="515620" y="538716"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="480060" y="556437"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="449580" y="542260"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="447040" y="545805"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="419100" y="598967"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="363220" y="602512"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="325120" y="563526"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="317500" y="574158"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="287020" y="616688"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="233680" y="620233"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="200660" y="581247"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="91440" y="453656"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="81280" y="439479"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="76200" y="414670"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="78740" y="396949"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="116840" y="134679"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="119380" y="106326"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="134620" y="88605"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="154940" y="85060"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="233680" y="74428"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="243840" y="53163"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}close/>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}moveTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="317500" y="393405"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="408940" y="510363"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="393700" y="531628"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="368300" y="535172"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="350520" y="517451"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="335280" y="496186"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="259080" y="407581"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="251460" y="396949"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="236220" y="400493"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="228600" y="411126"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="220980" y="421758"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="223520" y="443023"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="231140" y="453656"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="289560" y="520995"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="284480" y="528084"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="266700" y="549349"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="243840" y="549349"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="223520" y="531628"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="116840" y="404037"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="154940" y="141767"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="198120" y="134679"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="190500" y="145312"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="167640" y="191386"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="175260" y="251637"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="208280" y="279991"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="236220" y="308344"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="276860" y="301256"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="299720" y="265814"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="320040" y="230372"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="487680" y="439479"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="487680" y="439479"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="487680" y="439479"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="487680" y="439479"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="487680" y="446567"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="487680" y="453656"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="487680" y="460744"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="485140" y="467833"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="485140" y="471377"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="480060" y="489098"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="464820" y="492642"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="449580" y="482009"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="342900" y="347330"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="335280" y="336698"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="320040" y="336698"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="312420" y="350874"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="307340" y="361507"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="309880" y="382772"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="317500" y="393405"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}close/>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}moveTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="480060" y="343786"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="345440" y="177209"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="332740" y="163033"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="309880" y="163033"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="299720" y="180753"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="269240" y="230372"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="261620" y="244549"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="246380" y="251637"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="233680" y="237460"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="223520" y="226828"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="220980" y="205563"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="228600" y="184298"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="264160" y="120502"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="264160" y="120502"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="264160" y="120502"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="264160" y="116958"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="264160" y="116958"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="264160" y="116958"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="264160" y="116958"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="276860" y="88605"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="289560" y="67340"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="309880" y="53163"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="330200" y="67340"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="452120" y="138223"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="480060" y="343786"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}close/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}solidFill>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}srgbClr val="1A1A1A"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}ln>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}txBody>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}bodyPr/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}lstStyle/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}p/>
         </>
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
         <{http://schemas.openxmlformats.org/presentationml/2006/main}nvSpPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="15" name="svg 15"/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvSpPr/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="10953750" y="571500"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="609600" cy="609600"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}custGeom>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}gdLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ahLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}cxnLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}rect b="0" l="0" r="0" t="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}pathLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}path h="609600" w="609600">
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}moveTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="83820" y="106326"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="86360" y="92149"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="78740" y="74428"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="68580" y="74428"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="55880" y="70884"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="43180" y="81516"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="43180" y="95693"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="0" y="411126"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="-2540" y="425302"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="5080" y="446567"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="17780" y="446567"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="27940" y="450112"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="40640" y="439479"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="40640" y="421758"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="83820" y="106326"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}close/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}solidFill>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}srgbClr val="1A1A1A"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}ln>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}txBody>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}bodyPr/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}lstStyle/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}p/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvSpPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr id="16" name="svg 16"/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvSpPr/>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}spPr>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}xfrm>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}off x="10953750" y="571500"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ext cx="609600" cy="609600"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}custGeom>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}avLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}gdLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}ahLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}cxnLst/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}rect b="0" l="0" r="0" t="0"/>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}pathLst>
-              <{http://schemas.openxmlformats.org/drawingml/2006/main}path h="609600" w="609600">
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}moveTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="525780" y="106326"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="523240" y="92149"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="530860" y="74428"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="541020" y="74428"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="553720" y="70884"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="566420" y="81516"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="566420" y="95693"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="609600" y="411126"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="612140" y="425302"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="604520" y="446567"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="591820" y="446567"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}cubicBezTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="581660" y="450112"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="568960" y="439479"/>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="568960" y="421758"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}lnTo>
-                  <{http://schemas.openxmlformats.org/drawingml/2006/main}pt x="525780" y="106326"/>
-                </>
-                <{http://schemas.openxmlformats.org/drawingml/2006/main}close/>
-              </>
-            </>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}solidFill>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}srgbClr val="1A1A1A"/>
-          </>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}ln>
-            <{http://schemas.openxmlformats.org/drawingml/2006/main}noFill/>
-          </>
-        </>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}txBody>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}bodyPr/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}lstStyle/>
-          <{http://schemas.openxmlformats.org/drawingml/2006/main}p/>
-        </>
-      </>
-      <{http://schemas.openxmlformats.org/presentationml/2006/main}sp>
-        <{http://schemas.openxmlformats.org/presentationml/2006/main}nvSpPr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="gid:2:13" id="17" name="txt"/>
+          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="gid:2:13" id="15" name="txt"/>
           <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvSpPr txBox="1"/>
           <{http://schemas.openxmlformats.org/presentationml/2006/main}nvPr/>
         </>
@@ -4804,7 +4437,7 @@ PART ppt/slides/slide2.xml
       </>
       <{http://schemas.openxmlformats.org/presentationml/2006/main}graphicFrame>
         <{http://schemas.openxmlformats.org/presentationml/2006/main}nvGraphicFramePr>
-          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="gid:2:14" id="18" name="tbl"/>
+          <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvPr descr="gid:2:14" id="16" name="tbl"/>
           <{http://schemas.openxmlformats.org/presentationml/2006/main}cNvGraphicFramePr>
             <{http://schemas.openxmlformats.org/drawingml/2006/main}graphicFrameLocks noGrp="1"/>
           </>

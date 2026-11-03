@@ -62,6 +62,31 @@ test("regression: arc shape поддерживается валидатором 
   assert.deepStrictEqual(gds.map((gd) => [gd.attrs.get("name"), gd.attrs.get("fmla")]), [["adj1", "val 12000"], ["adj2", "val 34000"]]);
 });
 
+test("regression: raw SVG вставляется как image part с p:spPr и bounds", () => {
+  const { addSvg } = require("../tools/helpers/builder/svgshape.cjs");
+  const pkg = new Package();
+  const slide = new Part(pkg, "/ppt/slides/slide1.xml", "application/vnd.openxmlformats-officedocument.presentationml.slide+xml");
+  pkg.addPart(slide);
+  const spTree = parseFrag(`<p:spTree ${P} ${A}><p:nvGrpSpPr/><p:grpSpPr/></p:spTree>`);
+  const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0 L24 24 Z" fill="#A0B0C0"/></svg>';
+  const result = addSvg(spTree, 7, svg, 100, 200, 300, 400, { slidePart: slide, fillOverride: "#00FF00", opacity: 0.5 });
+  assert.strictEqual(result.nextId, 8);
+  assert.strictEqual(result.first.local, "pic");
+  assert.ok(!result.first.iter().some((el) => el.local === "custGeom"));
+  const xfrm = findL(findL(result.first, "spPr"), "xfrm");
+  assert.strictEqual(findL(xfrm, "off").attrs.get("x"), "100");
+  assert.strictEqual(findL(xfrm, "off").attrs.get("y"), "200");
+  assert.strictEqual(findL(xfrm, "ext").attrs.get("cx"), "300");
+  assert.strictEqual(findL(xfrm, "ext").attrs.get("cy"), "400");
+  const blip = findL(findL(result.first, "blipFill"), "blip");
+  const rid = blip.attrs.get(`{${NS_R}}embed`);
+  const part = pkg.parts.get(slide.rels.get(rid).target);
+  assert.strictEqual(part.contentType, "image/svg+xml");
+  const text = part.blob.toString("utf8");
+  assert.ok(text.includes('fill="#00FF00"'));
+  assert.ok(text.includes('fill-opacity="0.5"'));
+});
+
 test("regression: text run color #RRGGBBAA → только RGB, без alpha child", () => {
   const el = { type: "text", bounds: [0, 0, 10, 10], paragraphs: [{ runs: [{ text: "x", color: "#FF000080" }] }] };
   const sp = norm.normalizeTextShape(mkTextSp(), el);

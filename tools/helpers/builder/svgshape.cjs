@@ -85,30 +85,44 @@ function _spXml(sid, d, fill, opacity, x, y, cx, cy, kx, ky, rot, flips) {
     `<p:txBody><a:bodyPr/><a:lstStyle/><a:p/></p:txBody></p:sp>`;
 }
 
-// addSvg работает на нашем DOM (slide.spTree — El) и возвращает первый sp.
-function addSvg(spTree, nextId, svgText, x, y, cx, cy, { rotation = null, flip = null, opacity = null, fillOverride = null } = {}) {
+function _recolorSvg(svgText, fillOverride, opacity) {
+  if (!fillOverride && (opacity === null || opacity === undefined || opacity >= 1.0)) return svgText;
+  return svgText.replace(/<path\b[^>]*?\/>/g, (tag) => {
+    if (fillOverride && /fill="#[0-9A-Fa-f]{6}"/.test(tag)) {
+      tag = tag.replace(/fill="#[0-9A-Fa-f]{6}"/, `fill="${fillOverride}"`);
+    }
+    if (opacity !== null && opacity !== undefined && opacity < 1.0) {
+      const current = /fill-opacity="([\d.]+)"/.exec(tag);
+      const next = (current ? parseFloat(current[1]) : 1.0) * opacity;
+      if (current) tag = tag.replace(current[0], `fill-opacity="${next}"`);
+      else tag = tag.replace(/\s*\/>$/, ` fill-opacity="${next}"/>`);
+    }
+    return tag;
+  });
+}
+
+function addSvg(spTree, nextId, svgText, x, y, cx, cy, { rotation = null, flip = null, opacity = null, fillOverride = null, slidePart = null } = {}) {
+  const { Part, RT } = require("./opc.cjs");
   const { parseXml, docRoot } = require("../xml.cjs");
-  let [vbW, vbH, paths] = parseSvg(svgText);
-  if (fillOverride) paths = paths.map(([d, fill, op]) => [d, fill ? fillOverride : null, op]);
-  let sid = nextId;
+  parseSvg(svgText);
+  if (!slidePart) throw new SvgError("addSvg: slidePart is required for raw SVG insertion");
+  const part = new Part(slidePart.pkg, slidePart.pkg.nextImagePartname("svg"), "image/svg+xml");
+  part.blob = Buffer.from(_recolorSvg(svgText, fillOverride, opacity), "utf8");
+  slidePart.pkg.addPart(part);
+  const rid = slidePart.rels.relateTo(RT.IMAGE, part.partname);
   const rot = rotation ? ` rot="${pyRound(rotation * 60000)}"` : "";
   let flips = "";
   if (flip) {
     if (flip.h) flips += ' flipH="1"';
     if (flip.v) flips += ' flipV="1"';
   }
-  if (opacity !== null && opacity !== undefined && opacity < 1.0) {
-    paths = paths.map(([d, fill, op]) => [d, fill, op * opacity]);
-  }
-  const kx = cx / vbW, ky = cy / vbH;
-  let first = null;
-  for (const [d, fill, op] of paths) {
-    const spEl = docRoot(parseXml(_spXml(sid, d, fill, op, x, y, cx, cy, kx, ky, rot, flips)));
-    spTree.children.push(spEl);
-    if (first === null) first = spEl;
-    sid += 1;
-  }
-  return { first, nextId: sid };
+  const xml = `<p:pic xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">` +
+    `<p:nvPicPr><p:cNvPr id="${nextId}" name="svg ${nextId}"/><p:cNvPicPr/><p:nvPr/></p:nvPicPr>` +
+    `<p:blipFill><a:blip r:embed="${rid}"/><a:stretch><a:fillRect/></a:stretch></p:blipFill>` +
+    `<p:spPr><a:xfrm${rot}${flips}><a:off x="${pyRound(x)}" y="${pyRound(y)}"/><a:ext cx="${pyRound(cx)}" cy="${pyRound(cy)}"/></a:xfrm></p:spPr></p:pic>`;
+  const pic = docRoot(parseXml(xml));
+  spTree.children.push(pic);
+  return { first: pic, nextId: nextId + 1 };
 }
 
-module.exports = { SvgError, parseSvg, _checkD, _dToOoxml, _spXml, addSvg };
+module.exports = { SvgError, parseSvg, _checkD, _dToOoxml, _spXml, _recolorSvg, addSvg };

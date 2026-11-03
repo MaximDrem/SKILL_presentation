@@ -16,6 +16,22 @@
           "role": "picture"
         }
       ]
+    },
+    "image1.svg": {
+      "format": "svg",
+      "width": 384,
+      "height": 275,
+      "alpha": true,
+      "md5": "366995e272a7da05aba6c990e6c54b6f",
+      "bytes": 1593,
+      "class": "unrenderable",
+      "usedBy": [
+        {
+          "slide": 2,
+          "part": "ppt/slides/slide2.xml",
+          "role": "picture"
+        }
+      ]
     }
   }
 }

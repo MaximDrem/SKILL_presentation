@@ -609,7 +609,7 @@ async function run(args) {
           const svgFill = _svgFill(ctx, item, el);
           const res = addSvg(spTree, nid, fs.readFileSync(path.join(projectDir, "media", String(el.src).replace(/^media\//, "")), "utf8"),
                              pxEmu(b[0], k), pxEmu(b[1], k), pxEmu(b[2], k), pxEmu(b[3], k),
-                             { rotation: el.rotation ?? null, flip: el.flip ?? null, opacity: el.opacity ?? null, fillOverride: svgFill });
+                              { rotation: el.rotation ?? null, flip: el.flip ?? null, opacity: el.opacity ?? null, fillOverride: svgFill, slidePart: slide });
           allShapes.push(res.first);
           // addSvg расходует ids для группы/детей
           nid = res.nextId;
