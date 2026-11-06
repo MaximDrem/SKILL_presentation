@@ -150,6 +150,10 @@
 - мелкие акценты (точки/звёздочки) — 1–3 шт рядом с крупным декором;
 - файлы каталога — всегда декор, никогда не главный визуал слайда.
 
+## Dark theme: примеры JSON
+
+Используйте только dark-палитру и decor. Не переносите эти цвета в light.
+
 ### proto 1 — cover — заголовок слева, крупная 3D-иллюстрация справа
 ```json
 {"pageType": "cover", "proto": 1,
@@ -297,7 +301,9 @@
  ]}
 ```
 
-## Светлая тема: cover и closing
+## Light theme: примеры JSON
+
+Используйте только light-палитру и decor. Не переносите сюда цвета из dark.
 
 ### proto 1 — cover, светлый фон и текст `#2A3238`
 ```json
@@ -308,6 +314,70 @@
   {"type": "text", "id": "6-t", "bounds": [88, 535, 134, 68], "paragraphs": [{"runs": [{"text": "2026", "sz": 36, "font": "SB Sans Display Light", "color": "#2A3238"}]}]},
   {"type": "image", "src": "decor/illustrations/image180.png", "bounds": [680, 214, 722, 643], "bleed": true},
   {"type": "image", "src": "decor/other/image25.png", "bounds": [1114, 73, 74, 77], "rotation": 111.57}
+ ]}
+```
+
+### proto 19 — divider, минимальный светлый раздел
+```json
+{"pageType": "divider", "proto": 19,
+ "elements": [
+  {"type": "text", "id": "2-t", "bounds": [44, 420, 546, 151], "anchor": "ctr", "paragraphs": [{"runs": [{"text": "Заголовок", "sz": 48, "font": "SB Sans Display Semibold", "color": "#2A3238"}]}]}
+ ]}
+```
+
+### proto 42 — cards, три светлые карточки с 3D-иконками
+```json
+{"pageType": "content", "proto": 42,
+ "elements": [
+  {"type": "text", "id": "3-t", "bounds": [45, 83, 819, 68], "paragraphs": [{"runs": [{"text": "Заголовок", "sz": 36, "font": "SB Sans Display Semibold", "color": "#2A3238"}]}]},
+  {"type": "text", "id": "4-t", "bounds": [48, 151, 403, 68], "paragraphs": [{"runs": [{"text": "Подзаголовок", "sz": 18, "font": "SB Sans Display", "color": "#2A3238"}]}]},
+  {"type": "shape", "id": "36", "shape": "roundRect", "adjustments": [11145], "bounds": [46, 250, 370, 318], "fill": {"gradient": {"angle": 0, "stops": [[0, "#9DFFBB"], [1, "#FFFFFF"]]}}},
+  {"type": "shape", "id": "35", "shape": "roundRect", "adjustments": [11145], "bounds": [456, 250, 366, 318], "fill": {"gradient": {"angle": 0, "stops": [[0, "#9DFFBB"], [1, "#FFFFFF"]]}}},
+  {"type": "shape", "id": "34", "shape": "roundRect", "adjustments": [11145], "bounds": [863, 250, 370, 318], "fill": {"gradient": {"angle": 0, "stops": [[0, "#9DFFBB"], [1, "#FFFFFF"]]}}},
+  {"type": "image", "src": "decor/icons3d/image243.png", "bounds": [31, 234, 198, 198]},
+  {"type": "image", "src": "decor/icons3d/image244.png", "bounds": [444, 242, 203, 203]},
+  {"type": "image", "src": "decor/illustrations/image180.png", "bounds": [872, 262, 158, 158]},
+  {"type": "text", "id": "5", "bounds": [72, 454, 334, 95], "paragraphs": [{"runs": [{"text": "Текст", "sz": 14, "font": "SB Sans Text Light", "color": "#2A3238"}]}]},
+  {"type": "text", "id": "6", "bounds": [485, 454, 334, 95], "paragraphs": [{"runs": [{"text": "Текст", "sz": 14, "font": "SB Sans Text Light", "color": "#2A3238"}]}]},
+  {"type": "text", "id": "7", "bounds": [890, 454, 334, 95], "paragraphs": [{"runs": [{"text": "Текст", "sz": 14, "font": "SB Sans Text Light", "color": "#2A3238"}]}]}
+ ]}
+```
+
+### proto 45 — table, светлая таблица с прозрачными ячейками
+```json
+{"pageType": "content", "proto": 45,
+ "elements": [
+  {"type": "text", "id": "7-t", "bounds": [45, 83, 819, 68], "paragraphs": [{"runs": [{"text": "Заголовок таблицы", "sz": 36, "font": "SB Sans Display Semibold", "color": "#2A3238"}]}]},
+  {"type": "text", "id": "8-t", "bounds": [48, 151, 403, 68], "paragraphs": [{"runs": [{"text": "Подзаголовок таблицы", "sz": 18, "font": "SB Sans Display", "color": "#2A3238"}]}]},
+  {"type": "table", "bounds": [58, 230, 1174, 452],
+   "table": {
+    "colW": [240, 220, 240, 240, 234],
+    "rows": [
+     [{"text": "Компания", "fill": "none"}, {"text": "Периодичность", "fill": "none"}, {"text": "Отклонения", "fill": "none"}, {"text": "Порог", "fill": "none"}, {"text": "Итого", "fill": "none"}],
+     [{"text": "Эвотор", "fill": "none"}, {"text": "Ежемесячно", "fill": "none"}, {"text": "Да", "fill": "none"}, {"text": "120 000", "fill": "none"}, {"text": "13 000", "fill": "none"}],
+     [{"text": "Деловая среда", "fill": "none"}, {"text": "Ежеквартально", "fill": "none"}, {"text": "Нет", "fill": "none"}, {"text": "100 000", "fill": "none"}, {"text": "10 000", "fill": "none"}],
+     [{"text": "Ваш продукт", "fill": "none"}, {"text": "Еженедельно", "fill": "none"}, {"text": "Да", "fill": "none"}, {"text": "80 000", "fill": "none"}, {"text": "8 000", "fill": "none"}]
+    ],
+    "sz": 14,
+    "color": "#2A3238"
+   }
+  },
+  {"type": "image", "src": "decor/blobs/image23.png", "bounds": [535, -553, 803, 804], "bleed": true}
+ ]}
+```
+
+### proto 48 — chart, светлый график с основным текстом `#2A3238`
+```json
+{"pageType": "content", "proto": 48,
+ "elements": [
+  {"type": "text", "id": "5-t", "bounds": [45, 83, 819, 68], "paragraphs": [{"runs": [{"text": "Заголовок графика", "sz": 36, "font": "SB Sans Display Semibold", "color": "#2A3238"}]}]},
+  {"type": "text", "id": "6-t", "bounds": [48, 151, 403, 68], "paragraphs": [{"runs": [{"text": "Подзаголовок графика", "sz": 18, "font": "SB Sans Display", "color": "#2A3238"}]}]},
+  {"type": "chart", "id": "4", "bounds": [58, 142, 1135, 549],
+   "chart": {
+    "kind": "bar",
+    "series": [{"name": "Значение", "categories": ["2020", "2021", "2022", "2023", "2024", "2025", "2026"], "values": [202, 324, 455, 526, 688, 733, 812]}]
+   }
+  }
  ]}
 ```
 
@@ -322,8 +392,8 @@
   {"type": "text", "id": "7-t", "bounds": [48, 274, 251, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#2A3238"}]}]},
   {"type": "shape", "id": "11", "shape": "roundRect", "adjustments": [8165], "bounds": [58, 448, 290, 214], "fill": {"solid": "#2A323812"}},
   {"type": "text", "id": "12-t", "bounds": [71, 513, 339, 61], "paragraphs": [{"runs": [{"text": "Текст", "sz": 16, "font": "SB Sans Text", "color": "#2A3238"}]}]},
-  {"type": "text", "id": "15-t", "bounds": [71, 597, 90, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#01E0FF"}]}]},
-  {"type": "text", "id": "16-t", "bounds": [241, 597, 90, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#01E0FF"}]}]},
+  {"type": "text", "id": "15-t", "bounds": [71, 597, 90, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#019DB2"}]}]},
+  {"type": "text", "id": "16-t", "bounds": [241, 597, 90, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#019DB2"}]}]},
   {"type": "image", "src": "decor/other/image25.png", "bounds": [598, 186, 74, 77], "rotation": 111.57}
  ]}
 ```
