@@ -82,10 +82,58 @@
 | 56 | content closing | — |
 | 57 | — | content closing |
 
+## Цвета и шрифты
+
+### Тёмная тема (`--theme dark`)
+
+- Fonts: SB Sans Text Light ×316, SB Sans Display Semibold ×217,
+  SB Sans Display ×180, SB Sans Text ×110, SB Sans Display Light ×82,
+  SB Sans Text Semibold ×16, SBSansDisplay-Light ×7.
+- Font sizes: 14 ×307, 12 ×115, 18 ×105, 36 ×101, 11 ×88, 8 ×42,
+  10 ×30, 48 ×29, 16 ×24, 28 ×17, 20 ×12, 9 ×10.
+- Text colors: #FFFFFF ×778, #62ECFF ×36, #56FF71 ×33, #000000 ×16,
+  #BFBFBF ×15, #333F48 ×5, #FF3256 ×5, #000333 ×2.
+- Shape fills: #000000 ×334, #FFFFFF ×255, #FFFFFF26 ×14, #56FF71 ×13,
+  #62ECFF ×4, #FFFFFF21 ×4, #1032A1 ×1, #0882FF ×1, #ADFFC6 ×1,
+  #BAFFFB ×1, #FF3256 ×1, #50FA38 ×1.
+- Gradients: 359.9° #5BFC1F→#0FDEF7; 45° #F1F3FF33→#FFFFFF0D;
+  45° #F1F3FF33→#FFFFFF00; ?° #A0E72019→#4BE87B29→#42E3B447→#7AC0FF4F;
+  210° #F1F3FF33→#FFFFFF00; ?° #64E9E900→#64E9E9; 230° #56FF71→#56FF71;
+  ?° #64E9E900→#64E9E9; 175° #56FF71→#000000; 175° #62ECFF→#000000;
+  175° #1532A1→#000000; 290° #FFFFFF26→#FFFFFF33.
+- Theme: dk1 #000000, lt1 #FFFFFF, dk2 #0D0658, lt2 #ED692B,
+  accent1 #00ADEE, accent2 #20BA71, accent3 #A0E720, accent4 #2F97AD,
+  accent5 #64E9E9, accent6 #FAED00, hlink #33AC8B, folHlink #00A523.
+- clrMap: bg1→lt1, tx1→dk1, bg2→lt2, tx2→dk2.
+- Theme fonts: major SB Sans Display, minor SB Sans Text; embedded: yes.
+
+### Светлая тема (`--theme light`)
+
+- Fonts: SB Sans Text Light ×315, SB Sans Display Semibold ×226,
+  SB Sans Display ×175, SB Sans Text ×102, SB Sans Display Light ×82,
+  SB Sans Text Semibold ×22, SBSansDisplay-Light ×7, Calibri ×2.
+- Font sizes: 14 ×306, 12 ×115, 36 ×108, 18 ×107, 11 ×88, 8 ×35,
+  48 ×31, 10 ×30, 16 ×24, 28 ×17, 20 ×12, 9 ×10.
+- Text colors: #2A3238 ×734, #323E48 ×55, #000000 ×40, #01E0FF ×19,
+  #56FF71 ×19, #FFFFFF ×8, #62ECFF ×7, #333F48 ×5, #FF3256 ×5, #000333 ×2.
+- Shape fills: #000000 ×593, #52F46C26 ×11, #01E0FF1A ×8, #FFFFFF ×6,
+  #01E0FF ×6, #56FF71 ×4, #62ECFF ×4, #01E0FF26 ×4, #2A3238 ×3,
+  #2A323812 ×3, #00E0FF ×1, #283438 ×1.
+- Gradients: 359.9° #5BFC1F→#0FDEF7;
+  ?° #A0E72019→#4BE87B29→#42E3B447→#7AC0FF4F; ?° #FFFFFF→#FFFFFF00;
+  ?° #9DFFBB→#FFFFFF; ?° #55FF7000→#01E0FF; 230° #56FF71→#56FF71;
+  175° #56FF71→#FFFFFF; 175° #62ECFF→#FFFFFF; 175° #FF3256→#FFFFFF;
+  290° #FFFFFF26→#FFFFFF33.
+- Theme: dk1 #000000, lt1 #FFFFFF, dk2 #283438, lt2 #FFFFFF,
+  accent1 #56FF71, accent2 #5CFF8D, accent3 #00E0FF, accent4 #61ECFF,
+  accent5 #55FF70, accent6 #5CFF8D, hlink #0563C1, folHlink #954F72.
+- clrMap: bg1→lt1, tx1→dk1, bg2→lt2, tx2→dk2.
+- Theme fonts: major Calibri Light, minor Calibri; embedded: no.
+
 ## Типовые слайды — эталоны стиля и размещения декора
 
-Реальная геометрия шаблона (общая для обеих тем — примеры собраны на
-dark; цвета и фон берите из описания вашей темы выше). Это эталоны
+Реальная геометрия шаблона (dark-примеры и отдельные светлые cover/closing;
+цвета и фон берите из описания вашей темы выше). Это эталоны
 СТИЛЯ и размещения декора: контент — ваш; композицию можно адаптировать
 под контент (check подтвердит вместимость), но позиции декора держите
 как здесь. Копия 1:1 с чужими текстами — плохо; повторное размещение — норма.
@@ -245,6 +293,37 @@ dark; цвета и фон берите из описания вашей тем�
   {"type": "text", "id": "7-t", "bounds": [71, 513, 339, 61], "paragraphs": [{"runs": [{"text": "Текст", "sz": 16, "font": "SB Sans Text", "color": "#FFFFFF"}]}]},
   {"type": "text", "id": "11-t", "bounds": [71, 597, 90, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#56FF71"}]}]},
   {"type": "text", "id": "12-t", "bounds": [241, 597, 90, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#56FF71"}]}]},
+  {"type": "image", "src": "decor/other/image25.png", "bounds": [598, 186, 74, 77], "rotation": 111.57}
+ ]}
+```
+
+## Светлая тема: cover и closing
+
+### proto 1 — cover, светлый фон и текст `#2A3238`
+```json
+{"pageType": "cover", "proto": 1,
+ "elements": [
+  {"type": "image", "src": "decor/blobs/image23.png", "bounds": [627, -154, 803, 804], "bleed": true},
+  {"type": "text", "id": "5-t", "bounds": [84, 321, 526, 182], "paragraphs": [{"runs": [{"text": "Заголовок", "sz": 60, "b": true, "font": "SB Sans Display Semibold", "color": "#2A3238"}]}]},
+  {"type": "text", "id": "6-t", "bounds": [88, 535, 134, 68], "paragraphs": [{"runs": [{"text": "2026", "sz": 36, "font": "SB Sans Display Light", "color": "#2A3238"}]}]},
+  {"type": "image", "src": "decor/illustrations/image180.png", "bounds": [680, 214, 722, 643], "bleed": true},
+  {"type": "image", "src": "decor/other/image25.png", "bounds": [1114, 73, 74, 77], "rotation": 111.57}
+ ]}
+```
+
+### proto 57 — closing, светлый фон и текст `#2A3238`
+```json
+{"pageType": "closing", "proto": 57,
+ "elements": [
+  {"type": "image", "src": "decor/blobs/image23.png", "bounds": [674, -254, 803, 804], "bleed": true},
+  {"type": "image", "src": "decor/icons3d/image243.png", "bounds": [618, 414, 312, 272], "rotation": 343.35},
+  {"type": "image", "src": "decor/icons3d/image244.png", "bounds": [783, 211, 375, 327], "rotation": 12.44},
+  {"type": "text", "id": "6-t", "bounds": [45, 118, 435, 151], "anchor": "ctr", "paragraphs": [{"runs": [{"text": "Заголовок", "sz": 48, "font": "SB Sans Display Semibold", "color": "#2A3238"}]}]},
+  {"type": "text", "id": "7-t", "bounds": [48, 274, 251, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#2A3238"}]}]},
+  {"type": "shape", "id": "11", "shape": "roundRect", "adjustments": [8165], "bounds": [58, 448, 290, 214], "fill": {"solid": "#2A323812"}},
+  {"type": "text", "id": "12-t", "bounds": [71, 513, 339, 61], "paragraphs": [{"runs": [{"text": "Текст", "sz": 16, "font": "SB Sans Text", "color": "#2A3238"}]}]},
+  {"type": "text", "id": "15-t", "bounds": [71, 597, 90, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#01E0FF"}]}]},
+  {"type": "text", "id": "16-t", "bounds": [241, 597, 90, 39], "paragraphs": [{"runs": [{"text": "Текст", "sz": 18, "font": "SB Sans Text Light", "color": "#01E0FF"}]}]},
   {"type": "image", "src": "decor/other/image25.png", "bounds": [598, 186, 74, 77], "rotation": 111.57}
  ]}
 ```
