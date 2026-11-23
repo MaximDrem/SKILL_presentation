@@ -10,7 +10,7 @@ const { pyJsonDumps, pyJsonString } = require("../numfmt.cjs");
 const { parse: jsonLoads } = require("../jsonpy.cjs");
 const { El } = require("../xml.cjs");
 const { overlapCheck } = require("./overlap.cjs");
-const { qaWarnings } = require("./qa.cjs");
+const { qaWarnings, tableFillMismatches } = require("./qa.cjs");
 const { textfitCheck } = require("./textfit.cjs");
 const { resolveProtos } = require("./proto.cjs");
 const { validate } = require("./validate.cjs");
@@ -705,6 +705,13 @@ async function run(args) {
   if (svgBad.length) {
     bFail(3, { error: `в пакете svg image-части, которые не рендерит PowerPoint (a:blip → только растр): ${svgBad.join(", ")}`,
                suggestion: "регресс сборки SVG (svgshape должен конвертировать в нативные фигуры) — сообщите в багрепорт со спекой страниц" });
+  }
+
+  const tableFillBad = newSlides.flatMap((slide, i) => tableFillMismatches(slide.xmlEl, protos[i].page));
+  if (tableFillBad.length) {
+    const details = tableFillBad.slice(0, 8).map((f) => `${f.page} ${f.el}${f.cell ? ` [${f.cell.join(",")}]` : ""}: ${f.expected} → ${f.actual}`).join("; ");
+    bFail(3, { error: `в выходной деке искажены заливки ячеек: ${details}`,
+               suggestion: "это регресс сериализации таблицы — сообщите в багрепорт со спекой страниц" });
   }
 
   fs.writeFileSync(a.outPath, pkg.save());

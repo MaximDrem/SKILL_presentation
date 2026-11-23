@@ -381,8 +381,7 @@ function rebuildTbl(el, k) {
       } else if (fill) {
         removeL(tcPr, "noFill");
         removeL(tcPr, "solidFill");
-        sub(tcPr, NS_A, "solidFill");
-        sub(findL(tcPr, "solidFill"), NS_A, "srgbClr", { val: splitHex(fill)[0] });
+        solidFillXml(tcPr, fill);
       }
       const borders = cspec.borders || {};
       for (const side of "lrtb") {

@@ -284,6 +284,29 @@
  ]}
 ```
 
+### proto 44 — table, тёмная таблица с прозрачными ячейками
+```json
+{"pageType": "content", "proto": 44,
+ "elements": [
+  {"type": "text", "id": "4-t", "bounds": [45, 83, 819, 68], "paragraphs": [{"runs": [{"text": "Заголовок таблицы", "sz": 36, "font": "SB Sans Display Semibold", "color": "#FFFFFF"}]}]},
+  {"type": "text", "id": "5-t", "bounds": [48, 151, 403, 68], "paragraphs": [{"runs": [{"text": "Подзаголовок таблицы", "sz": 18, "font": "SB Sans Display", "color": "#FFFFFF"}]}]},
+  {"type": "table", "id": "3", "bounds": [58, 230, 1174, 452],
+   "table": {
+    "colW": [235, 235, 235, 235, 234],
+    "rows": [
+     [{"text": "Компания", "fill": "none"}, {"text": "Периодичность", "fill": "none"}, {"text": "Отклонения", "fill": "none"}, {"text": "Порог", "fill": "none"}, {"text": "Итого", "fill": "none"}],
+     [{"text": "Эвотор", "fill": "none"}, {"text": "Ежемесячно", "fill": "none"}, {"text": "Да", "fill": "none"}, {"text": "120 000", "fill": "none"}, {"text": "13 000", "fill": "none"}],
+     [{"text": "Деловая среда", "fill": "none"}, {"text": "Ежеквартально", "fill": "none"}, {"text": "Нет", "fill": "none"}, {"text": "100 000", "fill": "none"}, {"text": "10 000", "fill": "none"}],
+     [{"text": "Ваш продукт", "fill": "none"}, {"text": "Еженедельно", "fill": "none"}, {"text": "Да", "fill": "none"}, {"text": "80 000", "fill": "none"}, {"text": "13 000", "fill": "none"}]
+    ],
+    "sz": 14,
+    "color": "#FFFFFF",
+    "border": {"w": 0.7, "color": "#FFFFFF"}
+   }
+  }
+ ]}
+```
+
 ### proto 56 — closing — благодарность + 3D-сердца справа
 ```json
 {"pageType": "closing", "proto": 56,

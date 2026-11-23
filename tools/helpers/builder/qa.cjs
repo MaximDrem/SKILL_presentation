@@ -5,6 +5,8 @@ const path = require("path");
 const { pyFixed, pyPercent0, pyRound, pySum } = require("../numfmt.cjs");
 const { imageInfo } = require("../unpack/image.cjs");
 const { CH255 } = require("./srgb_luma_table.cjs");
+const { El } = require("../xml.cjs");
+const { findL } = require("./xmlbuild.cjs");
 
 const WARN_ALPHA = 0.06;
 const GRAD_ALPHA_OK = 0.90;
@@ -95,6 +97,72 @@ function _imageSize(p) {
 
 const _list = (x) => (Array.isArray(x) ? x : []);
 const _obj = (x) => (x !== null && typeof x === "object" && !Array.isArray(x));
+
+function _colorAlphaHex(rgb, alpha) {
+  const suffix = alpha === 255 ? "" : alpha.toString(16).toUpperCase().padStart(2, "0");
+  return `#${String(rgb).toUpperCase()}${suffix}`;
+}
+
+function _specCellFill(fill) {
+  if (!fill || fill === "none") return "none";
+  const p = _parse(fill);
+  if (!p) return String(fill);
+  const rgb = p.slice(0, 3).map((v) => v.toString(16).toUpperCase().padStart(2, "0")).join("");
+  return _colorAlphaHex(rgb, p[3]);
+}
+
+function _xmlCellFill(tcPr) {
+  if (!tcPr) return "missing";
+  const noFill = findL(tcPr, "noFill"), solidFill = findL(tcPr, "solidFill");
+  if (noFill && solidFill) return "conflict";
+  if (noFill) return "none";
+  const clr = findL(solidFill, "srgbClr");
+  if (!clr) return "missing";
+  const alphaNode = findL(clr, "alpha");
+  const alpha = alphaNode ? pyRound(parseInt(alphaNode.attrs.get("val"), 10) / 100000 * 255) : 255;
+  return _colorAlphaHex(clr.attrs.get("val"), alpha);
+}
+
+function tableFillMismatches(slideXml, item) {
+  const failures = [];
+  const spTree = findL(findL(slideXml, "cSld"), "spTree");
+  if (!spTree) return failures;
+  for (const [ei, el] of _list(item.spec.elements).entries()) {
+    if (!_obj(el) || el.type !== "table") continue;
+    const eid = el.id || `#${ei + 1}`;
+    const descr = `gid:${item.idx}:${ei}`;
+    const gf = spTree.children.find((c) => {
+      if (!(c instanceof El) || c.local !== "graphicFrame") return false;
+      const cNvPr = findL(findL(c, "nvGraphicFramePr"), "cNvPr");
+      return cNvPr && cNvPr.attrs.get("descr") === descr;
+    });
+    const tbl = findL(findL(findL(gf, "graphic"), "graphicData"), "tbl");
+    if (!tbl) {
+      failures.push({ page: item.file, el: eid, cell: null, expected: "table", actual: "missing" });
+      continue;
+    }
+    const trs = tbl.children.filter((c) => c instanceof El && c.local === "tr");
+    const merged = new Set();
+    for (const [ri, row] of _list(el.table.rows).entries()) {
+      for (const [ci, cspec] of _list(row).entries()) {
+        if (merged.has(`${ri},${ci}`)) continue;
+        const cs = cspec.colSpan || 1, rs = cspec.rowSpan || 1;
+        for (let dr = 0; dr < rs; dr++) {
+          for (let dc = 0; dc < cs; dc++) {
+            if (dr || dc) merged.add(`${ri + dr},${ci + dc}`);
+          }
+        }
+        const cells = (trs[ri]?.children || []).filter((c) => c instanceof El && c.local === "tc");
+        const expected = _specCellFill(cspec.fill);
+        const actual = _xmlCellFill(findL(cells[ci], "tcPr"));
+        if (actual !== expected) {
+          failures.push({ page: item.file, el: eid, cell: [ri + 1, ci + 1], expected, actual });
+        }
+      }
+    }
+  }
+  return failures;
+}
 
 function qaWarnings(pages, underlays = null, projectDir = null) {
   const hard = [], warns = [];
@@ -238,4 +306,4 @@ function qaWarnings(pages, underlays = null, projectDir = null) {
   return [hard, warns];
 }
 
-module.exports = { WARN_ALPHA, GRAD_ALPHA_OK, CONTRAST_MIN, qaWarnings, _parse, _lum, _composite, _contrast, _fixColor, _textUnderlay, _fills, _imageSize };
+module.exports = { WARN_ALPHA, GRAD_ALPHA_OK, CONTRAST_MIN, qaWarnings, tableFillMismatches, _parse, _lum, _composite, _contrast, _fixColor, _textUnderlay, _fills, _imageSize };
