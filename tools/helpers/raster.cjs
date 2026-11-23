@@ -4,8 +4,8 @@
 'use strict';
 const fs = require("fs");
 const path = require("path");
-const { PNG } = require("../../vendor/pngjs/lib/png.js");
-const jpeg = require("../../vendor/jpeg-js/index.js");
+const { PNG } = require("../../vendor/pngjs/lib/png.cjs");
+const jpeg = require("../../vendor/jpeg-js/index.cjs");
 const { resize } = require("./pilresample.cjs");
 const { parseSvg } = require("./builder/svgshape.cjs");
 

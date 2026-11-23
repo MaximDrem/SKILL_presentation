@@ -85,44 +85,39 @@ function _spXml(sid, d, fill, opacity, x, y, cx, cy, kx, ky, rot, flips) {
     `<p:txBody><a:bodyPr/><a:lstStyle/><a:p/></p:txBody></p:sp>`;
 }
 
-function _recolorSvg(svgText, fillOverride, opacity) {
-  if (!fillOverride && (opacity === null || opacity === undefined || opacity >= 1.0)) return svgText;
-  return svgText.replace(/<path\b[^>]*?\/>/g, (tag) => {
-    if (fillOverride && /fill="#[0-9A-Fa-f]{6}"/.test(tag)) {
-      tag = tag.replace(/fill="#[0-9A-Fa-f]{6}"/, `fill="${fillOverride}"`);
-    }
-    if (opacity !== null && opacity !== undefined && opacity < 1.0) {
-      const current = /fill-opacity="([\d.]+)"/.exec(tag);
-      const next = (current ? parseFloat(current[1]) : 1.0) * opacity;
-      if (current) tag = tag.replace(current[0], `fill-opacity="${next}"`);
-      else tag = tag.replace(/\s*\/>$/, ` fill-opacity="${next}"/>`);
-    }
-    return tag;
-  });
-}
-
-function addSvg(spTree, nextId, svgText, x, y, cx, cy, { rotation = null, flip = null, opacity = null, fillOverride = null, slidePart = null } = {}) {
-  const { Part, RT } = require("./opc.cjs");
+// addSvg: каждый <path> → отдельная нативная фигура (fill в DrawingML живёт на
+// фигуре, не на subpath, поэтому многоцветный SVG = несколько фигур).
+// Никаких image/svg+xml-частей: a:blip обязан указывать на растр, а SVG в
+// PowerPoint рендерится только через svgBlip-расширение поверх PNG-fallback —
+// прямая вставка svg-блипа невидима в PowerPoint (превью на Chromium её прощает).
+function addSvg(spTree, nextId, svgText, x, y, cx, cy, { rotation = null, flip = null, opacity = null, fillOverride = null } = {}) {
   const { parseXml, docRoot } = require("../xml.cjs");
-  parseSvg(svgText);
-  if (!slidePart) throw new SvgError("addSvg: slidePart is required for raw SVG insertion");
-  const part = new Part(slidePart.pkg, slidePart.pkg.nextImagePartname("svg"), "image/svg+xml");
-  part.blob = Buffer.from(_recolorSvg(svgText, fillOverride, opacity), "utf8");
-  slidePart.pkg.addPart(part);
-  const rid = slidePart.rels.relateTo(RT.IMAGE, part.partname);
+  const [vbW, vbH, parsed] = parseSvg(svgText);
+  const dim = opacity !== null && opacity !== undefined && opacity < 1.0;
+  const paths = parsed.map(([d, fill, op]) => [d, (fill && fillOverride) ? fillOverride : fill, dim ? op * opacity : op]);
   const rot = rotation ? ` rot="${pyRound(rotation * 60000)}"` : "";
   let flips = "";
-  if (flip) {
+  if (flip && typeof flip === "object") {
     if (flip.h) flips += ' flipH="1"';
     if (flip.v) flips += ' flipV="1"';
   }
-  const xml = `<p:pic xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">` +
-    `<p:nvPicPr><p:cNvPr id="${nextId}" name="svg ${nextId}"/><p:cNvPicPr/><p:nvPr/></p:nvPicPr>` +
-    `<p:blipFill><a:blip r:embed="${rid}"/><a:stretch><a:fillRect/></a:stretch></p:blipFill>` +
-    `<p:spPr><a:xfrm${rot}${flips}><a:off x="${pyRound(x)}" y="${pyRound(y)}"/><a:ext cx="${pyRound(cx)}" cy="${pyRound(cy)}"/></a:xfrm></p:spPr></p:pic>`;
-  const pic = docRoot(parseXml(xml));
-  spTree.children.push(pic);
-  return { first: pic, nextId: nextId + 1 };
+  let first = null;
+  let sid = nextId;
+  const shapes = [];
+  // bounds — слот, иконка вписывается с сохранением пропорций
+  // (preserveAspectRatio "xMidYMid meet", как <img> в превью): растягивать
+  // viewBox в box нельзя — иначе иконки сплющиваются при несовпавшем aspect.
+  const kk = Math.min(cx / vbW, cy / vbH);
+  const gw = vbW * kk, gh = vbH * kk;
+  const ox = x + (cx - gw) / 2, oy = y + (cy - gh) / 2;
+  for (const [d, fill, op] of paths) {
+    const sp = docRoot(parseXml(_spXml(sid, d, fill, op, ox, oy, gw, gh, kk, kk, rot, flips)));
+    spTree.children.push(sp);
+    shapes.push(sp);
+    if (first === null) first = sp;
+    sid += 1;
+  }
+  return { first, nextId: sid, shapes };
 }
 
-module.exports = { SvgError, parseSvg, _checkD, _dToOoxml, _spXml, _recolorSvg, addSvg };
+module.exports = { SvgError, parseSvg, _checkD, _dToOoxml, _spXml, addSvg };

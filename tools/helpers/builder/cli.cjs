@@ -15,7 +15,7 @@ const { textfitCheck } = require("./textfit.cjs");
 const { resolveProtos } = require("./proto.cjs");
 const { validate } = require("./validate.cjs");
 const { renderAndThumbs } = require("../render.cjs");
-const { Package, Part, CT, RT, findLocal } = require("./opc.cjs");
+const { Package, Part, CT, RT, findLocal, svgMediaParts } = require("./opc.cjs");
 const { px: pxEmu } = require("./elhelpers.cjs");
 const { copyDecor, deleteSlide } = require("./decor.cjs");
 const { mk, sub, findL, removeL, solidFillXml, gradFillXml, NS_A, NS_P } = require("./xmlbuild.cjs");
@@ -67,7 +67,8 @@ function _collect(args, needOut, cmd) {
     projectDir, outPath: outArg ? path.resolve(outArg) : null, app,
     mode: templateArg ? "clone" : "create",
   };
-  a.deckDir = a.outPath ? path.dirname(a.outPath) : null;
+  a.deckDir = path.resolve(projectDir);
+  a.outDir = a.outPath ? path.dirname(a.outPath) : null;
 
   const pagesDir = path.join(projectDir, "pages");
   if (!fs.existsSync(pagesDir) || !fs.statSync(pagesDir).isDirectory()) {
@@ -156,9 +157,10 @@ function _collect(args, needOut, cmd) {
   } catch {
     atlasBroken("_source.json нечитаем");
   }
-  const st = fs.statSync(templatePath);
-  if (source.bytes !== st.size) {
-    bFail(2, { error: `атлас протух относительно шаблона (_source.json: bytes ${source.bytes}, файл: bytes ${st.size})`,
+  const templateBytes = fs.readFileSync(templatePath);
+  const sha256 = crypto.createHash("sha256").update(templateBytes).digest("hex");
+  if (source.bytes !== templateBytes.length || source.sha256 !== sha256) {
+    bFail(2, { error: `атлас протух относительно шаблона (_source.json: bytes ${source.bytes}, sha256 ${source.sha256 || "missing"}; файл: bytes ${templateBytes.length}, sha256 ${sha256})`,
                suggestion: deckCmd("unpack", String(templatePath), "--out", String(atlasDir)) });
   }
   let template = null;
@@ -471,7 +473,7 @@ async function run(args) {
   const { a, pages, protos } = ctx;
   const projectDir = a.projectDir;
   const { templatePath, atlasDir, mediaClass } = ctx;
-  fs.mkdirSync(a.deckDir, { recursive: true });
+  fs.mkdirSync(a.outDir, { recursive: true });
 
   const noTheme = ctx.no_theme;
   let pkg, protoParts;
@@ -600,7 +602,7 @@ async function run(args) {
       });
       // interleave: фигуры попадают в spTree строго в порядке els (z-order)
       const { addSvg } = require("./svgshape.cjs");
-      const allShapes = [];
+      const elShapes = []; // ei → все созданные фигуры (SVG = мультифигура по path)
       let gi = 0;
       for (let ei = 0; ei < els.length; ei++) {
         const el = els[ei];
@@ -609,9 +611,9 @@ async function run(args) {
           const svgFill = _svgFill(ctx, item, el);
           const res = addSvg(spTree, nid, fs.readFileSync(path.join(projectDir, "media", String(el.src).replace(/^media\//, "")), "utf8"),
                              pxEmu(b[0], k), pxEmu(b[1], k), pxEmu(b[2], k), pxEmu(b[3], k),
-                              { rotation: el.rotation ?? null, flip: el.flip ?? null, opacity: el.opacity ?? null, fillOverride: svgFill, slidePart: slide });
-          allShapes.push(res.first);
-          // addSvg расходует ids для группы/детей
+                             { rotation: el.rotation ?? null, flip: el.flip ?? null, opacity: el.opacity ?? null, fillOverride: svgFill });
+          elShapes.push(res.shapes);
+          // addSvg расходует ids по числу path-фигур
           nid = res.nextId;
           if (!el.__bg) setShapeNameDescr(res.first, el.id || `el-${item.idx}-${ei}`, `gid:${item.idx}:${ei}`);
           continue;
@@ -625,14 +627,17 @@ async function run(args) {
         nid++;
         if (!el.__bg) setShapeNameDescr(sh, el.id || `el-${item.idx}-${ei}`, `gid:${item.idx}:${ei}`);
         spTree.children.push(sh);
-        allShapes.push(sh);
+        elShapes.push([sh]);
       }
-      // z-order: все фигуры уже в spTree в порядке els; bg image в начало (после grpSpPr)
+      // z-order: все фигуры уже в spTree в порядке els; bg (вкл. его svg-фигуры) в начало
       const bgIdx = els.findIndex((e) => e.__bg);
       if (bgIdx >= 0) {
-        const bgEl = allShapes[bgIdx];
-        spTree.children.splice(spTree.children.indexOf(bgEl), 1);
-        spTree.children.splice(2, 0, bgEl);
+        const bgShapes = elShapes[bgIdx];
+        const start = spTree.children.indexOf(bgShapes[0]);
+        if (start >= 0) {
+          spTree.children.splice(start, bgShapes.length);
+          spTree.children.splice(2, 0, ...bgShapes);
+        }
       }
       newSlides.push(slide);
     }
@@ -693,6 +698,13 @@ async function run(args) {
   if (leaked.length) {
     bFail(3, { error: `в выходной деке чужой текст шаблона: [${[...new Set(leaked)].sort().slice(0, 5).map((x) => "'" + x.replace(/\\/g, "\\\\").replace(/'/g, "\\'") + "'").join(", ")}]`,
                suggestion: "это регресс декор-whitelist — сообщите в багрепорт со спекой страниц" });
+  }
+
+  // --- svg media guard: прямые svg-части невидимы в PowerPoint (см. opc.svgMediaParts) ---
+  const svgBad = svgMediaParts(pkg);
+  if (svgBad.length) {
+    bFail(3, { error: `в пакете svg image-части, которые не рендерит PowerPoint (a:blip → только растр): ${svgBad.join(", ")}`,
+               suggestion: "регресс сборки SVG (svgshape должен конвертировать в нативные фигуры) — сообщите в багрепорт со спекой страниц" });
   }
 
   fs.writeFileSync(a.outPath, pkg.save());

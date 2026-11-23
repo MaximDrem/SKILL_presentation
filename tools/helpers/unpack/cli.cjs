@@ -389,8 +389,9 @@ function run(args) {
   const absIn = path.resolve(inFile);
   const relIn = path.relative(process.cwd(), absIn);
   const shownIn = relIn && !relIn.startsWith("..") && !path.isAbsolute(relIn) ? relIn.split(path.sep).join("/") : absIn;
+  const sha256 = crypto.createHash("sha256").update(fs.readFileSync(inFile)).digest("hex");
   fs.writeFileSync(path.join(outDir, "_source.json"),
-    _dumpsPretty({ file: shownIn, bytes: st.size, mtime: st.mtimeMs, slideCount: slideOrder.length }) + "\n");
+    _dumpsPretty({ file: shownIn, bytes: st.size, sha256, mtime: st.mtimeMs, slideCount: slideOrder.length }) + "\n");
 
   // --- style.json ---
   const embeddedFontFiles = names.filter((n) => n.startsWith("ppt/fonts/")).map((n) => path.posix.basename(n));
@@ -753,7 +754,7 @@ function run(args) {
   console.log("ОБЯЗАТЕЛЬНЫЙ интейк — по одному вызову на ответ, строго в этом порядке, до любых других действий:");
   console.log(`  1) read ${outDir}/STYLE.md`);
   sheets.forEach((s, i) => {
-    console.log(`  ${i + 2}) read_image ${outDir}/${s}`);
+    console.log(`  ${i + 2}) read ${outDir}/${s} mode="visual"`);
   });
   console.log("  Больше в атласе читать нечего — остальное машинные данные для build.");
   if (!shotFiles.length) {

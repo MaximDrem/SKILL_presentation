@@ -49,12 +49,14 @@ copied from the atlas or the brief, not interpreted).
    Nothing else in the atlases exists for you.
 
 3. **Folder + plan — one bash + one write:**
-   `mkdir -p "<deck>/pages" "<deck>/media"`, then `write "<deck>/plan.md"`
-   — one line per slide: `N. <layout family> — «title»` (SU path adds the
-   proto number: `N. <layout> — proto <N> — «title»`) plus the style
-   decision from step 1. The plan IS the design pass — think in the plan's
-   format, never design in reasoning first. Frozen after writing: check
-   fixes change geometry, never the plan.
+   `<deck>` = `chat-helpers/<deck-slug>-presentation` inside the Working
+   directory. Run `mkdir -p "<deck>/pages" "<deck>/media"`, then write
+   `"<deck>/plan.md"` — one line per slide: `N. <layout family> — «title»`
+   (SU path adds the proto number: `N. <layout> — proto <N> — «title»`) plus
+   the style decision from step 1. The plan IS the design pass — think in the
+   plan's format, never design in reasoning first. Frozen after writing: check
+   fixes change geometry, never the plan. Only the final `<deck-slug>.pptx`
+   goes to the Working directory root.
 
 4. **Media — one bash:** `cp` the decor files named in plan.md into
    `<deck>/media/` (from `templates/default-ref/decor/` — shared by both
@@ -96,13 +98,13 @@ copied from the atlas or the brief, not interpreted).
 
    macOS / Linux / zsh / bash:
    ```bash
-   ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" build "<deck>" --out "<abs>/<deck>.pptx" [--theme dark|light]
+   ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" build "<deck>" --out "<abs>/<deck-slug>.pptx" [--theme dark|light]
    ```
 
    Windows (PowerShell):
    ```powershell
-   $env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" build "<deck>" --out "<abs>/<deck>.pptx" [--theme dark|light]
+   $env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" build "<deck>" --out "<abs>/<deck-slug>.pptx" [--theme dark|light]
    ```
 
 8. **Review + deliver** — protocols: SKILL.md («After build: the verify
-   lines», «Delivery message»). Code only.
+   lines» incl. the fresh-render `read`, «Delivery message»). Code only.

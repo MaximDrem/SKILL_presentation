@@ -1,6 +1,6 @@
 ---
 name: presentation
-description: Create new PowerPoint presentations from scratch or restyle an attached pptx into new content. Use when the user asks to make a presentation, slides, or deck, when a .pptx/.potx file is attached to such a request (style is inherited from it), or to copy the style of an existing one. Triggers include «сделай презентацию», «сделай слайды/деку», «подготовь питч/презентацию по…», «перенеси контент в новый дизайн», «в стиле этого шаблона/файла», «сделай в стиле нашего шаблона», «переделай презентацию», "make a presentation", "slides about X", "copy this deck's style". Builds a real, fully editable .pptx via bundled node tools — no pip, no npm, nothing to install.
+description: Create new PowerPoint presentations from scratch or restyle an attached pptx into new content. Use when the user asks to make a presentation, slides, or deck, when a .pptx file is attached to such a request (style is inherited from it), or to copy the style of an existing one. Triggers include «сделай презентацию», «презентация про продукт», «сделай слайды/деку», «подготовь питч/презентацию по…», «перенеси контент в новый дизайн», «в стиле этого шаблона/файла», «сделай в стиле нашего шаблона», «переделай презентацию», "make a presentation", "slides about X", "copy this deck's style". Builds a real, fully editable .pptx via bundled node tools — no pip, no npm, nothing to install.
 previewDescription: Работа с презентациями
 ---
 
@@ -87,12 +87,13 @@ at sibling boxes) — apply them as printed.
 
 - After a context compaction, find your place by `ls` of the project
   folder and the workflow's step list.
-- **Create a dedicated project folder per deck, inside your working
-  directory** — `<deck-slug>/` holding `pages/`, `media/` and the output
-  `.pptx`. Never put `pages/` or `media/` directly into the working
-  directory root. Never write to `/tmp` or anywhere else outside the
-  working directory. Slug = the transliterated topic in one word — do
-  not brainstorm names.
+- **Create a dedicated project folder per deck** —
+  `chat-helpers/<deck-slug>-presentation/` inside your working directory,
+  holding `pages/`, `media/`, `plan.md`, unpacked references, `shots/`,
+  `preview*.png` and every other intermediate file. Write only the final `<deck-slug>.pptx` to the working
+  directory root. Never put project or helper files directly into that root.
+  Never write to `/tmp` or anywhere else outside the working directory.
+  Slug = the transliterated topic in one word — do not brainstorm names.
 - **Never explore the environment** (fonts, packages, OS, binaries,
   paths outside your Working directory) — the skill bundles everything
   it needs; a genuinely missing tool comes back as an error envelope,
@@ -107,9 +108,15 @@ at sibling boxes) — apply them as printed.
 - **The user's brief outranks every hint in this skill** — if a rule
   here conflicts with an explicit requirement from the user, follow the
   requirement.
-- **Read images only with the `read_image` tool** (path + prompt) —
-  never with text-file readers (`read` on an image errors and burns a
-  step).
+- **Read local images with `read` in `mode="visual"`** (path + prompt) —
+  this returns compact vision text for every model without storing an image
+  attachment in the tool result. Default `read` mode is for native attachments,
+  not the presentation intake sheets. This applies to **every** image,
+  including your own renders in `shots/*.png`: a default-mode call puts a
+  full-size image into the conversation, where it stays for the rest of the
+  session. Vision text is also the only way to ask a targeted question
+  («does the heading collide with the icon?», «what changed between these
+  two renders?») — a native attachment cannot be interrogated.
 - **Modify `pages/*.json` only by whole-file `write`** — never with
   scripts (node/sed/jq fixers), never with exact-string `edit`
   patching (JSON whitespace mismatches make it fail and burn extra
@@ -182,6 +189,16 @@ Fix the named page (whole-file `write`) and rebuild; ≤2 rounds. Zero
 actionable lines → done. A defect that still remains goes to the
 delivery exceptions (one line) — no more rebuilds. The build prints the
 slide-number → `slide-NN.json` mapping.
+
+The verify lines are a text estimate, not a look at the page: they never
+report a heading touching an icon, a badge sitting on a title, or a
+silently missing visual. So after the last build, for every page whose
+layout you changed, `read` its fresh `shots/slide-NN.png` with
+`mode="visual"` and a targeted prompt. The build already rewrote `shots/` —
+never trust a visual conclusion made before the latest build, and never
+answer the user's "nothing changed" from memory of the code: re-read the
+fresh render first, then either fix and rebuild or state the confirmed
+result.
 
 ## Delivery message
 

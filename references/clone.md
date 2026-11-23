@@ -20,15 +20,18 @@ interpreted).
 ## Steps
 
 1. **Unpack the reference — one command, inside your Working directory.**
+   `<deck>` = `chat-helpers/<deck-slug>-presentation`; unpack into
+   `<deck>/<name>-ref`. Create parents automatically with the command's output
+   path; all reference artifacts stay inside the helper folder.
 
    macOS / Linux / zsh / bash:
    ```bash
-   ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" unpack "<ref.pptx>" --out "<name>-ref"
+   ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" unpack "<ref.pptx>" --out "<deck>/<name>-ref"
    ```
 
    Windows (PowerShell):
    ```powershell
-   $env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" unpack "<ref.pptx>" --out "<name>-ref"
+   $env:ELECTRON_RUN_AS_NODE="1"; & $env:GIGATOOL_NODE "$HOME/.wsc/config/skills/presentation/tools/deck.cjs" unpack "<ref.pptx>" --out "<deck>/<name>-ref"
    ```
 
    Engine verify-issues it may print (OUT OF BOUNDS, TEXT CLIPPED, …)
@@ -47,11 +50,11 @@ interpreted).
       Canvas is ALWAYS **1280×720**, including the STYLE.md patterns —
       never rescale or "convert" coordinates.
    2. only if the intake list contains `thumbs*.png` (unpack ran with
-      renders): `read_image` on each — extract exactly two words:
+      renders): `read` each with `mode="visual"` — extract exactly two words:
       `rounding=sharp|round` (drives shape `adjustments`: 6000 | 25000)
       and `mood=photo|vector` (drives illustration choices). If unsure or
       absent: `rounding=round`, `mood=photo`.
-   3. `read_image` on each `decor-thumbs*.png` sheet, fixed prompt:
+   3. `read` each `decor-thumbs*.png` sheet with `mode="visual"`, fixed prompt:
       «перечисли ВСЕ плитки без пропусков (слева направо, построчно):
       имя файла (подпись ПОД фото, в общей с ним рамке) — короткое
       описание — класс `decor` (нейтральное украшение: фигуры, блобы,
@@ -66,8 +69,9 @@ interpreted).
    for the build. **Only `decor`-class files may be copied** (spec.md
    «Уместность декора»).
 
-3. **Project folder — one bash:** `mkdir -p "<deck>/pages" "<deck>/media"`
-   (`<deck>` = short topic slug, inside your Working directory).
+3. **Project folder — one bash:** `mkdir -p "<deck>/pages" "<deck>/media"`.
+   Keep using `<deck>` = `chat-helpers/<deck-slug>-presentation` from step 1.
+   Only the final `<deck-slug>.pptx` goes to the Working directory root.
 
 4. **`write "<deck>/plan.md"` — the plan IS the design pass.** Think in
    the plan's format; never design in reasoning first, never re-plan
@@ -97,7 +101,7 @@ interpreted).
       как в референсе (вместимость подтвердит check).
    ```
 
-5. **Copy decor — one bash:** `cp "<name>-ref/media/<f1>" "<name>-ref/media/<f2>" … "<deck>/media/"`
+5. **Copy decor — one bash:** `cp "<deck>/<name>-ref/media/<f1>" "<deck>/<name>-ref/media/<f2>" … "<deck>/media/"`
    — every file named in plan.md, in one command. Do not generate images.
    If the plan needs a visual that exists neither in the reference media
    nor among the bundled pictograms
@@ -127,14 +131,14 @@ interpreted).
    most clone text-fit failures come from long Russian text in compact
    reference boxes.
 
-7. **Fix loop:** `ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" … deck.cjs check "<deck>" --template "<ref.pptx>" --ref "<name>-ref"`
+7. **Fix loop:** `ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" … deck.cjs check "<deck>" --template "<ref.pptx>" --ref "<deck>/<name>-ref"`
    → apply every `plan[]` entry by rewriting whole pages with `write`
    (protocol: SKILL.md Rules) → re-check. Until zero HARD. If a proto is
    rejected (degraded / not in atlas), its failure message names the
    default replacement — apply it. If check/build reports a stale atlas,
    run the printed recovery command.
 
-8. **Build once:** `ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" … deck.cjs build "<deck>" --template "<ref.pptx>" --ref "<name>-ref" --out "<abs>/<deck>.pptx"`
+8. **Build once:** `ELECTRON_RUN_AS_NODE=1 "$GIGATOOL_NODE" … deck.cjs build "<deck>" --template "<ref.pptx>" --ref "<deck>/<name>-ref" --out "<abs>/<deck-slug>.pptx"`
 
-9. **Review + deliver** — protocols: SKILL.md («After build: the verify lines»,
-   «Delivery message»). Code only.
+9. **Review + deliver** — protocols: SKILL.md («After build: the verify lines»
+   incl. the fresh-render `read`, «Delivery message»). Code only.

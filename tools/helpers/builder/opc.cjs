@@ -376,6 +376,15 @@ function findLocal(el, local) {
   return null;
 }
 
+// svg-часть среди image-частей пакета = невалидная вставка: a:blip обязан
+// указывать на растр, PowerPoint рендерит SVG только через svgBlip-расширение
+// поверх PNG-fallback (Chromium-превью при этом прощает прямую svg-ссылку).
+function svgMediaParts(pkg) {
+  return pkg.reachableParts()
+    .filter((part) => part.partname.startsWith("/ppt/media/") && /\.svg$/i.test(part.partname))
+    .map((part) => part.partname);
+}
+
 module.exports = {
-  Package, Part, Rel, RelSet, CT, RT, IMAGE_CONTENT_TYPES, relsUriFor, serializePartXml, findLocal,
+  Package, Part, Rel, RelSet, CT, RT, IMAGE_CONTENT_TYPES, relsUriFor, serializePartXml, findLocal, svgMediaParts,
 };

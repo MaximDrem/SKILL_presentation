@@ -211,6 +211,19 @@ function qaWarnings(pages, underlays = null, projectDir = null) {
               warns.push(`${item.file} ${eid}: картинка «${el.src}» растянута крупнее исходника (${size[0]}×${size[1]}px → ${bw}×${bh}px на слайде) — будет мыло; default: bounds ≤ ${size[0]}×${size[1]}px, либо это иконка-слот, не главный визуал (нужно исправить)`);
             }
           }
+        } else if (/\.svg$/i.test(el.src)) {
+          const [bw, bh] = [el.bounds[2], el.bounds[3]];
+          if (bw > 0 && bh > 0) {
+            try {
+              const { parseSvg } = require("./svgshape.cjs");
+              const [vw, vh] = parseSvg(fs.readFileSync(path.join(projectDir, el.src), "utf8"));
+              const aVb = vw / vh, aB = bw / bh;
+              const dev = Math.max(aVb, aB) / Math.min(aVb, aB) - 1;
+              if (dev > 0.08) {
+                warns.push(`${item.file} ${eid}: иконка «${el.src}» вписана в bounds ${bw}×${bh} с сохранением пропорций (viewBox ${pyRound(vw)}×${pyRound(vh)}, расхождение аспектов ${Math.trunc(dev * 100)}%) — видимый размер меньше слота; default: bounds ${pyRound(bh * aVb)}×${bh} или ${bw}×${pyRound(bw / aVb)}, либо исходник под слот (нужно исправить)`);
+              }
+            } catch { /* контракт svg (path M/L/C/Z) уже проверяет validate */ }
+          }
         }
       }
     }
